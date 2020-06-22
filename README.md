@@ -77,9 +77,13 @@ SOFTWARE.
 
 
 ---
-> My Website: [https://sanjaysunil.tk](https://sanjaysunil.tk) <br>
-> GitHub : [@D3VSJ](https://github.com/D3VSJ) <br>
-> Discord : [D3VSJ#7037](https://discordapp.com/users/705710081211236354) 
+<div align="center">
+
+> Website : [sanjaysunil.tk](https://sanjaysunil.tk) &nbsp;&middot;&nbsp;
+> GitHub : [@D3VSJ](https://github.com/D3VSJ) &nbsp;&middot;&nbsp;
+> Discord : [D3VSJ#7037](https://discordapp.com/users/705710081211236354)
+
+</div>
 
 
 
