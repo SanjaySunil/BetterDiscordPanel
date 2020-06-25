@@ -6,7 +6,7 @@
 	BetterDiscordPanel
     <br>
   <a href="https://discordapp.com/users/705710081211236354/">   
-<img src="https://img.shields.io/badge/Personal-D3VSJ%237037-%2300BFFF.svg?logo=discord" alt="Discord D3VSJ#7037">
+<img src="https://img.shields.io/badge/Personal-D3VSJ%237037-%2300BFFF.svg?logo=discord" alt="Discord D3VSJ#9933">
 </a>
   <br>
 </h1>
@@ -79,7 +79,7 @@ SOFTWARE.
 ---
 > My Website: [https://sanjaysunil.tk](https://sanjaysunil.tk) <br>
 > GitHub : [@D3VSJ](https://github.com/D3VSJ) <br>
-> Discord : [D3VSJ#7037](https://discordapp.com/users/705710081211236354) 
+> Discord : [D3VSJ#9933](https://discordapp.com/users/705710081211236354) 
 
 
 
