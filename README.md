@@ -80,9 +80,9 @@ SOFTWARE.
 
 <div align="center">
 
-> Website : [sanjaysunil.tk](https://sanjaysunil.tk) &nbsp;&middot;&nbsp;
-> GitHub : [@D3VSJ](https://github.com/D3VSJ) &nbsp;&middot;&nbsp;
-> Discord : [D3VSJ#9933](https://discordapp.com/users/724668118504570881)
+Website : [sanjaysunil.tk](https://sanjaysunil.tk) &nbsp;&middot;&nbsp;
+Email : [D3VSJ@protonmail.com](mailto:D3VSJprotonmail.com) &nbsp;&middot;&nbsp;
+Discord : [D3VSJ#8335](https://discordapp.com/users/727549614240170066)
 
 </div>
 
