@@ -6,7 +6,7 @@
 	BetterDiscordPanel
     <br>
   <a href="https://discordapp.com/users/705710081211236354/">   
-<img src="https://img.shields.io/badge/Personal-D3VSJ%237037-%2300BFFF.svg?logo=discord" alt="Discord D3VSJ#9933">
+<img src="https://img.shields.io/badge/Personal-D3VSJ%237037-%2300BFFF.svg?logo=discord" alt="Discord D3VSJ#9496">
 </a>
   <br>
 </h1>
