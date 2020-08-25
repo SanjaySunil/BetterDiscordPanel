@@ -1,13 +1,9 @@
 
 <h1 align="center">
   <br>
-  <a href="https://github.com/D3VSJ/D3VDocs"><img src="https://image.flaticon.com/icons/png/512/906/906361.png" alt="xBrowser" width="200"></a>
+  <a href="https://github.com/D3VSJ/BetterDiscordPanel"><img src="https://image.flaticon.com/icons/png/512/906/906361.png" alt="Logo" width="200"></a>
   <br>
 	BetterDiscordPanel
-    <br>
-  <a href="https://discordapp.com/users/732336924559278181/">   
-<img src="https://img.shields.io/badge/Personal-D3VSJ%237037-%2300BFFF.svg?logo=discord" alt="Discord D3VSJ#9496">
-</a>
   <br>
 </h1>
 
@@ -18,9 +14,7 @@
 
 <p align="center">
   <a href="#key-features">Key Features</a> •
-  <!-- <a href="#download">Download</a> •
-  <a href="#installation">Installation</a> • -->
-  <!-- <a href="#credits">Credits</a> • -->
+  <a href="#installation">Installation</a> • 
   <a href="#license">License</a>
 </p>
 
@@ -32,14 +26,6 @@
 * Discord-Like Design
 	- The Panel has been designed to look similar to your regular discord
 
-<!-- 
-
-## Download
-
-Soon, we will place a release link here for people wanting to download BetterDiscordPanel. 
-
- <a href="#installation">Follow the Installation steps to use BetterDiscordPanel.</a> 
- 
 ## Installation
 
 Run the following in the Same Directory as BetterDiscordPanel through CMD:
@@ -49,7 +35,6 @@ npm install
 npm start
 ```
 
--->
 ---
 ## License
 
