@@ -14,26 +14,16 @@
 
 <p align="center">
   <a href="#key-features">Key Features</a> •
-  <a href="#installation">Installation</a> • 
   <a href="#license">License</a>
 </p>
 
 ## Key Features
 
 * Messaging Panel
-	- Message with your discord bot within the panel through DMs and Servers
+	- Message on Servers and DMs using the Panel
     
-* Discord-Like Design
+* Discord-Theme Design
 	- The Panel has been designed to look similar to your regular discord
-
-## Installation
-
-Run the following in the Same Directory as BetterDiscordPanel through CMD:
-
-```
-npm install
-npm start
-```
 
 ---
 ## License
