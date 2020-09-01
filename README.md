@@ -14,6 +14,7 @@
 
 <p align="center">
   <a href="#key-features">Key Features</a> •
+    <a href=“#credits”>Credits</a> •
   <a href="#license">License</a>
 </p>
 
@@ -28,11 +29,12 @@
 
 ## Credits
 
-* <a href="https://github.com/discordjs/discord.js/tree/webpack">Discord.js</a>
+* Discord.js
+* Notavone’s Discord Panel
 
 ## License
 
-GPL-3.0
+<a href=“”>GPL-3.0</>
 
 ---
 
