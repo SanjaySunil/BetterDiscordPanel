@@ -1,139 +1,710 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
+
+    <meta charset="utf-8" />
     <title>BetterDiscordPanel</title>
-    <link rel="stylesheet" href="./style.css">
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-    <script type="text/javascript">
-        window.oncontextmenu = function () {
-            return false;
-        }
-        $(document).keydown(function (event) {
-            if (event.keyCode == 123) {
-                return false;
-            }
-            else if ((event.ctrlKey && event.shiftKey && event.keyCode == 73) || (event.ctrlKey && event.shiftKey && event.keyCode == 74)) {
-                return false;
-            }
-        });
-    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="Responsive Bootstrap 4 Chat App" name="description" />
+    <meta content="Themesbrand" name="author" />
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+    <!-- magnific-popup css -->
+    <link href="assets/libs/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css" />
+
+    <!-- owl.carousel css -->
+    <link rel="stylesheet" href="assets/libs/owl.carousel/assets/owl.carousel.min.css">
+
+    <link rel="stylesheet" href="assets/libs/owl.carousel/assets/owl.theme.default.min.css">
+
+    <!-- Bootstrap Css -->
+    <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
+    <link href="assets/css/bootstrap-dark.min.css" id="bootstrap-dark-style" rel="stylesheet" type="text/css" />
+    <!-- Icons Css -->
+    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <!-- App Css-->
+    <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
+    <link href="assets/css/app-dark.min.css" id="app-dark-style" rel="stylesheet" type="text/css" />
+    <!--Discord CSS-->
+    <link href="assets/css/main.css" id="app-dark-style" rel="stylesheet" type="text/css" />
 
 </head>
 
 <body>
-    <header>
-        <button id="toggle-nav">=</button>
-    </header>
-    <nav>
-        <button class="active"><svg class="homeIcon-tEMBK1" aria-hidden="false" width="28" height="20"
-                viewBox="0 0 28 20">
-                <path fill="currentColor"
-                    d="M20.6644 20C20.6644 20 19.8014 18.9762 19.0822 18.0714C22.2226 17.1905 23.4212 15.2381 23.4212 15.2381C22.4384 15.881 21.5034 16.3334 20.6644 16.6429C19.4658 17.1429 18.3151 17.4762 17.1884 17.6667C14.887 18.0953 12.7774 17.9762 10.9795 17.6429C9.61301 17.381 8.43836 17 7.45548 16.6191C6.90411 16.4048 6.30479 16.1429 5.70548 15.8096C5.63356 15.7619 5.56164 15.7381 5.48973 15.6905C5.44178 15.6667 5.41781 15.6429 5.39384 15.6191C4.96233 15.381 4.7226 15.2143 4.7226 15.2143C4.7226 15.2143 5.87329 17.1191 8.91781 18.0238C8.19863 18.9286 7.31164 20 7.31164 20C2.0137 19.8333 0 16.381 0 16.381C0 8.7144 3.45205 2.50017 3.45205 2.50017C6.90411 -0.07123 10.1884 0.000197861 10.1884 0.000197861L10.4281 0.285909C6.11301 1.52399 4.12329 3.40493 4.12329 3.40493C4.12329 3.40493 4.65068 3.11921 5.53767 2.71446C8.10274 1.59542 10.1404 1.2859 10.9795 1.21447C11.1233 1.19066 11.2432 1.16685 11.387 1.16685C12.8493 0.976379 14.5034 0.92876 16.2295 1.11923C18.5068 1.38114 20.9521 2.0478 23.4452 3.40493C23.4452 3.40493 21.5514 1.61923 17.476 0.381146L17.8116 0.000197861C17.8116 0.000197861 21.0959 -0.07123 24.5479 2.50017C24.5479 2.50017 28 8.7144 28 16.381C28 16.381 25.9623 19.8333 20.6644 20ZM9.51712 8.88106C8.15068 8.88106 7.07192 10.0715 7.07192 11.5239C7.07192 12.9763 8.17466 14.1667 9.51712 14.1667C10.8836 14.1667 11.9623 12.9763 11.9623 11.5239C11.9863 10.0715 10.8836 8.88106 9.51712 8.88106ZM18.2671 8.88106C16.9007 8.88106 15.8219 10.0715 15.8219 11.5239C15.8219 12.9763 16.9247 14.1667 18.2671 14.1667C19.6336 14.1667 20.7123 12.9763 20.7123 11.5239C20.7123 10.0715 19.6336 8.88106 18.2671 8.88106Z">
-                </path>
-            </svg></button>
-        <span id="online-count">0 online</span>
-        <button>
-            F
-            <img src="https://picsum.photos/200?gravity=east" alt="">
-        </button>
-        <button>
-            R
-            <img src="" alt="">
-        </button>
-        <button class="add">+</button>
-    </nav>
-    <section id="sub">
-        <p class="border1"><br>BetterDiscordPanel<br></p>
-        <p class="border2"><br>Message Panel</p>
-        <select id="guilds"></select><br>
-        <select id="channels"></select><br>
-        <div class="options">
-    </section>
-    <main>
-        <div class="friend-info">
-            <p id='guildName' class="border"><br>Loading...<br></p>
-            <p class="name"></p>
-            <span class="status offline"></span>
-            </p>
-            <button>O</button>
-            <button>...</button>
-        </div>
-        <div id="chat" class="messages">
-            <div>
 
+    <div class="layout-wrapper d-lg-flex">
+
+        <!-- Start left sidebar-menu -->
+        <div class="side-menu flex-lg-column mr-lg-1">
+            <!-- LOGO -->
+            <div class="navbar-brand-box">
+                <a href="index.html" class="logo logo-dark">
+                    <span class="logo-sm">
+                            <img src="assets/images/logo.svg" alt="" height="30">
+                        </span>
+                </a>
+
+                <a href="index.html" class="logo logo-light">
+                    <span class="logo-sm">
+                            <img src="assets/images/logo.svg" alt="" height="30">
+                        </span>
+                </a>
             </div>
-        </div>
-        <form>
-            <input type="button" value="+" />
-            <textarea class='send' id="toSend" placeholder="Write the content of your message"></textarea>
-            <div class="invisible">
-                <button id="send" class="blue"></button></div>
+            <!-- end navbar-brand-box -->
 
-            <!--  <button id="delLast" class="red">🗓 Delete Last Message</button> -->
+            <!-- Start side-menu nav -->
+            <div class="flex-lg-column my-auto">
+                <ul class="nav nav-pills side-menu-nav justify-content-center" role="tablist">
+                    <li class="nav-item" data-toggle="tooltip" data-trigger="hover" data-placement="top" title="Profile">
+                        <a class="nav-link" id="pills-user-tab" data-toggle="pill" href="#pills-user" role="tab">
+                            <i class="ri-user-2-line"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item" data-toggle="tooltip" data-trigger="hover" data-placement="top" title="Chats">
+                        <a class="nav-link active" id="pills-chat-tab" data-toggle="pill" href="#pills-chat" role="tab">
+                            <i class="ri-message-3-line"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item" data-toggle="tooltip" data-trigger="hover" data-placement="top" title="Settings">
+                        <a class="nav-link" id="pills-setting-tab" data-toggle="pill" href="#pills-setting" role="tab">
+                            <i class="ri-settings-2-line"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown profile-user-dropdown d-inline-block d-lg-none">
+                        <a class="nav-link dropdown-toggle" href="javascript: void(0);" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img src="" alt="" class="profile-user rounded-circle botavatar">
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Profile <i class="ri-profile-line float-right text-muted"></i></a>
+                            <a class="dropdown-item" href="#">Setting <i class="ri-settings-3-line float-right text-muted"></i></a>
+                            <div class="dropdown-divider"></div>
+                            <button class="dropdown-item refreshToken"><i class="ri-logout-circle-r-line float-right text-muted"></i></button>
+                        </div>
+                    </li>
+                </ul>
             </div>
-        </form>
-    </main>
+            <!-- end side-menu nav -->
 
-    <footer>
-        <div class="user-icon">
-            <img src="https://i.pinimg.com/originals/e3/54/65/e354658df9dd581a078b071adad7a030.png" alt="">
-            <span class="status"></span>
-        </div>
-        <div class="user-info">
-            <p>USER</p>
-            <span>#0000</span>
-        </div>
-        <a data-modal-target="#modal_account">
-        <div class="settingsicon">
-            <svg aria-hidden="false" width="20" height="20" viewBox="0 0 24 24">
-                <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"
-                    d="M19.738 10H22V14H19.739C19.498 14.931 19.1 15.798 18.565 16.564L20 18L18 20L16.565 18.564C15.797 19.099 14.932 19.498 14 19.738V22H10V19.738C9.069 19.498 8.203 19.099 7.436 18.564L6 20L4 18L5.436 16.564C4.901 15.799 4.502 14.932 4.262 14H2V10H4.262C4.502 9.068 4.9 8.202 5.436 7.436L4 6L6 4L7.436 5.436C8.202 4.9 9.068 4.502 10 4.262V2H14V4.261C14.932 4.502 15.797 4.9 16.565 5.435L18 3.999L20 5.999L18.564 7.436C19.099 8.202 19.498 9.069 19.738 10ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z">
-                </path>
-            </svg>
-        </div>
-        </a>
-    </footer>
- <!--Settings-->
- <div class="modal" id="modal_account">
-    <div class="modal-header">
-      <div class="title">Settings</div>
-      <button data-close-button class="close-button">&times;</button>
-    </div>
-    <div class="modal-body">
-        <fieldset>
-            <legend>Auto-Scroll</legend>
-            <label class="switch">
-                <input id="chk1" type="checkbox" value="last">
-                <span class="slider round"></span>
-            </label>
-            <label for="last">Last Messages</label><br /><br />
-            <label class="switch">
-                <input id="chk2" type="checkbox" value="chatCheck" checked>
-                <span class="slider round"></span>
-            </label>
-            <label id='channelNameLabel' for="chatCheck">Chat</label><br /><br />
-            <label class="switch">
-                <input id="chk3" type="checkbox" value="animCheck" checked>
-                <span class="slider round"></span>
-            </label>
-            <label for="animCheck">Enable auto-scrolling animation</label><br /><br />
-            <button id='refreshToken' class="red demi">Login/Logout</button><button id="btnrRefreshChat"
-                class="demi">Refresh Chat</button>
-        </fieldset>
-        <h3 align="center">Programmed by D3VSJ#9496</h3>
-    </div>
-  </div>
-  <div id="overlay"></div>
+            <div class="flex-lg-column d-none d-lg-block">
+                <ul class="nav side-menu-nav justify-content-center">
+                    <li class="nav-item">
+                        <a class="nav-link" id="light-dark" href="#" data-toggle="tooltip" data-trigger="hover" data-placement="right" title="Dark / Light Mode">
+                            <i class="ri-sun-line theme-mode-icon"></i>
+                        </a>
+                    </li>
 
-    <!-- partial -->
-    <script src="./script.js"></script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script type="text/javascript" src="./js/discord.11.4.2.js"></script>
-    <script type="text/javascript" src="./js/main.js"></script>
-    <script type="text/javascript" src="./js/panel.js"></script>
-    <script type="text/javascript" src="./js/modals.js"></script>
+                    <li class="nav-item btn-group dropup profile-user-dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img src="" alt="" class="profile-user rounded-circle botavatar">
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Profile <i class="ri-profile-line float-right text-muted"></i></a>
+                            <a class="dropdown-item" href="#">Setting <i class="ri-settings-3-line float-right text-muted"></i></a>
+                            <div class="dropdown-divider"></div>
+                            <button class="dropdown-item refreshToken"><i class="ri-logout-circle-r-line float-right text-muted"></i></button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- Side menu user -->
+        </div>
+        <!-- end left sidebar-menu -->
+
+        <!-- start chat-leftsidebar -->
+        <div class="chat-leftsidebar mr-lg-1">
+
+            <div class="tab-content">
+                <!-- Start Profile tab-pane -->
+                <div class="tab-pane" id="pills-user" role="tabpanel" aria-labelledby="pills-user-tab">
+                    <!-- Start profile content -->
+                    <div>
+                        <div class="px-4 pt-4">
+                            <div class="user-chat-nav float-right">
+                                <div class="dropdown">
+                                    <a href="javascript: void(0);" class="font-size-18 text-muted dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="ri-more-2-fill"></i>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                        <a class="dropdown-item" href="#">Edit</a>
+                                        <a class="dropdown-item" href="#"></a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <h4 class="mb-0">My Profile</h4>
+                        </div>
+
+                        <div class="text-center p-4 border-bottom">
+                            <div class="mb-4">
+                                <img src="" class="rounded-circle avatar-lg img-thumbnail botavatar" alt="">
+                            </div>
+
+                            <h5 class="font-size-16 mb-1 text-truncate clientUsername"></h5>
+                            <!-- <p class="text-muted text-truncate mb-1"><i class="ri-record-circle-fill font-size-10 text-success mr-1 d-inline-block"></i> Active</p> -->
+                        </div>
+                        <!-- End profile user -->
+
+                        <!-- Start user-profile-desc -->
+                        <div class="p-4 user-profile-desc" data-simplebar>
+                            <div id="profile-user-accordion-1" class="custom-accordion">
+                                <div class="card shadow-none border mb-2">
+                                    <a href="#profile-user-collapseOne" class="text-dark" data-toggle="collapse" aria-expanded="true" aria-controls="profile-user-collapseOne">
+                                        <div class="card-header" id="profile-user-headingOne">
+                                            <h5 class="font-size-14 m-0">
+                                                <i class="ri-user-2-line mr-2 align-middle d-inline-block"></i> About
+                                                <i class="mdi mdi-chevron-up float-right accor-plus-icon"></i>
+                                            </h5>
+                                        </div>
+                                    </a>
+
+                                    <div id="profile-user-collapseOne" class="collapse show" aria-labelledby="profile-user-headingOne" data-parent="#profile-user-accordion-1">
+                                        <div class="card-body">
+
+                                            <div>
+                                                <p class="text-muted mb-1">Name</p>
+                                                <h5 class="font-size-14 clientUsername"></h5>
+                                            </div>
+
+                                            <div class="mt-4">
+                                                <p class="text-muted mb-1">Discrim</p>
+                                                <h5 class="font-size-14 clientDiscriminator"></h5>
+                                            </div>
+
+                                            <div class="mt-4">
+                                                <p class="text-muted mb-1">UserID</p>
+                                                <h5 class="font-size-14 clientUserid"></h5>
+                                            </div>
+
+                                            <div class="mt-4">
+                                                <p class="text-muted mb-1">Created At</p>
+                                                <h5 class="font-size-14 mb-0 bot-createdat"></h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End About card -->
+                            </div>
+                            <!-- end profile-user-accordion -->
+
+                        </div>
+                        <!-- end user-profile-desc -->
+                    </div>
+                    <!-- End profile content -->
+                </div>
+                <!-- End Profile tab-pane -->
+
+                <!-- Start chats tab-pane -->
+                <div class="tab-pane fade show active" id="pills-chat" role="tabpanel" aria-labelledby="pills-chat-tab">
+                    <!-- Start chats content -->
+                    <div>
+                        <div class="px-4 pt-4">
+                            <h4 class="mb-4 header guildName header guildName">Chats</h4>
+                        </div>
+                        <!-- .p-4 -->
+
+                        <!-- Start chat-message-list -->
+                        <div class="px-2">
+                            <div class="chat-message-list">
+                                <ul class="list-unstyled chat-list chat-user-list">
+                                    <li>
+                                        <select title="guilds" class="half guilds"></select>
+                                        <select title="channels" class="half channels" size="30"></select>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                        <!-- End chat-message-list -->
+                    </div>
+                    <!-- Start chats content -->
+                </div>
+                <!-- End chats tab-pane -->
+
+                <!-- Start settings tab-pane -->
+                <div class="tab-pane" id="pills-setting" role="tabpanel" aria-labelledby="pills-setting-tab">
+                    <!-- Start Settings content -->
+                    <div>
+                        <div class="px-4 pt-4">
+                            <h4 class="mb-0">Settings</h4>
+                        </div>
+
+                        <div class="text-center border-bottom p-4">
+                            <div class="mb-4 profile-user">
+                                <img src="" class="rounded-circle avatar-lg img-thumbnail botavatar" alt="">
+                                <button type="button" class="btn bg-light avatar-xs p-0 rounded-circle profile-photo-edit">
+                                        <i class="ri-pencil-fill"></i>
+                                    </button>
+                            </div>
+
+                            <h5 class="font-size-16 mb-1 text-truncate clientUsername"></h5>
+                            <div class="dropdown d-inline-block mb-1">
+                                <!--
+                                    <a class="text-muted dropdown-toggle pb-1 d-block" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Available <i class="mdi mdi-chevron-down"></i>
+                                    </a>
+                                
+          
+                                    <div class="dropdown-menu">
+                                      <a class="dropdown-item" href="#">Available</a>
+                                      <a class="dropdown-item" href="#">Busy</a>
+                                    </div>
+                                -->
+                            </div>
+                        </div>
+                        <!-- End profile user -->
+
+                        <!-- Start User profile description -->
+                        <div class="p-4 user-profile-desc" data-simplebar>
+
+                            <div id="profile-setting-accordion" class="custom-accordion">
+                                <div class="card shadow-none border mb-2">
+                                    <a href="#profile-setting-personalinfocollapse" class="text-dark" data-toggle="collapse" aria-expanded="true" aria-controls="profile-setting-personalinfocollapse">
+                                        <div class="card-header" id="profile-setting-personalinfoheading">
+                                            <h5 class="font-size-14 m-0">
+                                                Personal Info
+                                                <i class="mdi mdi-chevron-up float-right accor-plus-icon"></i>
+                                            </h5>
+                                        </div>
+                                    </a>
+
+                                    <div id="profile-setting-personalinfocollapse" class="collapse show" aria-labelledby="profile-setting-personalinfoheading" data-parent="#profile-setting-accordion">
+                                        <div class="card-body">
+
+                                            <div class="float-right">
+                                                <button type="button" class="btn btn-light btn-sm"><i class="ri-edit-fill mr-1 align-middle"></i> Edit</button>
+                                            </div>
+
+                                            <div>
+                                                <p class="text-muted mb-1">Name</p>
+                                                <h5 class="font-size-14 clientUsername"></h5>
+                                            </div>
+
+                                            <div class="mt-4">
+                                                <p class="text-muted mb-1">Discrim</p>
+                                                <h5 class="font-size-14 clientDiscriminator"></h5>
+                                            </div>
+
+                                            <div class="mt-4">
+                                                <p class="text-muted mb-1">UserID</p>
+                                                <h5 class="font-size-14 clientUserid"></h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end profile card 
+                                    <div class="card shadow-none border mb-2">
+                                        <a href="#profile-setting-privacycollapse" class="text-dark collapsed" data-toggle="collapse"
+                                                        aria-expanded="false"
+                                                        aria-controls="profile-setting-privacycollapse">
+                                            <div class="card-header" id="profile-setting-privacyheading">
+                                                <h5 class="font-size-14 m-0">
+                                                    Privacy
+                                                    <i class="mdi mdi-chevron-up float-right accor-plus-icon"></i>
+                                                </h5>
+                                            </div>
+                                        </a>
+                                        <div id="profile-setting-privacycollapse" class="collapse" aria-labelledby="profile-setting-privacyheading"
+                                                data-parent="#profile-setting-accordion">
+                                            <div class="card-body">
+                                                <div class="py-3">
+                                                    <div class="media align-items-center">
+                                                        <div class="media-body overflow-hidden">
+                                                            <h5 class="font-size-13 mb-0 text-truncate">Profile photo</h5>
+
+                                                        </div>
+                                                        <div class="dropdown ml-2">
+                                                            <button class="btn btn-light btn-sm dropdown-toggle w-sm" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                Everyone <i class="mdi mdi-chevron-down"></i>
+                                                            </button>
+                                                            <div class="dropdown-menu dropdown-menu-right">
+                                                                <a class="dropdown-item" href="#">Everyone</a>
+                                                                <a class="dropdown-item" href="#">selected</a>
+                                                                <a class="dropdown-item" href="#">Nobody</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="py-3 border-top">
+                                                    <div class="media align-items-center">
+                                                        <div class="media-body overflow-hidden">
+                                                            <h5 class="font-size-13 mb-0 text-truncate">Last seen</h5>
+
+                                                        </div>
+                                                        <div class="ml-2">
+                                                            <div class="custom-control custom-switch">
+                                                                <input type="checkbox" class="custom-control-input" id="privacy-lastseenSwitch" checked>
+                                                                <label class="custom-control-label" for="privacy-lastseenSwitch"></label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="py-3 border-top">
+                                                    <div class="media align-items-center">
+                                                        <div class="media-body overflow-hidden">
+                                                            <h5 class="font-size-13 mb-0 text-truncate">Status</h5>
+
+                                                        </div>
+                                                        <div class="dropdown ml-2">
+                                                            <button class="btn btn-light btn-sm dropdown-toggle w-sm" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                Everyone <i class="mdi mdi-chevron-down"></i>
+                                                            </button>
+                                                            <div class="dropdown-menu dropdown-menu-right">
+                                                                <a class="dropdown-item" href="#">Everyone</a>
+                                                                <a class="dropdown-item" href="#">selected</a>
+                                                                <a class="dropdown-item" href="#">Nobody</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="py-3 border-top">
+                                                    <div class="media align-items-center">
+                                                        <div class="media-body overflow-hidden">
+                                                            <h5 class="font-size-13 mb-0 text-truncate">Read receipts</h5>
+
+                                                        </div>
+                                                        <div class="ml-2">
+                                                            <div class="custom-control custom-switch">
+                                                                <input type="checkbox" class="custom-control-input" id="privacy-readreceiptSwitch" checked>
+                                                                <label class="custom-control-label" for="privacy-readreceiptSwitch"></label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                        
+                                                <div class="py-3 border-top">
+                                                    <div class="media align-items-center">
+                                                        <div class="media-body overflow-hidden">
+                                                            <h5 class="font-size-13 mb-0 text-truncate">Groups</h5>
+
+                                                        </div>
+                                                        <div class="dropdown ml-2">
+                                                            <button class="btn btn-light btn-sm dropdown-toggle w-sm" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                Everyone <i class="mdi mdi-chevron-down"></i>
+                                                            </button>
+                                                            <div class="dropdown-menu dropdown-menu-right">
+                                                                <a class="dropdown-item" href="#">Everyone</a>
+                                                                <a class="dropdown-item" href="#">selected</a>
+                                                                <a class="dropdown-item" href="#">Nobody</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                        
+                                        </div>
+                                    </div>
+                                -->
+                                <!-- end Privacy card 
+
+                                    <div class="card shadow-none border mb-2">
+                                        <a href="#profile-setting-securitynoticollapse" class="text-dark collapsed" data-toggle="collapse"
+                                                        aria-expanded="false"
+                                                        aria-controls="profile-setting-securitynoticollapse">
+                                            <div class="card-header" id="profile-setting-securitynotiheading">
+                                                <h5 class="font-size-14 m-0">
+                                                    Security
+                                                    <i class="mdi mdi-chevron-up float-right accor-plus-icon"></i>
+                                                </h5>
+                                            </div>
+                                        </a>
+                                        <div id="profile-setting-securitynoticollapse" class="collapse" aria-labelledby="profile-setting-securitynotiheading"
+                                                data-parent="#profile-setting-accordion">
+                                            <div class="card-body">
+                        
+                                                <div>
+                                                    <div class="media align-items-center">
+                                                        <div class="media-body overflow-hidden">
+                                                            <h5 class="font-size-13 mb-0 text-truncate">Show security notification</h5>
+
+                                                        </div>
+                                                        <div class="ml-2">
+                                                            <div class="custom-control custom-switch">
+                                                                <input type="checkbox" class="custom-control-input" id="security-notificationswitch">
+                                                                <label class="custom-control-label" for="security-notificationswitch"></label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> -->
+                                <!-- end Security card -->
+
+                                <div class="card shadow-none border mb-2">
+                                    <a href="#profile-setting-helpcollapse" class="text-dark collapsed" data-toggle="collapse" aria-expanded="false" aria-controls="profile-setting-helpcollapse">
+                                        <div class="card-header" id="profile-setting-helpheading">
+                                            <h5 class="font-size-14 m-0">
+                                                Help
+                                                <i class="mdi mdi-chevron-up float-right accor-plus-icon"></i>
+                                            </h5>
+                                        </div>
+                                    </a>
+                                    <div id="profile-setting-helpcollapse" class="collapse" aria-labelledby="profile-setting-helpheading" data-parent="#profile-setting-accordion">
+                                        <div class="card-body">
+
+                                            <div>
+                                                <div class="py-3">
+                                                    <h5 class="font-size-13 mb-0"><a href="#" class="text-body d-block">FAQs</a></h5>
+                                                </div>
+                                                <div class="py-3 border-top">
+                                                    <h5 class="font-size-13 mb-0"><a href="#" class="text-body d-block">Contact</a></h5>
+                                                </div>
+                                                <div class="py-3 border-top">
+                                                    <h5 class="font-size-13 mb-0"><a href="#" class="text-body d-block">Terms & Privacy policy</a></h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end Help card -->
+                            </div>
+                            <!-- end profile-setting-accordion -->
+                        </div>
+                        <!-- End User profile description -->
+                    </div>
+                    <!-- Start Settings content -->
+                </div>
+                <!-- End settings tab-pane -->
+            </div>
+            <!-- end tab content -->
+
+        </div>
+        <!-- end chat-leftsidebar -->
+
+        <!-- Start User chat -->
+        <div class="user-chat w-100">
+            <div class="d-lg-flex">
+
+                <!-- start chat conversation section -->
+                <div class="w-100">
+                    <div class="p-3 p-lg-4 border-bottom">
+                        <div class="row align-items-center">
+                            <div class="col-sm-4 col-8">
+                                <div class="media align-items-center">
+                                    <div class="d-block d-lg-none mr-2">
+                                        <a href="javascript: void(0);" class="user-chat-remove text-muted font-size-16 p-2"><i class="ri-arrow-left-s-line"></i></a>
+                                    </div>
+                                    <div class="mr-3">
+                                        <!-- <img class="rounded-circle avatar-xs guildNameNoPic" alt=""> -->
+                                    </div>
+                                    <div class="media-body overflow-hidden">
+                                        <h5 class="font-size-16 mb-0 text-truncate">
+                                            <a href="#" class="text-reset user-profile-show channelName"></a>
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-8 col-4">
+                                <ul class="list-inline user-chat-nav text-right mb-0">
+                                    <li class="list-inline-item d-none d-lg-inline-block">
+                                        <button type="button" class="btn nav-btn user-profile-show">
+                                                <i class="ri-user-2-line"></i>
+                                            </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end chat user head -->
+
+                    <!-- start chat conversation -->
+                    <div class="chat-conversation p-3 p-lg-4" data-simplebar="init">
+                        <ul class="list-unstyled mb-0">
+                            <!--
+                                <li>
+                                    <div class="conversation-list">
+                                        <div class="chat-avatar">
+                                            <img src="assets/images/users/avatar-4.jpg" alt="">
+                                        </div>
+    
+                                        <div class="user-chat-content">
+                                            <div class="ctext-wrap">
+                                                <div class="ctext-wrap-content">
+                                                    <p class="mb-0">
+                                                        Good morning
+                                                    </p>
+                                                    <p class="chat-time mb-0"><i class="ri-time-line align-middle"></i> <span class="align-middle">10:00</span></p>
+                                                </div>
+                                                <div class="dropdown align-self-start">
+                                                    <a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        <i class="ri-more-2-fill"></i>
+                                                    </a>
+                                                    <div class="dropdown-menu">
+                                                        <a class="dropdown-item" href="#">Copy <i class="ri-file-copy-line float-right text-muted"></i></a>
+                                                        <a class="dropdown-item" href="#">Save <i class="ri-save-line float-right text-muted"></i></a>
+                                                        <a class="dropdown-item" href="#">Forward <i class="ri-chat-forward-line float-right text-muted"></i></a>
+                                                        <a class="dropdown-item" href="#">Delete <i class="ri-delete-bin-line float-right text-muted"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="conversation-name">Doris Brown</div>
+                                        </div>
+                                    </div>
+                                </li>
+    
+                                <li class="right">
+                                    <div class="conversation-list">
+                                        <div class="chat-avatar">
+                                            <img src="assets/images/users/avatar-1.jpg" alt="">
+                                        </div>
+    
+                                        <div class="user-chat-content">
+                                            <div class="ctext-wrap">
+                                                <div class="ctext-wrap-content">
+                                                    <p class="mb-0">
+                                                        Good morning, How are you? What about our next meeting?
+                                                    </p>
+                                                    <p class="chat-time mb-0"><i class="ri-time-line align-middle"></i> <span class="align-middle">10:02</span></p>
+                                                </div>
+                                                    
+                                                <div class="dropdown align-self-start">
+                                                    <a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        <i class="ri-more-2-fill"></i>
+                                                    </a>
+                                                    <div class="dropdown-menu">
+                                                        <a class="dropdown-item" href="#">Copy <i class="ri-file-copy-line float-right text-muted"></i></a>
+                                                        <a class="dropdown-item" href="#">Save <i class="ri-save-line float-right text-muted"></i></a>
+                                                        <a class="dropdown-item" href="#">Forward <i class="ri-chat-forward-line float-right text-muted"></i></a>
+                                                        <a class="dropdown-item" href="#">Delete <i class="ri-delete-bin-line float-right text-muted"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="conversation-name">Patricia Smith</div>
+                                        </div>
+                                    </div>
+                                </li>
+                            
+                                <li> 
+                                    <div class="chat-day-title">
+                                        <span class="title">Today</span>
+                                    </div>
+                                </li>
+                            -->
+                            <div class="scrollable" id="chat">
+                        </ul>
+                        </div>
+                        <!-- end chat conversation end -->
+
+                        <!-- start chat input section -->
+                        <div class="p-3 p-lg-4 border-top mb-0">
+                            <div class="row no-gutters">
+                                <div class="col">
+                                    <div>
+                                        <div contenteditable="true" id="toSend" class="form-control form-control-lg bg-light border-light"></div>
+                                    </div>
+                                </div>
+                                <div class="col-auto">
+                                    <div class="chat-input-links ml-md-2">
+                                        <ul class="list-inline mb-0">
+                                            <li class="list-inline-item">
+                                                <button type="button" class="btn btn-link text-decoration-none font-size-16 btn-lg waves-effect" data-toggle="tooltip" data-placement="top" title="Emoji">
+                                                    <i class="ri-emotion-happy-line"></i>
+                                                </button>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <button type="button" class="btn btn-link text-decoration-none font-size-16 btn-lg waves-effect" data-toggle="tooltip" data-placement="top" title="Attached File">
+                                                    <i class="ri-attachment-line"></i>
+                                                </button>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <button type="submit" class="btn btn-primary font-size-16 btn-lg chat-send waves-effect waves-light" id="send">
+                                                    <i class="ri-send-plane-2-fill"></i>
+                                                </button>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end chat input section -->
+                    </div>
+                    <!-- end chat conversation section -->
+
+                    <!-- start User profile detail sidebar -->
+                    <div class="user-profile-sidebar">
+                        <div class="px-3 px-lg-4 pt-3 pt-lg-4">
+                            <div class="user-chat-nav text-right">
+                                <button type="button" class="btn nav-btn" id="user-profile-hide">
+                                    <i class="ri-close-line"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="text-center p-4 border-bottom">
+                            <div class="mb-4">
+                                <img class="rounded-circle avatar-lg img-thumbnail botavatar" alt="">
+                            </div>
+
+                            <h5 class="font-size-16 mb-1 text-truncate guildNameNoPic"></h5>
+                        </div>
+                        <!-- End profile user -->
+
+                        <!-- Start user-profile-desc -->
+                        <div class="p-4 user-profile-desc" data-simplebar>
+                            <div id="profile-user-accordion" class="custom-accordion">
+                                <div class="card shadow-none border mb-2">
+                                    <a href="#collapseOne" class="text-dark" data-toggle="collapse" aria-expanded="true" aria-controls="collapseOne">
+                                        <div class="card-header" id="headingOne">
+                                            <h5 class="font-size-14 m-0">
+                                                <i class="ri-user-2-line mr-2 align-middle d-inline-block"></i> About
+                                                <i class="mdi mdi-chevron-up float-right accor-plus-icon"></i>
+                                            </h5>
+                                        </div>
+                                    </a>
+                                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#profile-user-accordion">
+                                        <div class="card-body">
+                                            <div>
+                                                <p class="text-muted mb-1">Info</p>
+                                                <h5 class="font-size-14 guildInfo"></h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End About card -->
+                            </div>
+                            <!-- end profile-user-accordion -->
+                        </div>
+                        <!-- end user-profile-desc -->
+                    </div>
+                    <!-- end User profile detail sidebar -->
+                </div>
+            </div>
+            <!-- End User chat -->
+        </div>
+        <!-- end  layout wrapper -->
+
+        <!-- JAVASCRIPT -->
+        <script src="assets/libs/jquery/jquery.min.js"></script>
+        <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/libs/simplebar/simplebar.min.js"></script>
+        <script src="assets/libs/node-waves/waves.min.js"></script>
+
+        <!-- Magnific Popup-->
+        <script src="assets/libs/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+        <!-- owl.carousel js -->
+        <script src="assets/libs/owl.carousel/owl.carousel.min.js"></script>
+
+        <!-- page init -->
+        <script src="assets/js/pages/index.init.js"></script>
+
+        <script src="assets/js/app.js"></script>
+
+        <!-- Discord JS -->
+        <script type="text/javascript" src="./assets/js/discord.12.1.1.min.js"></script>
+        <script type="text/javascript" src="./assets/js/locales.js"></script>
+        <script type="text/javascript" src="./assets/js/main.js"></script>
+        <script type="text/javascript" src="./assets/js/panel.js"></script>
+
+        <script>
+        </script>
+
 </body>
 
 </html>
