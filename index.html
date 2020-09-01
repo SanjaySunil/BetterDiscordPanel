@@ -6,10 +6,20 @@
     <meta charset="utf-8" />
     <title>BetterDiscordPanel</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta content="Responsive Bootstrap 4 Chat App" name="description" />
-    <meta content="Themesbrand" name="author" />
-    <!-- App favicon -->
-    <link rel="shortcut icon" href="assets/images/favicon.ico">
+    <meta name="description"
+    content="BetterDiscordPanel, the best discord panel for developers." />
+    <meta name="author" content="Sanjay Sunil">
+    <meta name="author:username" content="D3VSJ" />
+    <meta property="og:site_name" content="BetterDiscordPanel" />
+    <meta property="og:url" content="index.html" />
+    <meta property="og:type" content="website" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/logo/apple-touch-icon.png" />
+    <link rel="shortcut icon" href="./images/logo/icon.ico" />
+    <link rel="icon" type="image/x-icon" href="./images/logo/icon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/logo/32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/logo/16x16.png" />
+    <meta name="apple-mobile-web-app-title" content="BetterDiscordPanel" />
+    <meta name="application-name" content="BetterDiscordPanel" />
 
     <!-- magnific-popup css -->
     <link href="assets/libs/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css" />
@@ -18,6 +28,11 @@
     <link rel="stylesheet" href="assets/libs/owl.carousel/assets/owl.carousel.min.css">
 
     <link rel="stylesheet" href="assets/libs/owl.carousel/assets/owl.theme.default.min.css">
+
+    <!-- Noty -->
+    <link rel="stylesheet" href="assets/libs/noty/noty.css">
+    <link rel="stylesheet" href="assets/libs/noty/nest.css">
+
 
     <!-- Bootstrap Css -->
     <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
@@ -42,14 +57,14 @@
             <div class="navbar-brand-box">
                 <a href="index.html" class="logo logo-dark">
                     <span class="logo-sm">
-                            <img src="assets/images/logo.svg" alt="" height="30">
-                        </span>
+                        <img src="assets/images/betterdiscordpanel.png" alt="" height="50">
+                    </span>
                 </a>
 
                 <a href="index.html" class="logo logo-light">
                     <span class="logo-sm">
-                            <img src="assets/images/logo.svg" alt="" height="30">
-                        </span>
+                        <img src="assets/images/betterdiscordpanel.png" alt="" height="50">
+                    </span>
                 </a>
             </div>
             <!-- end navbar-brand-box -->
@@ -78,7 +93,7 @@
                         </a>
                         <div class="dropdown-menu">
                             <a class="dropdown-item" href="#">Profile <i class="ri-profile-line float-right text-muted"></i></a>
-                            <a class="dropdown-item" href="#">Setting <i class="ri-settings-3-line float-right text-muted"></i></a>
+                            <a class="dropdown-item" href="#pills-setting">Settings <i class="ri-settings-3-line float-right text-muted"></i></a>
                             <div class="dropdown-divider"></div>
                             <button class="dropdown-item refreshToken"><i class="ri-logout-circle-r-line float-right text-muted"></i></button>
                         </div>
@@ -101,7 +116,7 @@
                         </a>
                         <div class="dropdown-menu">
                             <a class="dropdown-item" href="#">Profile <i class="ri-profile-line float-right text-muted"></i></a>
-                            <a class="dropdown-item" href="#">Setting <i class="ri-settings-3-line float-right text-muted"></i></a>
+                            <a class="dropdown-item" id="openSettings" href="#">Settings <i class="ri-settings-3-line float-right text-muted"></i></a>
                             <div class="dropdown-divider"></div>
                             <button class="dropdown-item refreshToken"><i class="ri-logout-circle-r-line float-right text-muted"></i></button>
                         </div>
@@ -121,19 +136,6 @@
                     <!-- Start profile content -->
                     <div>
                         <div class="px-4 pt-4">
-                            <div class="user-chat-nav float-right">
-                                <div class="dropdown">
-                                    <a href="javascript: void(0);" class="font-size-18 text-muted dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        <i class="ri-more-2-fill"></i>
-                                    </a>
-                                    <div class="dropdown-menu dropdown-menu-right">
-                                        <a class="dropdown-item" href="#">Edit</a>
-                                        <a class="dropdown-item" href="#"></a>
-                                        <div class="dropdown-divider"></div>
-                                        <a class="dropdown-item" href="#"></a>
-                                    </div>
-                                </div>
-                            </div>
                             <h4 class="mb-0">My Profile</h4>
                         </div>
 
@@ -143,7 +145,6 @@
                             </div>
 
                             <h5 class="font-size-16 mb-1 text-truncate clientUsername"></h5>
-                            <!-- <p class="text-muted text-truncate mb-1"><i class="ri-record-circle-fill font-size-10 text-success mr-1 d-inline-block"></i> Active</p> -->
                         </div>
                         <!-- End profile user -->
 
@@ -234,9 +235,6 @@
                         <div class="text-center border-bottom p-4">
                             <div class="mb-4 profile-user">
                                 <img src="" class="rounded-circle avatar-lg img-thumbnail botavatar" alt="">
-                                <button type="button" class="btn bg-light avatar-xs p-0 rounded-circle profile-photo-edit">
-                                        <i class="ri-pencil-fill"></i>
-                                    </button>
                             </div>
 
                             <h5 class="font-size-16 mb-1 text-truncate clientUsername"></h5>
@@ -294,147 +292,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <!-- end profile card 
-                                    <div class="card shadow-none border mb-2">
-                                        <a href="#profile-setting-privacycollapse" class="text-dark collapsed" data-toggle="collapse"
-                                                        aria-expanded="false"
-                                                        aria-controls="profile-setting-privacycollapse">
-                                            <div class="card-header" id="profile-setting-privacyheading">
-                                                <h5 class="font-size-14 m-0">
-                                                    Privacy
-                                                    <i class="mdi mdi-chevron-up float-right accor-plus-icon"></i>
-                                                </h5>
-                                            </div>
-                                        </a>
-                                        <div id="profile-setting-privacycollapse" class="collapse" aria-labelledby="profile-setting-privacyheading"
-                                                data-parent="#profile-setting-accordion">
-                                            <div class="card-body">
-                                                <div class="py-3">
-                                                    <div class="media align-items-center">
-                                                        <div class="media-body overflow-hidden">
-                                                            <h5 class="font-size-13 mb-0 text-truncate">Profile photo</h5>
-
-                                                        </div>
-                                                        <div class="dropdown ml-2">
-                                                            <button class="btn btn-light btn-sm dropdown-toggle w-sm" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                                Everyone <i class="mdi mdi-chevron-down"></i>
-                                                            </button>
-                                                            <div class="dropdown-menu dropdown-menu-right">
-                                                                <a class="dropdown-item" href="#">Everyone</a>
-                                                                <a class="dropdown-item" href="#">selected</a>
-                                                                <a class="dropdown-item" href="#">Nobody</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="py-3 border-top">
-                                                    <div class="media align-items-center">
-                                                        <div class="media-body overflow-hidden">
-                                                            <h5 class="font-size-13 mb-0 text-truncate">Last seen</h5>
-
-                                                        </div>
-                                                        <div class="ml-2">
-                                                            <div class="custom-control custom-switch">
-                                                                <input type="checkbox" class="custom-control-input" id="privacy-lastseenSwitch" checked>
-                                                                <label class="custom-control-label" for="privacy-lastseenSwitch"></label>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="py-3 border-top">
-                                                    <div class="media align-items-center">
-                                                        <div class="media-body overflow-hidden">
-                                                            <h5 class="font-size-13 mb-0 text-truncate">Status</h5>
-
-                                                        </div>
-                                                        <div class="dropdown ml-2">
-                                                            <button class="btn btn-light btn-sm dropdown-toggle w-sm" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                                Everyone <i class="mdi mdi-chevron-down"></i>
-                                                            </button>
-                                                            <div class="dropdown-menu dropdown-menu-right">
-                                                                <a class="dropdown-item" href="#">Everyone</a>
-                                                                <a class="dropdown-item" href="#">selected</a>
-                                                                <a class="dropdown-item" href="#">Nobody</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="py-3 border-top">
-                                                    <div class="media align-items-center">
-                                                        <div class="media-body overflow-hidden">
-                                                            <h5 class="font-size-13 mb-0 text-truncate">Read receipts</h5>
-
-                                                        </div>
-                                                        <div class="ml-2">
-                                                            <div class="custom-control custom-switch">
-                                                                <input type="checkbox" class="custom-control-input" id="privacy-readreceiptSwitch" checked>
-                                                                <label class="custom-control-label" for="privacy-readreceiptSwitch"></label>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                        
-                                                <div class="py-3 border-top">
-                                                    <div class="media align-items-center">
-                                                        <div class="media-body overflow-hidden">
-                                                            <h5 class="font-size-13 mb-0 text-truncate">Groups</h5>
-
-                                                        </div>
-                                                        <div class="dropdown ml-2">
-                                                            <button class="btn btn-light btn-sm dropdown-toggle w-sm" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                                Everyone <i class="mdi mdi-chevron-down"></i>
-                                                            </button>
-                                                            <div class="dropdown-menu dropdown-menu-right">
-                                                                <a class="dropdown-item" href="#">Everyone</a>
-                                                                <a class="dropdown-item" href="#">selected</a>
-                                                                <a class="dropdown-item" href="#">Nobody</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                        
-                                        </div>
-                                    </div>
-                                -->
-                                <!-- end Privacy card 
-
-                                    <div class="card shadow-none border mb-2">
-                                        <a href="#profile-setting-securitynoticollapse" class="text-dark collapsed" data-toggle="collapse"
-                                                        aria-expanded="false"
-                                                        aria-controls="profile-setting-securitynoticollapse">
-                                            <div class="card-header" id="profile-setting-securitynotiheading">
-                                                <h5 class="font-size-14 m-0">
-                                                    Security
-                                                    <i class="mdi mdi-chevron-up float-right accor-plus-icon"></i>
-                                                </h5>
-                                            </div>
-                                        </a>
-                                        <div id="profile-setting-securitynoticollapse" class="collapse" aria-labelledby="profile-setting-securitynotiheading"
-                                                data-parent="#profile-setting-accordion">
-                                            <div class="card-body">
-                        
-                                                <div>
-                                                    <div class="media align-items-center">
-                                                        <div class="media-body overflow-hidden">
-                                                            <h5 class="font-size-13 mb-0 text-truncate">Show security notification</h5>
-
-                                                        </div>
-                                                        <div class="ml-2">
-                                                            <div class="custom-control custom-switch">
-                                                                <input type="checkbox" class="custom-control-input" id="security-notificationswitch">
-                                                                <label class="custom-control-label" for="security-notificationswitch"></label>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div> -->
-                                <!-- end Security card -->
-
+                
                                 <div class="card shadow-none border mb-2">
                                     <a href="#profile-setting-helpcollapse" class="text-dark collapsed" data-toggle="collapse" aria-expanded="false" aria-controls="profile-setting-helpcollapse">
                                         <div class="card-header" id="profile-setting-helpheading">
@@ -515,76 +373,6 @@
                     <!-- start chat conversation -->
                     <div class="chat-conversation p-3 p-lg-4" data-simplebar="init">
                         <ul class="list-unstyled mb-0">
-                            <!--
-                                <li>
-                                    <div class="conversation-list">
-                                        <div class="chat-avatar">
-                                            <img src="assets/images/users/avatar-4.jpg" alt="">
-                                        </div>
-    
-                                        <div class="user-chat-content">
-                                            <div class="ctext-wrap">
-                                                <div class="ctext-wrap-content">
-                                                    <p class="mb-0">
-                                                        Good morning
-                                                    </p>
-                                                    <p class="chat-time mb-0"><i class="ri-time-line align-middle"></i> <span class="align-middle">10:00</span></p>
-                                                </div>
-                                                <div class="dropdown align-self-start">
-                                                    <a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                        <i class="ri-more-2-fill"></i>
-                                                    </a>
-                                                    <div class="dropdown-menu">
-                                                        <a class="dropdown-item" href="#">Copy <i class="ri-file-copy-line float-right text-muted"></i></a>
-                                                        <a class="dropdown-item" href="#">Save <i class="ri-save-line float-right text-muted"></i></a>
-                                                        <a class="dropdown-item" href="#">Forward <i class="ri-chat-forward-line float-right text-muted"></i></a>
-                                                        <a class="dropdown-item" href="#">Delete <i class="ri-delete-bin-line float-right text-muted"></i></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="conversation-name">Doris Brown</div>
-                                        </div>
-                                    </div>
-                                </li>
-    
-                                <li class="right">
-                                    <div class="conversation-list">
-                                        <div class="chat-avatar">
-                                            <img src="assets/images/users/avatar-1.jpg" alt="">
-                                        </div>
-    
-                                        <div class="user-chat-content">
-                                            <div class="ctext-wrap">
-                                                <div class="ctext-wrap-content">
-                                                    <p class="mb-0">
-                                                        Good morning, How are you? What about our next meeting?
-                                                    </p>
-                                                    <p class="chat-time mb-0"><i class="ri-time-line align-middle"></i> <span class="align-middle">10:02</span></p>
-                                                </div>
-                                                    
-                                                <div class="dropdown align-self-start">
-                                                    <a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                        <i class="ri-more-2-fill"></i>
-                                                    </a>
-                                                    <div class="dropdown-menu">
-                                                        <a class="dropdown-item" href="#">Copy <i class="ri-file-copy-line float-right text-muted"></i></a>
-                                                        <a class="dropdown-item" href="#">Save <i class="ri-save-line float-right text-muted"></i></a>
-                                                        <a class="dropdown-item" href="#">Forward <i class="ri-chat-forward-line float-right text-muted"></i></a>
-                                                        <a class="dropdown-item" href="#">Delete <i class="ri-delete-bin-line float-right text-muted"></i></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="conversation-name">Patricia Smith</div>
-                                        </div>
-                                    </div>
-                                </li>
-                            
-                                <li> 
-                                    <div class="chat-day-title">
-                                        <span class="title">Today</span>
-                                    </div>
-                                </li>
-                            -->
                             <div class="scrollable" id="chat">
                         </ul>
                         </div>
@@ -684,6 +472,7 @@
         <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
         <script src="assets/libs/simplebar/simplebar.min.js"></script>
         <script src="assets/libs/node-waves/waves.min.js"></script>
+        <script src="assets/libs/noty/noty.js"></script>
 
         <!-- Magnific Popup-->
         <script src="assets/libs/magnific-popup/jquery.magnific-popup.min.js"></script>
@@ -703,6 +492,7 @@
         <script type="text/javascript" src="./assets/js/panel.js"></script>
 
         <script>
+
         </script>
 
 </body>

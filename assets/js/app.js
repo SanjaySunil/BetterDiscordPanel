@@ -16,3 +16,16 @@
         "disabled" !== a("#bootstrap-style").attr("disabled") ? (a("#bootstrap-dark-style").attr("disabled", !1), a("#bootstrap-style").attr("disabled", !0), a("#app-dark-style").attr("disabled", !1), a("#app-style").attr("disabled", !0)) : (a("#bootstrap-dark-style").attr("disabled", !0), a("#bootstrap-style").attr("disabled", !1), a("#app-dark-style").attr("disabled", !0), a("#app-style").attr("disabled", !1))
     }), Waves.init()
 }(jQuery);
+
+$(document).ready(function () { 
+    new Noty({
+        type: 'info',
+        theme:"nest",
+        closeWith: ['button'],
+        text: 'Welcome to BetterDiscordPanel by D3VSJ! Please star us on GitHub. It would be appreciated! :)',
+        dismissQueue: true, 
+    }).show()   
+});
+
+
+
