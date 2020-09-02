@@ -30,7 +30,6 @@
 ## Credits
 
 * Discord.js
-* Notavone’s Discord Panel
 
 ## License
 
