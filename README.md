@@ -33,7 +33,7 @@
 
 ## License
 
-<a href=“”>GPL-3.0</>
+<a href="">GPL-3.0</a>
 
 ---
 
