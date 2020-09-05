@@ -20,7 +20,7 @@
 $(document).ready(function () { 
     new Noty({
         type: 'info',
-        theme:"nest",
+        theme: "nest",
         closeWith: ['button'],
         text: 'Welcome to BetterDiscordPanel by D3VSJ! Please star us on GitHub. It would be appreciated! :)',
         dismissQueue: true, 
