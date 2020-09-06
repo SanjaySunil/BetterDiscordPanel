@@ -33,7 +33,7 @@
 
 ## License
 
-<a href="">GPL-3.0</a>
+<a href="https://github.com/D3VSJ/BetterDiscordPanel/blob/master/LICENSE">GPL-3.0</a>
 
 ---
 
