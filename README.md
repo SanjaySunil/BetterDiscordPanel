@@ -8,7 +8,7 @@
   <h3 align="center">BetterDiscordPanel</h3>
 
   <p align="center">
-    An awesome README template to jumpstart your projects!
+A Discord Panel that allows you control your discord bot with ease!
     <br />
     <a href="https://github.com/D3VSJ/BetterDiscordPanel"><strong>Explore the docs »</strong></a>
     <br />
