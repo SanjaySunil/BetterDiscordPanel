@@ -8,7 +8,7 @@
   <h3 align="center">BetterDiscordPanel</h3>
 
   <p align="center">
-A Discord Panel that allows you control your discord bot with ease!
+Discord Messaging Panel made to make bot management easy.
     <br />
     <a href="https://github.com/D3VSJ/BetterDiscordPanel"><strong>Explore the docs »</strong></a>
     <br />
@@ -25,7 +25,6 @@ A Discord Panel that allows you control your discord bot with ease!
 ## Table of Contents
 
 * [About the Project](#about-the-project)
-  * [Built With](#built-with)
 * [Getting Started](#getting-started)
   * [Prerequisites](#prerequisites)
   * [Installation](#installation)
@@ -34,6 +33,7 @@ A Discord Panel that allows you control your discord bot with ease!
 * [Contributing](#contributing)
 * [License](#license)
 * [Contact](#contact)
+* [Built With](#built-with)
 * [Acknowledgements](#acknowledgements)
 
 <!-- ABOUT THE PROJECT -->
@@ -41,7 +41,7 @@ A Discord Panel that allows you control your discord bot with ease!
 
 <img src="assets/images/previews/preview.png" alt="Logo" width="100%" height="100%">
 
-<p align="center">BetterDiscordPanel is my new and first discord panel project made to suit the needs for those who need it.</p>
+<p align="center">BetterDiscordPanel is a brand new panel made to make discord bot management easy.</p>
 
 **Current Features:**
 * Messaging Interface with Discord Design
