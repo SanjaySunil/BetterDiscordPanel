@@ -1,14 +1,8 @@
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![GPL-3.0 License][license-shield]][license-url]
-
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
   <a href="https://github.com/D3VSJ/BetterDiscordPanel">
-    <img src="assets/images/betterdiscordpanel.png" alt="Logo" width="80" height="80">
+    <img src="assets/images/betterdiscordpanel.png" alt="Logo" width="128" height="128">
   </a>
 
   <h3 align="center">BetterDiscordPanel</h3>
