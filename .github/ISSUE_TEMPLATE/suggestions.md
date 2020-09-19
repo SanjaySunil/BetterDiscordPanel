@@ -6,9 +6,10 @@ labels: Suggestion - Please use Discord
 assignees: ''
 
 ---
-<h6>This is the template for your suggestions! User feedback is important to us and we want to make sure this app makes as many of you happy
+
+<!--This is the template for your suggestions! User feedback is important to us and we want to make sure this app makes as many of you happy
 Disclaimer: We would appreciate it if you don't post the suggestions here but on our discord server since we're going to see it faster and try to do it if we can or think it's a good idea
-Discord server link: https://discord.gg/5SAVPAj</h6>
+Discord server link: https://discord.gg/5SAVPAj</h6> -->
 
 #### Suggestion Type
 <!-- New Feature or Change -->
