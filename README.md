@@ -39,8 +39,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
+<img src="assets/images/previews/preview.png" alt="Logo" width="100%" height="100%">
 BetterDiscordPanel is my new and first discord panel project made to suit the needs for those who need it. 
 
 Current Features:
