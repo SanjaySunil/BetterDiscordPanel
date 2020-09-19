@@ -22,7 +22,7 @@ $(document).ready(function () {
         type: 'info',
         theme: "nest",
         closeWith: ['button'],
-        text: 'Welcome to BetterDiscordPanel by D3VSJ! Please star us on GitHub. It would be appreciated! :)',
+        text: 'Welcome to BetterDiscordPanel!<iframe src="https://ghbtns.com/github-btn.html?user=D3VSJ&repo=BetterDiscordPanel&type=star&count=true" frameborder="0" scrolling="0" width="150" height="20" title="GitHub"></iframe>',
         dismissQueue: true, 
     }).show()   
 });

@@ -14,18 +14,19 @@
 
 <p align="center">
   <a href="#key-features">Key Features</a> •
-    <a href=“#credits”>Credits</a> •
+    <a href="#credits>Credits</a> •
   <a href="#license">License</a>
 </p>
 
 ## Key Features
 
 - Messaging Panel
-    * Message through DMs, Groups and Servers
+
 - Discord Design
-    * Light and Dark theme to personalize your panel
+
 - View Server Details
-    * Fetch full details of any server including Members, Roles, Channels ...
+
+- View User Details
 
 ## Credits
 

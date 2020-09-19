@@ -18,7 +18,7 @@ const locales = {
         },
         "buttons": {
             "clearLastMessages": "Clear Last Messages",
-            "editToken": "Edit token",
+            "editToken": "Login/Logout",
             "refreshChat": "Refresh chat",
             "changeLanguage": "Change language",
             "send": "Send",
@@ -46,9 +46,9 @@ const locales = {
             "missingPermissions": "ERROR : MISSING PERMISSIONS"
         },
         "token": {
-            "prompt": "Please enter your discord bot token",
+            "prompt": "Enter your Discord Bot Token to Login:",
             "confirmation": "Are you sure ?",
-            "invalid": "No token provided or token is invalid"
+            "invalid": "Token is Invalid. Please try again."
         },
         "messageType": {
             "serverJoin": "joined the server",
