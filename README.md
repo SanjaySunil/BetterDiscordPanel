@@ -1,44 +1,132 @@
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![GPL-3.0 License][license-shield]][license-url]
 
-<h1 align="center">
-  <br>
-  <a href="https://github.com/D3VSJ/BetterDiscordPanel"><img src="./assets/images/betterdiscordpanel.png" alt="Logo" width="200"></a>
-  <br>
-	BetterDiscordPanel
-  <br>
-</h1>
-
-<h4 align="center">A Discord Panel that allows you control your discord bot with ease!
-
+<!-- PROJECT LOGO -->
+<br />
 <p align="center">
+  <a href="https://github.com/D3VSJ/BetterDiscordPanel">
+    <img src="assets/images/betterdiscordpanel.png" alt="Logo" width="80" height="80">
+  </a>
+
+  <h3 align="center">BetterDiscordPanel</h3>
+
+  <p align="center">
+    An awesome README template to jumpstart your projects!
+    <br />
+    <a href="https://github.com/D3VSJ/BetterDiscordPanel"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="https://github.com/D3VSJ/BetterDiscordPanel">View Demo</a>
+    ·
+    <a href="https://github.com/D3VSJ/BetterDiscordPanel/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/D3VSJ/BetterDiscordPanel/suggestions">Request Feature</a>
+  </p>
 </p>
 
-<p align="center">
-  <a href="#key-features">Key Features</a> •
-    <a href="#credits>Credits</a> •
-  <a href="#license">License</a>
-</p>
+<!-- TABLE OF CONTENTS -->
+## Table of Contents
 
-## Key Features
+* [About the Project](#about-the-project)
+  * [Built With](#built-with)
+* [Getting Started](#getting-started)
+  * [Prerequisites](#prerequisites)
+  * [Installation](#installation)
+* [Usage](#usage)
+* [Roadmap](#roadmap)
+* [Contributing](#contributing)
+* [License](#license)
+* [Contact](#contact)
+* [Acknowledgements](#acknowledgements)
 
-- Messaging Panel
+<!-- ABOUT THE PROJECT -->
+## About The Project
 
-- Discord Design
+[![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-- View Server Details
+BetterDiscordPanel is my new and first discord panel project made to suit the needs for those who need it. 
 
-- View User Details
+Current Features:
+* Messaging Interface with Discord Design
+* Server Statistics
+* User Profile Statistics 
 
-## Credits
+Coming Soon:
+* User Profile Editing
+* Electron Desktop Application
+* Website with Documentation
 
-* Discord.js
+A list of commonly used resources that I find helpful are listed in the acknowledgements.
 
+### Built With
+
+* [Discord.JS]()
+* [JQuery](https://jquery.com)
+
+## Getting Started
+
+This project does not run on any servers and can be self hosted. Simply open ```index.html``` to get started.
+
+### Prerequisites
+
+No Prerequisites yet, however the Electron Desktop version will require some soon.
+
+### Installation
+
+1. Clone the Repo
+2. Clone the repo
+```sh
+git clone https://github.com/D3VSJ/BetterDiscordPanel
+```
+3. Open ```index.html```
+
+4. Add your token by selected the profile on the bottom left corner and click Login/Logout.
+
+5. Start using BetterDiscordPanel!
+
+<!-- USAGE EXAMPLES 
+## Usage
+
+Usage info here 
+
+_For more examples, please refer to the [Documentation](https://example.com)_
+
+--> 
+
+<!-- ROADMAP -->
+## Roadmap
+
+See the [open issues](https://github.com/D3VSJ/BetterDiscordPanel/issues) for a list of proposed features (and known issues).
+
+<!-- CONTRIBUTING -->
+## Contributing
+
+Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+<!-- LICENSE -->
 ## License
 
-<a href="https://github.com/D3VSJ/BetterDiscordPanel/blob/master/LICENSE">GPL-3.0</a>
+Distributed under the GPL-3.0 License. See `LICENSE` for more information.
+
+<!-- ACKNOWLEDGEMENTS -->
+## Acknowledgements
+* [Discord JS]()
+* [JQuery](https://jquery.com)
 
 ---
 
 <div align="center">
+
+## Contact 
 
 Website : [sanjaysunil.me](https://sanjaysunil.me) &nbsp;&middot;&nbsp;
 Email : [D3VSJ@protonmail.com](mailto:D3VSJprotonmail.com) &nbsp;&middot;&nbsp;
