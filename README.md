@@ -40,24 +40,21 @@
 ## About The Project
 
 <img src="assets/images/previews/preview.png" alt="Logo" width="100%" height="100%">
-BetterDiscordPanel is my new and first discord panel project made to suit the needs for those who need it. 
 
-Current Features:
+<p align="center">BetterDiscordPanel is my new and first discord panel project made to suit the needs for those who need it.</p>
+
+**Current Features:**
 * Messaging Interface with Discord Design
 * Server Statistics
 * User Profile Statistics 
 
-Coming Soon:
+**Coming Soon:**
 * User Profile Editing
 * Electron Desktop Application
 * Website with Documentation
 
-A list of commonly used resources that I find helpful are listed in the acknowledgements.
+<p>A list of commonly used resources that I find helpful are listed in the acknowledgements.</p>
 
-### Built With
-
-* [Discord.JS]()
-* [JQuery](https://jquery.com)
 
 ## Getting Started
 
@@ -115,6 +112,10 @@ Distributed under the GPL-3.0 License. See `LICENSE` for more information.
 * [Discord JS]()
 * [JQuery](https://jquery.com)
 
+### Built With
+
+* [Discord.JS]()
+* [JQuery](https://jquery.com)
 ---
 
 <div align="center">
