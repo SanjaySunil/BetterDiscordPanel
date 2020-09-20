@@ -10,14 +10,14 @@
   <p align="center">
 Discord Messaging Panel made to make bot management easy.
     <br />
-    <a href="https://github.com/D3VSJ/BetterDiscordPanel"><strong>Explore the docs »</strong></a>
+    <!-- <a href="https://github.com/D3VSJ/BetterDiscordPanel"><strong>Explore the docs »</strong></a> -->
     <br />
     <br />
     <a href="https://github.com/D3VSJ/BetterDiscordPanel">View Demo</a>
     ·
-    <a href="https://github.com/D3VSJ/BetterDiscordPanel/issues">Report Bug</a>
+    <a href="https://github.com/D3VSJ/BetterDiscordPanel/issues/new?assignees=&labels=Bug&template=bug_report.md&title=%5BBUG%5D">Report Bug</a>
     ·
-    <a href="https://github.com/D3VSJ/BetterDiscordPanel/suggestions">Request Feature</a>
+    <a href="https://github.com/D3VSJ/BetterDiscordPanel/issues/new?assignees=&labels=Suggestions&template=suggestions.md&title=%5BSUGGESTION%5D">Request Feature</a>
   </p>
 </p>
 
@@ -28,13 +28,12 @@ Discord Messaging Panel made to make bot management easy.
 * [Getting Started](#getting-started)
   * [Prerequisites](#prerequisites)
   * [Installation](#installation)
-* [Usage](#usage)
 * [Roadmap](#roadmap)
 * [Contributing](#contributing)
 * [License](#license)
-* [Contact](#contact)
 * [Built With](#built-with)
 * [Acknowledgements](#acknowledgements)
+* [Contact](#contact)
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
@@ -53,29 +52,25 @@ Discord Messaging Panel made to make bot management easy.
 * Electron Desktop Application
 * Website with Documentation
 
-<p>A list of commonly used resources that I find helpful are listed in the acknowledgements.</p>
-
-
 ## Getting Started
 
 This project does not run on any servers and can be self hosted. Simply open ```index.html``` to get started.
 
 ### Prerequisites
 
-No Prerequisites yet, however the Electron Desktop version will require some soon.
+No prerequisites yet, however the Electron Desktop version will require some soon.
 
 ### Installation
 
-1. Clone the Repo
-2. Clone the repo
+1. Clone the repo
 ```sh
 git clone https://github.com/D3VSJ/BetterDiscordPanel
 ```
-3. Open ```index.html```
+2. Open ```index.html```
 
-4. Add your token by selected the profile on the bottom left corner and click Login/Logout.
+3. Add your token by selected the profile image on the bottom left corner and click Login/Logout or enter token when prompted.
 
-5. Start using BetterDiscordPanel!
+4. Start using BetterDiscordPanel!
 
 <!-- USAGE EXAMPLES 
 ## Usage
@@ -109,12 +104,12 @@ Distributed under the GPL-3.0 License. See `LICENSE` for more information.
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
-* [Discord JS]()
+* [Discord JS](https://github.com/discordjs/discord.js)
 * [JQuery](https://jquery.com)
 
 ### Built With
 
-* [Discord.JS]()
+* [Discord.JS](https://github.com/discordjs/discord.js)
 * [JQuery](https://jquery.com)
 ---
 
