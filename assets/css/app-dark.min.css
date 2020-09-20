@@ -677,6 +677,10 @@
     box-shadow: 0 2px 4px rgba(15, 34, 58, .12)
 }
 
+#name {
+    text-align: center;
+}
+
 @media (max-width:991.98px) {
     .side-menu {
         position: fixed;

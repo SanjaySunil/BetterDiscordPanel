@@ -788,6 +788,10 @@ inviteBtn.click(() => {
   }
 });
 
+$('.000').replaceWith('Copyright © 2020');
+$('.001').replaceWith('Sanjay Sunil');
+$('.002').replaceWith('All rights reserved.');
+
 refreshChat.click(() => {
   updateChannel();
 });

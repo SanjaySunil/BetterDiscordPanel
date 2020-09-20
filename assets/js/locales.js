@@ -46,7 +46,7 @@ const locales = {
             "missingPermissions": "ERROR : MISSING PERMISSIONS"
         },
         "token": {
-            "prompt": "Enter your Discord Bot Token to Login:",
+            "prompt": "Enter your Discord Bot Token to Login: ",
             "confirmation": "Are you sure ?",
             "invalid": "Token is Invalid. Please try again."
         },

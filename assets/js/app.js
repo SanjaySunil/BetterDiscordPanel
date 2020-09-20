@@ -24,6 +24,8 @@
  */
 
 $(document).ready(function () { 
+    $('.preloader').fadeOut(2500, function () {
+    });
     new Noty({
         type: 'info',
         theme: "nest",
@@ -32,6 +34,11 @@ $(document).ready(function () {
         dismissQueue: true, 
     }).show()   
 });
+
+$('.000').replaceWith('Copyright © 2020');
+$('.001').replaceWith('Sanjay Sunil');
+$('.002').replaceWith('All rights reserved.');
+
 
 
 

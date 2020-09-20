@@ -14,6 +14,16 @@
   --contentColor: rgb(39, 39, 41);
 }
 
+a {
+  text-decoration: none;
+  transition: 0.25s;
+}
+
+a:hover {
+  transition: 0.25s;
+  color: #fff;
+}
+
 body {
   background-color: #2F3136;
   overflow: hidden;
@@ -424,3 +434,56 @@ input:checked + .slider::before {
   right: 45px;
   font-size: 60px;
 }
+
+.preloader {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 10000;
+	background: #000;
+	text-align: center;
+	padding-top: calc(50vh - 45px);
+	transition: .25s
+  }
+
+  @keyframes fadeIn { 
+	from { opacity: 0.25; } 
+  }
+  
+  .preloader h1 {
+	font-size: 50px;
+	animation: fadeIn 1s infinite alternate;
+  }
+  
+  .preloader img {
+	width: 400px;
+	height: auto;
+	opacity: .9;
+	animation: loader 1.2s linear infinite
+  }
+
+  .preloader p {
+	color: #fff;
+	padding-top: 10px;
+	font-size: 20px;
+	font-weight: 300;
+	letter-spacing: 1px
+  }
+
+  @keyframes loader {
+	0% {
+	  opacity: .3
+	}
+
+	50% {
+	  opacity: .8
+	}
+
+	100% {
+	  opacity: .3
+	}
+  }

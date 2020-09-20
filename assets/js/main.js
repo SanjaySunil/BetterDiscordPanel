@@ -35,9 +35,10 @@ if (
   localStorage.getItem("token") === "" ||
   localStorage.getItem("token") === null
 ) {
-  token = prompt(localeFile.token.prompt, "");
-  localStorage.setItem("token", token);
+    token = prompt(localeFile.token.prompt, "");
+    localStorage.setItem("token", token);
 }
+
 token = localStorage.getItem("token");
 
 const client = new Discord.Client();
@@ -87,6 +88,10 @@ function embedLinks(element) {
   html += "</div>";
   return html;
 }
+
+$('.000').replaceWith('Copyright © 2020');
+$('.001').replaceWith('Sanjay Sunil');
+$('.002').replaceWith('All rights reserved.');
 
 function contentReplacement(content, links) {
   // noinspection HtmlUnknownTarget
