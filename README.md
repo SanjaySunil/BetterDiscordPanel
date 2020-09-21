@@ -13,8 +13,6 @@ Discord Messaging Panel made to make bot management easy.
     <!-- <a href="https://github.com/D3VSJ/BetterDiscordPanel"><strong>Explore the docs »</strong></a> -->
     <br />
     <br />
-    <a href="https://github.com/D3VSJ/BetterDiscordPanel">View Demo</a>
-    ·
     <a href="https://github.com/D3VSJ/BetterDiscordPanel/issues/new?assignees=&labels=Bug&template=bug_report.md&title=%5BBUG%5D">Report Bug</a>
     ·
     <a href="https://github.com/D3VSJ/BetterDiscordPanel/issues/new?assignees=&labels=Suggestions&template=suggestions.md&title=%5BSUGGESTION%5D">Request Feature</a>
