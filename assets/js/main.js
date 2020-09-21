@@ -41,7 +41,10 @@ if (
 
 token = localStorage.getItem("token");
 
-const client = new Discord.Client();
+const client = new Discord.Client({
+  messageCacheMaxSize: 5,
+  fetchAllMembers: false
+});
 client.login(token).catch(() => {
   alert(localeFile.token.invalid);
 });

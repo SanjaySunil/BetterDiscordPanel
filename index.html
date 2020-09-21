@@ -5,8 +5,7 @@
     <meta charset="utf-8" />
     <title>BetterDiscordPanel</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-    content="BetterDiscordPanel, the best discord panel for developers." />
+    <meta name="description" content="BetterDiscordPanel, the best discord panel for developers." />
     <meta name="author" content="Sanjay Sunil">
     <meta name="author:username" content="D3VSJ" />
     <meta property="og:site_name" content="BetterDiscordPanel" />
@@ -32,7 +31,6 @@
     <link rel="stylesheet" href="assets/libs/noty/noty.css">
     <link rel="stylesheet" href="assets/libs/noty/nest.css">
 
-
     <!-- Bootstrap Css -->
     <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
     <link href="assets/css/bootstrap-dark.min.css" id="bootstrap-dark-style" rel="stylesheet" type="text/css" />
@@ -49,9 +47,12 @@
 <body>
     <!-- Preloader -->
     <div class="preloader">
-        <div id="loader"><h1>BetterDiscordPanel</h1></div>
+        <div id="loader">
+            <h1>BetterDiscordPanel</h1>
+        </div>
     </div>
-    <!-- ./ Preloader -->
+
+    <!-- App -->
 
     <div class="layout-wrapper d-lg-flex">
 
@@ -71,7 +72,6 @@
                 </a>
             </div>
 
-            <!-- Start side-menu nav -->
             <div class="flex-lg-column my-auto">
                 <ul class="nav nav-pills side-menu-nav justify-content-center" role="tablist">
                     <li class="nav-item" data-toggle="tooltip" data-trigger="hover" data-placement="top" title="Profile">
@@ -84,6 +84,13 @@
                             <i class="ri-message-3-line"></i>
                         </a>
                     </li>
+                    <!--
+                    <li class="nav-item" data-toggle="tooltip" data-trigger="hover" data-placement="top" title="Stats">
+                        <a class="nav-link active" id="pills-stats-tab" data-toggle="pill" href="#pills-stats" role="tab">
+                            <i class="ri-bar-chart-2-line"></i>
+                        </a>
+                    </li>
+                        -->
                     <li class="nav-item" data-toggle="tooltip" data-trigger="hover" data-placement="top" title="Settings">
                         <a class="nav-link" id="pills-setting-tab" data-toggle="pill" href="#pills-setting" role="tab">
                             <i class="ri-settings-2-line"></i>
@@ -99,10 +106,10 @@
                     </li>
                 </ul>
             </div>
-            <!-- end side-menu nav -->
 
             <div class="flex-lg-column d-none d-lg-block">
                 <ul class="nav side-menu-nav justify-content-center">
+
                     <!-- Fix Light theme Button and themes later 
                     <li class="nav-item">
                         <a class="nav-link" id="light-dark" href="#" data-toggle="tooltip" data-trigger="hover" data-placement="right" title="Dark / Light Mode">
@@ -121,17 +128,12 @@
                     </li>
                 </ul>
             </div>
-            <!-- Side menu user -->
         </div>
-        <!-- end left sidebar-menu -->
 
-        <!-- start chat-leftsidebar -->
         <div class="chat-leftsidebar mr-lg-1">
 
             <div class="tab-content">
-                <!-- Start Profile tab-pane -->
                 <div class="tab-pane" id="pills-user" role="tabpanel" aria-labelledby="pills-user-tab">
-                    <!-- Start profile content -->
                     <div>
                         <div class="px-4 pt-4">
                             <h4 class="mb-0">My Profile</h4>
@@ -139,14 +141,12 @@
 
                         <div class="text-center p-4 border-bottom">
                             <div class="mb-4">
-                                <img src="assets/images/discord_defaults_avatars/0.png" class="rounded-circle avatar-lg img-thumbnail botavatar" alt="">
+                                <img src="assets/images/discord_defaults_avatars/0.png" class="rounded-circle avatar-lg img-thumbnail bot-avatar" alt="">
                             </div>
 
-                            <h5 class="font-size-16 mb-1 text-truncate clientUsername"></h5>
+                            <h5 class="bot-name font-size-16 mb-1 text-truncate"></h5>
                         </div>
-                        <!-- End profile user -->
 
-                        <!-- Start user-profile-desc -->
                         <div class="p-4 user-profile-desc" data-simplebar>
                             <div id="profile-user-accordion-1" class="custom-accordion">
                                 <div class="card shadow-none border mb-2">
@@ -164,22 +164,37 @@
 
                                             <div>
                                                 <p class="text-muted mb-1">Name</p>
-                                                <h5 class="font-size-14 clientUsername"></h5>
+                                                <h5 class="font-size-14 bot-name"></h5>
                                             </div>
 
                                             <div class="mt-4">
                                                 <p class="text-muted mb-1">Discrim</p>
-                                                <h5 class="font-size-14 clientDiscriminator"></h5>
+                                                <h5 class="font-size-14 bot-discriminator"></h5>
                                             </div>
 
                                             <div class="mt-4">
                                                 <p class="text-muted mb-1">UserID</p>
-                                                <h5 class="font-size-14 clientUserid"></h5>
+                                                <h5 class="font-size-14 bot-userid"></h5>
+                                            </div>
+
+                                            <div class="mt-4">
+                                                <p class="text-muted mb-1">Guilds</p>
+                                                <span class="font-size-14" id="bot-guilds"></span>
+                                            </div>
+
+                                            <div class="mt-4">
+                                                <p class="text-muted mb-1">Channels</p>
+                                                <h5 class="font-size-14" id="bot-channels"></h5>
+                                            </div>
+
+                                            <div class="mt-4">
+                                                <p class="text-muted mb-1">User Size</p>
+                                                <h5 class="font-size-14 mb-0" id="bot-users"></h5>
                                             </div>
 
                                             <div class="mt-4">
                                                 <p class="text-muted mb-1">Created At</p>
-                                                <h5 class="font-size-14 mb-0 bot-createdat"></h5>
+                                                <h5 class="font-size-14 mb-0 bot-createdAt"></h5>
                                             </div>
                                         </div>
                                     </div>
@@ -191,33 +206,24 @@
                                                 <div class="py-3">
                                                     <h5 class="font-size-13 mb-0 000"></h5><br>
                                                     <h5 class="font-size-13 mb-0 001"></h5><br>
-                                                    <h5 class="font-size-13 mb-0 002"></h5>                         
+                                                    <h5 class="font-size-13 mb-0 002"></h5>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <!-- End About card -->
                             </div>
-                            <!-- end profile-user-accordion -->
 
                         </div>
-                        <!-- end user-profile-desc -->
                     </div>
-                    <!-- End profile content -->
                 </div>
-                <!-- End Profile tab-pane -->
 
-                <!-- Start chats tab-pane -->
                 <div class="tab-pane fade show active" id="pills-chat" role="tabpanel" aria-labelledby="pills-chat-tab">
-                    <!-- Start chats content -->
                     <div>
                         <div class="px-4 pt-4">
                             <h4 class="mb-4 header guildName header guildName">Chats</h4>
                         </div>
-                        <!-- .p-4 -->
 
-                        <!-- Start chat-message-list -->
                         <div class="px-2">
                             <div class="chat-message-list">
                                 <ul class="list-unstyled chat-list chat-user-list">
@@ -235,7 +241,7 @@
                                                 <div class="py-3">
                                                     <h5 class="font-size-13 mb-0 000"></h5><br>
                                                     <h5 class="font-size-13 mb-0 001"></h5><br>
-                                                    <h5 class="font-size-13 mb-0 002"></h5>                         
+                                                    <h5 class="font-size-13 mb-0 002"></h5>
                                                 </div>
                                             </div>
                                         </div>
@@ -243,15 +249,10 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- End chat-message-list -->
                     </div>
-                    <!-- Start chats content -->
                 </div>
-                <!-- End chats tab-pane -->
 
-                <!-- Start settings tab-pane -->
                 <div class="tab-pane" id="pills-setting" role="tabpanel" aria-labelledby="pills-setting-tab">
-                    <!-- Start Settings content -->
                     <div>
                         <div class="px-4 pt-4">
                             <h4 class="mb-0">Settings</h4>
@@ -259,10 +260,10 @@
 
                         <div class="text-center border-bottom p-4">
                             <div class="mb-4 profile-user">
-                                <img src="assets/images/discord_defaults_avatars/0.png" class="rounded-circle avatar-lg img-thumbnail botavatar" alt="">
+                                <img src="assets/images/discord_defaults_avatars/0.png" class="rounded-circle avatar-lg img-thumbnail bot-avatar" alt="">
                             </div>
 
-                            <h5 class="font-size-16 mb-1 text-truncate clientUsername"></h5>
+                            <h5 class="bot-name font-size-16 mb-1 text-truncate"></h5>
                             <div class="dropdown d-inline-block mb-1">
                                 <!--
                                     <a class="text-muted dropdown-toggle pb-1 d-block" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -277,9 +278,7 @@
                                 -->
                             </div>
                         </div>
-                        <!-- End profile user -->
 
-                        <!-- Start User profile description -->
                         <div class="p-4 user-profile-desc" data-simplebar>
 
                             <div id="profile-setting-accordion" class="custom-accordion">
@@ -302,17 +301,38 @@
 
                                             <div>
                                                 <p class="text-muted mb-1">Name</p>
-                                                <h5 class="font-size-14 clientUsername"></h5>
+                                                <h5 class="font-size-14 bot-name"></h5>
                                             </div>
 
                                             <div class="mt-4">
                                                 <p class="text-muted mb-1">Discrim</p>
-                                                <h5 class="font-size-14 clientDiscriminator"></h5>
+                                                <h5 class="font-size-14 bot-discriminator"></h5>
                                             </div>
 
                                             <div class="mt-4">
                                                 <p class="text-muted mb-1">UserID</p>
-                                                <h5 class="font-size-14 clientUserid"></h5>
+                                                <h5 class="bot-userid font-size-14"></h5>
+                                            </div>
+
+                                            <div class="mt-4">
+                                                <p class="text-muted mb-1">Guilds</p>
+                                                <span class="bot-guilds"></span>
+                                            </div>
+
+                                            <div class="mt-4">
+                                                <p class="text-muted mb-1">Channels</p>
+                                                <h5 class="bot-channels">
+                                                    </span>
+                                            </div>
+
+                                            <div class="mt-4">
+                                                <p class="text-muted mb-1">User Size</p>
+                                                <h5 class="bot-users font-size-14"></h5>
+                                            </div>
+
+                                            <div class="mt-4">
+                                                <p class="text-muted mb-1">Created At</p>
+                                                <h5 class="font-size-14 mb-0 bot-createdAt"></h5>
                                             </div>
                                         </div>
                                     </div>
@@ -342,30 +362,20 @@
                                             <div class="py-3">
                                                 <h5 class="font-size-13 mb-0 000"></h5><br>
                                                 <h5 class="font-size-13 mb-0 001"></h5><br>
-                                                <h5 class="font-size-13 mb-0 002"></h5>                         
+                                                <h5 class="font-size-13 mb-0 002"></h5>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <!-- end profile-setting-accordion -->
                         </div>
-                        <!-- End User profile description -->
                     </div>
-                    <!-- Start Settings content -->
                 </div>
-                <!-- End settings tab-pane -->
             </div>
-            <!-- end tab content -->
-
         </div>
-        <!-- end chat-leftsidebar -->
 
-        <!-- Start User chat -->
         <div class="user-chat w-100">
             <div class="d-lg-flex">
-
-                <!-- start chat conversation section -->
                 <div class="w-100">
                     <div class="p-3 p-lg-4 border-bottom">
                         <div class="row align-items-center">
@@ -395,17 +405,13 @@
                             </div>
                         </div>
                     </div>
-                    <!-- end chat user head -->
 
-                    <!-- start chat conversation -->
                     <div class="chat-conversation p-3 p-lg-4" data-simplebar="init">
                         <ul class="list-unstyled mb-0">
                             <div class="scrollable" id="chat">
                         </ul>
                         </div>
-                        <!-- end chat conversation end -->
 
-                        <!-- start chat input section -->
                         <div class="p-3 p-lg-4 border-top mb-0">
                             <div class="row no-gutters">
                                 <div class="col">
@@ -437,11 +443,8 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- end chat input section -->
                     </div>
-                    <!-- end chat conversation section -->
 
-                    <!-- start User profile detail sidebar -->
                     <div class="user-profile-sidebar">
                         <div class="px-3 px-lg-4 pt-3 pt-lg-4">
                             <div class="user-chat-nav text-right">
@@ -458,9 +461,7 @@
 
                             <h5 class="font-size-16 mb-1 text-truncate guildNameNoPic"></h5>
                         </div>
-                        <!-- End profile user -->
 
-                        <!-- Start user-profile-desc -->
                         <div class="p-4 user-profile-desc" data-simplebar>
                             <div id="profile-user-accordion" class="custom-accordion">
                                 <div class="card shadow-none border mb-2">
@@ -481,18 +482,12 @@
                                         </div>
                                     </div>
                                 </div>
-                                <!-- End About card -->
                             </div>
-                            <!-- end profile-user-accordion -->
                         </div>
-                        <!-- end user-profile-desc -->
                     </div>
-                    <!-- end User profile detail sidebar -->
                 </div>
             </div>
-            <!-- End User chat -->
         </div>
-        <!-- end  layout wrapper -->
 
         <!-- JAVASCRIPT -->
         <script src="assets/libs/jquery/jquery.min.js"></script>
@@ -514,12 +509,12 @@
 
         <!-- Discord JS -->
         <script type="text/javascript" src="./assets/js/discord.12.1.1.min.js"></script>
+
+        <!-- App Scripts -->
         <script type="text/javascript" src="./assets/js/locales.js"></script>
         <script type="text/javascript" src="./assets/js/main.js"></script>
         <script type="text/javascript" src="./assets/js/panel.js"></script>
-
         <script>
-
         </script>
 
 </body>

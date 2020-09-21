@@ -16,7 +16,6 @@ const lastMessages = $("#lastMessages");
 const clearChat = $("#clearChat");
 const send = $("#send");
 const guildName = $(".guildName");
-const botavatar = $(".botavatar");
 const guildNameNoPic = $(".guildNameNoPic");
 const leaveGuild = $("#leaveGuild");
 const inviteBtn = $("#inviteBtn");
@@ -600,12 +599,16 @@ client.on("message", (message) => {
 
 client.on("ready", () => {
   lastMessages.html(localStorage.getItem("lastMessages") || "");
-  $(".clientUsername").html(client.user.username);
-  $(".clientDiscriminator").html("#" + client.user.discriminator);
-  //  $('.botavatar').src(bot.user.displayAvatarURL());
-  $(".bot-createdat").html(client.user.createdAt);
-  $(".clientUserid").html(client.user.id);
-  $(".clientPresence").html(client.user.presence);
+  $('.bot-name').html(client.user.username);
+  $('.bot-discriminator').html('#' + client.user.discriminator);
+  $('.bot-userid').html(client.user.id);
+  $('.bot-createdAt').html(client.user.createdAt);
+  $('#bot-guilds').html(client.guilds.size);
+  $('#bot-channels').html(client.channels.size);
+  $('#bot-users').html(client.users.size);
+  //$(".bot-presence").html(client.user.presence);
+  //$('img.bot-avatar').attr('src', client.user.displayAvatarURL);
+  //$('link.bot-avatar').attr('href', client.user.displayAvatarURL);
   fetchGuilds();
 });
 
