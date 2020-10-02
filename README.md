@@ -8,7 +8,7 @@
   <h3 align="center">BetterDiscordPanel</h3>
 
   <p align="center">
-Discord Messaging Panel made to make bot management easy.
+Discord Messaging Panel that allows you to message inside of a bot!
     <br />
     <br />
     <!-- <a href="https://github.com/D3VSJ/BetterDiscordPanel"><strong>Explore the docs »</strong></a> -->
@@ -23,13 +23,12 @@ Discord Messaging Panel made to make bot management easy.
 
 * [About the Project](#about-the-project)
 * [Getting Started](#getting-started)
-  * [Prerequisites](#prerequisites)
+  <!--* [Prerequisites](#prerequisites)-->
   * [Installation](#installation)
 * [Roadmap](#roadmap)
 * [Contributing](#contributing)
 * [License](#license)
 * [Built With](#built-with)
-* [Acknowledgements](#acknowledgements)
 * [Contact](#contact)
 
 <!-- ABOUT THE PROJECT -->
@@ -37,7 +36,7 @@ Discord Messaging Panel made to make bot management easy.
 
 <img src="assets/images/previews/preview.png" alt="Logo" width="100%" height="100%">
 
-<p align="center">BetterDiscordPanel is a brand new panel made to make discord bot management easy.</p>
+<p align="center">BetterDiscordPanel is a new project that allows users to message and manage inside of their discord bots.</p>
 
 **Current Features:**
 * Messaging Interface with Discord Design
@@ -51,11 +50,14 @@ Discord Messaging Panel made to make bot management easy.
 
 ## Getting Started
 
-This project does not run on any servers and can be self hosted. Simply open ```index.html``` to get started.
+This project does not run on any servers and can be self hosted. Simply open 
+```index.html``` to get started or use the control panel by opening ```BetterDiscordPanel.cmd```.
 
+<!--
 ### Prerequisites
 
 No prerequisites yet, however the Electron Desktop version will require some soon.
+-->
 
 ### Installation
 
@@ -63,9 +65,9 @@ No prerequisites yet, however the Electron Desktop version will require some soo
 ```sh
 git clone https://github.com/D3VSJ/BetterDiscordPanel
 ```
-2. Open ```index.html```
+2. Open ```index.html``` or open ```BetterDiscordPanel.cmd``` to run the program.
 
-3. Add your token by selected the profile image on the bottom left corner and click Login/Logout or enter token when prompted.
+3. Add your token by selecting the profile image on the bottom left corner and click Login/Logout or enter token when prompted. On mobile, it should be located on the bottom right corner.
 
 4. Start using BetterDiscordPanel!
 
@@ -99,14 +101,9 @@ Contributions are what make the open source community such an amazing place to b
 
 Distributed under the GPL-3.0 License. See `LICENSE` for more information.
 
-<!-- ACKNOWLEDGEMENTS -->
-## Acknowledgements
-* [Discord JS](https://github.com/discordjs/discord.js)
-* [JQuery](https://jquery.com)
-
 ### Built With
 
-* [Discord.JS](https://github.com/discordjs/discord.js)
+* [Discord.js](https://github.com/discordjs/discord.js)
 * [JQuery](https://jquery.com)
 ---
 
@@ -115,7 +112,7 @@ Distributed under the GPL-3.0 License. See `LICENSE` for more information.
 ## Contact 
 
 Website : [sanjaysunil.me](https://sanjaysunil.me) &nbsp;&middot;&nbsp;
-Email : [D3VSJ@protonmail.com](mailto:D3VSJprotonmail.com) &nbsp;&middot;&nbsp;
+Email : [D3VSJS@gmail.com](mailto:D3VSJS@gmail.com) &nbsp;&middot;&nbsp;
 Discord : [D3VSJ#9496](https://discordapp.com/users/732336924559278181)
 
 </div>

@@ -1,9 +1,35 @@
 Function Exit-BetterDiscordPanel-Updater {
+  $caption = "
+  "
+  $description = "
+  "
   Write-Host
-  Write-Host "[BetterDiscordPanel]: Get Help/Support at discord.gg/9h822h3."
+  $choices = New-Object Collections.ObjectModel.Collection[Management.Automation.Host.ChoiceDescription]
+  $choices.Add((
+    New-Object Management.Automation.Host.ChoiceDescription `
+      -ArgumentList `
+        "&Go back.",
+        "Go back to selection panel."
+  ))
+  $choices.Add((
+    New-Object Management.Automation.Host.ChoiceDescription `
+      -ArgumentList `
+        "&Exit",
+        "Exit this script.
+        "
+  ))
+
+  $selection = $host.ui.PromptForChoice($empty, $empty2, $choices, -1)
   Write-Host
 
-  Exit-PSSession
+  switch($selection) {
+    0 {
+      .\scripts\Selection.ps1
+    }
+    1 {
+      Exit
+    }
+  }
 }
 
 
@@ -14,10 +40,11 @@ If (-Not (Test-Path ".git")) {
   Write-Host
 
   Write-Host "[BetterDiscordPanel]: Check if you have installed BetterDiscordPanel correctly."
-  Write-Host "[BetterDiscordPanel]: Follow the installation guide."
+  Write-Host "[BetterDiscordPanel]: Get Help/Support for BetterDiscordPanel: https://discord.gg/9h822H3"
 
   Exit-BetterDiscordPanel-Updater
 }
+cls
 Write-Host "[BetterDiscordPanel]: System check successful."
 Write-Host
 
@@ -29,7 +56,7 @@ Write-Host
 git pull
 If (-Not ($?)) {
   Write-Host "[BetterDiscordPanel]: Unable to update BetterDiscordPanel, error while updating BetterDiscordPanel."
-  Write-Host "[BetterDiscordPanel]: Contact BetterDiscordPanel Support for help."
+  Write-Host "[BetterDiscordPanel]: Get Help/Support for BetterDiscordPanel: https://discord.gg/9h822H3"
   Write-Host
 
   Exit-BetterDiscordPanel-Updater
@@ -37,9 +64,4 @@ If (-Not ($?)) {
 
 
 # Update was successful
-Write-Host "[BetterDiscordPanel]: BetterDiscordPanel was successfully updated."
-Write-Host
-
-Write-Host "[BetterDiscordPanel]: Ready to boot up and start running!"
-
 Exit-BetterDiscordPanel-Updater

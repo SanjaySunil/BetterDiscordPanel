@@ -1,3 +1,4 @@
+cls
 $caption = "[BetterDiscordPanel]: Hello, $env:UserName!
  "
 $description = "[BetterDiscordPanel]: Select the option you would like to perform.
@@ -8,13 +9,19 @@ $choices.Add((
   New-Object Management.Automation.Host.ChoiceDescription `
     -ArgumentList `
       "&Start BetterDiscordPanel",
-      "Automatically opens BetterDiscordPanel in your Default Browser."
+      "Start BetterDiscordPanel in your default browser."
 ))
 $choices.Add((
   New-Object Management.Automation.Host.ChoiceDescription `
     -ArgumentList `
       "&Update BetterDiscordPanel",
-      "Updates BetterDiscordPanel from Git clone."
+      "Update BetterDiscordPanel to the latest available version."
+))
+$choices.Add((
+  New-Object Management.Automation.Host.ChoiceDescription `
+    -ArgumentList `
+      "&Reinstall BetterDiscordPanel",
+      "Reinstall BetterDiscordPanel completely to its latest available version."
 ))
 $choices.Add((
   New-Object Management.Automation.Host.ChoiceDescription `
@@ -35,6 +42,9 @@ switch($selection) {
     .\scripts\Update.ps1
   }
   2 {
+    .\scripts\ResetConfirmation.ps1
+  }
+  3 {
     Exit
   }
 }
