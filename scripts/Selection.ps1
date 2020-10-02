@@ -20,12 +20,6 @@ $choices.Add((
 $choices.Add((
   New-Object Management.Automation.Host.ChoiceDescription `
     -ArgumentList `
-      "&Reinstall BetterDiscordPanel",
-      "Reinstall BetterDiscordPanel completely to its latest available version."
-))
-$choices.Add((
-  New-Object Management.Automation.Host.ChoiceDescription `
-    -ArgumentList `
       "&Exit",
       "Exit this script.
       "
@@ -42,9 +36,6 @@ switch($selection) {
     .\scripts\Update.ps1
   }
   2 {
-    .\scripts\ResetConfirmation.ps1
-  }
-  3 {
     Exit
   }
 }
