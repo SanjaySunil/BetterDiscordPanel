@@ -5,10 +5,10 @@
     <img src="assets/images/betterdiscordpanel.png" alt="Logo" width="128" height="128">
   </a>
 
-  <h3 align="center">BetterDiscordPanel</h3>
+  <h1 align="center">BetterDiscordPanel</h1>
 
   <p align="center">
-Discord Messaging Panel that allows you to message inside of a bot!
+    Discord Messaging Panel that allows you to message inside of a bot!
     <br />
     <br />
     <!-- <a href="https://github.com/D3VSJ/BetterDiscordPanel"><strong>Explore the docs »</strong></a> -->
@@ -24,7 +24,7 @@ Discord Messaging Panel that allows you to message inside of a bot!
 * [About the Project](#about-the-project)
 * [Getting Started](#getting-started)
   <!--* [Prerequisites](#prerequisites)-->
-  * [Installation](#installation)
+* [Installation](#installation)
 * [Roadmap](#roadmap)
 * [Contributing](#contributing)
 * [License](#license)
