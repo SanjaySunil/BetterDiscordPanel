@@ -1,0 +1,40 @@
+{
+    "welcome": "Hello,",
+    "select_option": "Select the option you would like to perform.",
+
+    "start_web": "&WEB - BetterDiscordPanel",
+    "start_desktop": "&DESKTOP APP - BetterDiscordPanel",
+
+    "support": "Support",
+    "settings": "Settings",
+    "update": "Check for Updates",
+    "language": "Language",
+    "go_back": "Go Back",
+    "done": "Done!",
+    "exit": "Exit",
+
+    "betterdiscordpanel_help":"Start BetterDiscordPanel in your default browser.",
+    "desktop_panel_help": "Start the Desktop app of BetterDiscordPanel.",
+    "settings_help": "Update BetterDiscordPanel to the latest available version.",
+    "exit_help": "Exit this script.",
+    "support_help": "Get Support for BetterDiscordPanel.",
+    "update_help": "Update BetterDiscordPanel to the latest available version.",
+    "language_help": "Choose a Language for BetterDiscordPanel",
+    "english_help": "Choose a Language for BetterDiscordPanel",
+    "go_back_help": "Go back to the selection panel.",
+    "discord_help": "Open the Discord support server link on your default browser.",
+    "issue_help": "Submit a Issue/Bug Report/Suggestion through GitHub.",
+    "get_help": "Get Help/Support for BetterDiscordPanel:",
+
+    "check_installation": "Check if you have installed BetterDiscordPanel correctly.",
+    "checking_failure": "System check failed.",
+    "checking_system": "Checking BetterDiscordPanel system ...",
+    "check_success": "System check successful.",
+    "updating": "Updating BetterDiscordPanel ...",
+    "updating_failure": "Unable to update BetterDiscordPanel, error while updating BetterDiscordPanel.",
+    "check_index": "Check if index.html exists.",
+    "check_main": "Check if main.js exists.",
+    "check_repo_download_method": "Clone the Repository and try again.",
+    "booting": "Booting up BetterDiscordPanel ..."
+}
+

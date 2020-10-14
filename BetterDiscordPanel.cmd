@@ -4,4 +4,5 @@ TITLE BetterDiscordPanel
 CLS
 ECHO.
 
-powershell -ExecutionPolicy Bypass .\scripts\Selection.ps1
+cd scripts
+powershell -ExecutionPolicy Bypass .\Selection.ps1

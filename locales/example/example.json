@@ -1,0 +1,40 @@
+{
+    "welcome": "",
+    "select_option": "",
+
+    "start_web": "",
+    "start_desktop": "",
+
+    "support": "",
+    "settings": "",
+    "update": "",
+    "language": "",
+    "go_back": "",
+    "done": "",
+    "exit": "",
+
+    "betterdiscordpanel_help":"",
+    "desktop_panel_help": "",
+    "settings_help": "",
+    "exit_help": "",
+    "support_help": "",
+    "update_help": "",
+    "language_help": "",
+    "english_help": "",
+    "go_back_help": "",
+    "discord_help": "",
+    "issue_help": "",
+    "get_help": "",
+
+    "check_installation": "",
+    "checking_failure": "",
+    "checking_system": "",
+    "check_success": "",
+    "updating": "",
+    "updating_failure": "",
+    "check_index": "",
+    "check_main": "",
+    "check_repo_download_method": "",
+    "booting": ""
+}
+
