@@ -23,23 +23,24 @@ const refreshToken = $(".refreshToken");
 const refreshChat = $("#refreshChat");
 const overlay = $("#overlay-content");
 
-/*///////////////////////////////////////////
-                    LOADING TRANSLATION
-    //////////////////////////////////////////*/
+
+// Translation
 
 Object.values(locales).forEach((locale) => {
   overlay.html(
     overlay.html() +
-      `<a href="" onclick="localStorage.setItem('locale', '${locale.cCode}'); location.reload()">${locale.language}</a>`
+    `<a href="" onclick="localStorage.setItem('locale', '${locale.cCode}'); location.reload()">${locale.language}</a>`
   );
 });
 
 // Text
+
 channelNameLabel.html(localeFile.text.channelNameLabel);
 $("#animCheck").html(localeFile.text.scrollCheck);
 channelName.html(`${localeFile.text.channelNameLabel}`);
 
 // Headings
+
 guildName.html(
   `<img class="avatarIMG" src="" alt=""> ${localeFile.headings.guildName}`
 );
@@ -54,12 +55,12 @@ $("#last").html(localeFile.headings.lastMessages);
 refreshToken.html(
   `${localeFile.buttons.editToken}<i class="ri-logout-circle-r-line float-right text-muted"></i>`
 );
-refreshChat.html(`🔁 ${localeFile.buttons.refreshChat}`);
-$("#language").html(`🏳️ ${localeFile.buttons.changeLanguage}`);
-leaveGuild.html(`🚪 ${localeFile.buttons.leave}`);
-inviteBtn.html(`✉ ${localeFile.buttons.invite}`);
-send.html(`↩ ${localeFile.buttons.send}`);
-clearChat.html(`♻ ${localeFile.buttons.clearLastMessages}`);
+refreshChat.html(`${localeFile.buttons.refreshChat}`);
+$("#language").html(`${localeFile.buttons.changeLanguage}`);
+leaveGuild.html(`${localeFile.buttons.leave}`);
+inviteBtn.html(`${localeFile.buttons.invite}`);
+send.html(`${localeFile.buttons.send}`);
+clearChat.html(`${localeFile.buttons.clearLastMessages}`);
 
 // Formatting
 $("#bold").attr("title", localeFile.formatting.bold);
@@ -78,7 +79,7 @@ function createMessage(message) {
   let userId = message.author.id;
   let avatarUrl =
     message.author.avatarURL() ||
-    `./img/discord_defaults_avatars/${message.author.discriminator % 5}.png`; // Get the user's avatar, if not, find the color of his default avatar
+    `./assets/images/discord_defaults_avatars/${message.author.discriminator % 5}.png`; // Get the user's avatar, if not, find the color of his default avatar
   let userAvatar = `<a href="${avatarUrl}" target="_blank"><img alt="" src="${avatarUrl}" class="avatarIMG"></a>`;
   let timestamp = formatTimestamp(message.createdAt);
   let html;
@@ -290,7 +291,7 @@ function updateChannel() {
     channel = user.dmChannel;
     let avatarUrl =
       user.avatarURL() ||
-      `./img/discord_defaults_avatars/${user.discriminator % 5}.png`;
+      `./assets/images/discord_defaults_avatars/${user.discriminator % 5}.png`;
     guildName.html(
       `<a href="${avatarUrl}" target="_blank"><img alt="" src="${avatarUrl}" class="avatarIMG"/></a> ${escapeHtml(
         user.username
@@ -397,6 +398,7 @@ function updateGuild() {
     guildNameNoPic.html(`${escapeHtml(guild.name)}`);
 
     // General information
+
     html += `<div>${localeFile.infos.owner}: ${
       guild.owner.user.tag
     } <button data-value="<@!${
@@ -412,12 +414,13 @@ function updateGuild() {
     }</div><br>`;
 
     // Members button
+
     guild.members.cache
       .filter((member) => !member.user.bot)
       .forEach((member) => {
         let avatarUrl =
           member.user.avatarURL() ||
-          `./img/discord_defaults_avatars/${member.user.discriminator % 5}.png`;
+          `./assets/images//discord_defaults_avatars/${member.user.discriminator % 5}.png`;
         guildMembers.push(
           `<div style="margin: 4px 0 4px 0"><a href="${avatarUrl}" target="_blank"><img alt="" style="display: inline;" class="avatarIMG" src="${avatarUrl}"/></a> ${member.user.tag} <button data-value="<@!${member.user.id}>" onclick="addText(this.dataset.value)" class="mini">@</button></div>`
         );
@@ -429,6 +432,7 @@ function updateGuild() {
     )}</div>`;
 
     // Roles button
+
     html += `<button onclick='$("#guildRoles").toggle("fast")'>${
       localeFile.infos.roles
     }</button><div id="guildRoles" style="display:none;">${guild.roles.cache
@@ -436,6 +440,7 @@ function updateGuild() {
       .join("<div style='margin: 8px 0 8px 0'></div>")}</div>`;
 
     // Channels button
+
     if (guild.channels.cache.size > 0) {
       html += `<button onclick='$("#guildChannels").toggle("fast")'>${
         localeFile.infos.channels
@@ -445,6 +450,7 @@ function updateGuild() {
     }
 
     // Emoji button
+
     if (guild.emojis.cache.size > 0) {
       guild.emojis.cache.forEach((emoji) => {
         if (emoji.animated) {
@@ -534,6 +540,8 @@ function sendMessage() {
   }
 }
 
+document.getElementById("toSend").placeholder = "Type a message."
+
 function selectChannelOnReload(channel) {
   $(`.channels option[value="${channel}"]`).prop("selected", true);
   setTimeout(() => {
@@ -544,21 +552,17 @@ function selectChannelOnReload(channel) {
 function scrollAnim(DOM1, DOM2, time) {
   if (document.querySelector(DOM1).checked) {
     if (document.querySelector("#chk3").checked) {
-      $(DOM2).animate(
-        {
-          scrollTop: $(DOM2)[0].scrollHeight - $(DOM2).height(),
-        },
-        time
-      );
+      $(DOM2).animate({
+        scrollTop: $(DOM2)[0].scrollHeight - $(DOM2).height()
+      }, time);
     } else {
       $(DOM2).scrollTop($(DOM2)[0].scrollHeight - $(DOM2).height());
     }
   }
 }
 
-/*///////////////////////////////////////////
-                    DISCORD EVENTS
-    //////////////////////////////////////////*/
+// Discord Events
+
 client.on("message", (message) => {
   if (Number(message.channel.id) === Number(channels.val())) {
     chat.html(chat.html() + createMessage(message));
@@ -579,7 +583,7 @@ client.on("message", (message) => {
   ) {
     lastMessages.html(
       lastMessages.html() +
-        `<br>[<b>#${escapeHtml(message.channel.name)} | ${escapeHtml(
+      `<br>[<b>#${escapeHtml(message.channel.name)} | ${escapeHtml(
           message.guild.name
         )} | ${message.guild.id} | ${escapeHtml(message.author.tag)} | ${
           message.author.id
@@ -588,7 +592,7 @@ client.on("message", (message) => {
   } else if (message.channel.type === "dm" && !message.author.bot) {
     lastMessages.html(
       lastMessages.html() +
-        `<br><b>[${localeFile.text.privateMessages}] ${escapeHtml(
+      `<br><b>[${localeFile.text.privateMessages}] ${escapeHtml(
           message.author.tag
         )} | ${message.author.id} </b> \n${contentReplacement(message.content)}`
     );
@@ -603,12 +607,12 @@ client.on("ready", () => {
   $('.bot-discriminator').html('#' + client.user.discriminator);
   $('.bot-userid').html(client.user.id);
   $('.bot-createdAt').html(client.user.createdAt);
-  $('#bot-guilds').html(client.guilds.size);
-  $('#bot-channels').html(client.channels.size);
-  $('#bot-users').html(client.users.size);
-  //$(".bot-presence").html(client.user.presence);
-  //$('img.bot-avatar').attr('src', client.user.displayAvatarURL);
-  //$('link.bot-avatar').attr('href', client.user.displayAvatarURL);
+//  $('#bot-guilds').html(client.guilds.size);
+//  $('#bot-channels').html(client.channels.size);
+//  $('#bot-users').html(client.users.size);
+  // $(".bot-presence").html(client.user.presence);
+  // $('img.bot-avatar').attr('src', client.user.displayAvatarURL);
+  // $('link.bot-avatar').attr('href', client.user.displayAvatarURL);
   fetchGuilds();
 });
 
@@ -726,9 +730,7 @@ client.on("emojiUpdate", (oldEmoji) => {
   }
 });
 
-/*///////////////////////////////////////////
-                    DOCUMENT EVENTS
-    //////////////////////////////////////////*/
+// Document Events
 
 $(document).on("change", ".guilds", () => {
   updateGuild();
@@ -738,9 +740,7 @@ $(document).on("change", ".channels", () => {
   updateChannel();
 });
 
-/*///////////////////////////////////////////
-                    BUTTONS EVENTS
-    //////////////////////////////////////////*/
+// Button Events
 
 refreshToken.click(() => {
   if (window.confirm(localeFile.token.confirmation)) {
@@ -771,7 +771,7 @@ leaveGuild.click(() => {
   }
 });
 
-inviteBtn.click(() => {
+function generateInvite() {
   if (guilds.val() === "DM") {
     tempChange("#inviteBtn", `[${localeFile.errors.dm}]`, 1000);
   } else {
@@ -789,7 +789,8 @@ inviteBtn.click(() => {
         );
       });
   }
-});
+}
+
 
 $('.000').replaceWith('Copyright © 2020');
 $('.001').replaceWith('Sanjay Sunil');
@@ -799,9 +800,7 @@ refreshChat.click(() => {
   updateChannel();
 });
 
-/*///////////////////////////////////////////
-                    KEY/PASTE EVENTS
-    //////////////////////////////////////////*/
+// Keypaste Events
 
 toSend.keypress((event) => {
   if (!event.shiftKey && event.key === "Enter") {
@@ -825,35 +824,21 @@ document.addEventListener("keyup", (event) => {
   event.stopPropagation();
 });
 
-/*///////////////////////////////////////////
-                    AUTO-SCROLL
-    //////////////////////////////////////////*/
-
-lastMessages.bind("wheel", (event) => {
-  if (event.originalEvent.deltaY < 0) {
-    $("#chk1")[0].checked = false;
-  } else if (
-    event.originalEvent.deltaY > 0 &&
-    $("#lastMessages").scrollTop() + $("#lastMessages").innerHeight() >=
-      $("#lastMessages")[0].scrollHeight - 100
-  ) {
-    $("#chk1")[0].checked = true;
-  }
-});
-
+// Autoscroll
+/*
 chat.bind("wheel", (event) => {
   if (event.originalEvent.deltaY < 0) {
-    $("#chk2")[0].checked = false;
+    $("#chk3")[0].checked = false;
   } else if (
     event.originalEvent.deltaY > 0 &&
-    $("#chat").scrollTop() + $("#chat").innerHeight() >=
+    $("#chk3").scrollTop() + $("#chat").innerHeight() >=
       $("#chat")[0].scrollHeight - 100
   ) {
-    $("#chk2")[0].checked = true;
+    $("#chk3")[0].checked = true;
   }
 });
 
 setInterval(() => {
-  scrollAnim("#chk1", "#lastMessages", 1000);
-  scrollAnim("#chk2", "#chat", 100);
+  scrollAnim("#chk3", "#chat", 100);
 }, 1000);
+*/

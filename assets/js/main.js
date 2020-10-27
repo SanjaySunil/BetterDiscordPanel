@@ -35,8 +35,8 @@ if (
   localStorage.getItem("token") === "" ||
   localStorage.getItem("token") === null
 ) {
-    token = prompt(localeFile.token.prompt, "");
-    localStorage.setItem("token", token);
+  token = prompt(localeFile.token.prompt, "");
+  localStorage.setItem("token", token);
 }
 
 token = localStorage.getItem("token");
@@ -166,7 +166,7 @@ function delMsg(message) {
   if (guilds.val() === "DM") {
     let channel = client.channels.cache.find(
       (channel) =>
-        channel.type === "dm" && channel.recipient.id === channels.val()
+      channel.type === "dm" && channel.recipient.id === channels.val()
     );
     channel.messages.cache
       .find((m) => m.id === message)

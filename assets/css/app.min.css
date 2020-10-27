@@ -8,6 +8,66 @@
  * Copyright 2014-2018 Alfiana E. Sibuea and other contributors 
  * Released under the MIT license 
  * https://github.com/fians/Waves/blob/master/LICENSE */
+:root {
+  --blue: #7269ef;
+  --indigo: #564ab1;
+  --purple: #8e4aec;
+  --pink: #e83e8c;
+  --red: #EF476F;
+  --orange: #FC814A;
+  --yellow: #FFD166;
+  --green: #06D6A0;
+  --teal: #050505;
+  --cyan: #50a5f1;
+  --white: #fff;
+  --gray: #7a7f9a;
+  --gray-dark: #343a40;
+  --primary: #7269ef;
+  --secondary: #7a7f9a;
+  --success: #06D6A0;
+  --info: #50a5f1;
+  --warning: #FFD166;
+  --danger: #EF476F;
+  --light: #e6ebf5;
+  --dark: #343a40;
+  --pink: #e83e8c;
+  --breakpoint-xs: 0;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --font-family-sans-serif: "Public Sans", sans-serif;
+  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  /* Discord Light Theme */
+  --header-primary: #060607;
+  --header-secondary: #4f5660;
+  --text-normal: #2e3338;
+  --text-muted: #747f8d;
+  --text-link: #0067e0;
+  --channels-default: #6a7480;
+  --interactive-normal: #4f5660;
+  --interactive-hover: #2e3338;
+  --interactive-active: #060607;
+  --interactive-muted: #c7ccd1;
+  --background-primary: #fff;
+  --background-secondary: #f2f3f5;
+  --background-secondary-alt: #ebedef;
+  --background-tertiary: #e3e5e8;
+  --background-accent: #747f8d;
+  --background-floating: #fff;
+  --background-mobile-primary: #f8f9f9;
+  --background-mobile-secondary: #fff;
+  --background-modifier-hover: rgba(116, 127, 141, 0.08);
+  --background-modifier-active: rgba(116, 127, 141, 0.16);
+  --background-modifier-selected: rgba(116, 127, 141, 0.24);
+  --background-modifier-accent: rgba(6, 6, 7, 0.08);
+  --background-mentioned: rgba(250, 166, 26, 0.1);
+  --background-mentioned-hover: rgba(250, 166, 26, 0.2);
+  --background-message-hover: rgba(6, 6, 7, 0.02);
+  --background-help-warning: rgba(250, 166, 26, 0.1);
+  --background-help-info: rgba(0, 103, 224, 0.1);
+}
+
 .waves-effect {
   position: relative;
   cursor: pointer;
@@ -676,7 +736,7 @@
   max-width: 75px;
   height: 100vh;
   min-height: 570px;
-  background-color: #fff;
+  background-color: #e3e5e8;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -778,7 +838,7 @@
 
 .chat-leftsidebar {
   height: 100vh;
-  background-color: #f5f7fb;
+  background-color: #f2f3f5;
 }
 
 @media (min-width: 992px) {
@@ -813,6 +873,10 @@
   position: absolute;
   right: 13px;
   top: 0;
+}
+
+.chat-header {
+  z-index: 100;
 }
 
 .chat-message-list {

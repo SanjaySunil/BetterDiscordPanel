@@ -8,6 +8,67 @@
  * Copyright 2014-2018 Alfiana E. Sibuea and other contributors 
  * Released under the MIT license 
  * https://github.com/fians/Waves/blob/master/LICENSE */
+:root {
+    --blue: #7269ef;
+    --indigo: #564ab1;
+    --purple: #8e4aec;
+    --pink: #e83e8c;
+    --red: #ef476f;
+    --orange: #fc814a;
+    --yellow: #ffd166;
+    --green: #06d6a0;
+    --teal: #050505;
+    --cyan: #50a5f1;
+    --white: #fff;
+    --gray: #abb4d2;
+    --gray-dark: #eff2f7;
+    --primary: #7269ef;
+    --secondary: #abb4d2;
+    --success: #06d6a0;
+    --info: #50a5f1;
+    --warning: #ffd166;
+    --danger: #ef476f;
+    --light: #36404a;
+    --dark: #eff2f7;
+    --pink: #e83e8c;
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --font-family-sans-serif: "Public Sans", sans-serif;
+    --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
+        "Liberation Mono", "Courier New", monospace;
+    /* Discord Dark Theme */
+    --header-primary: #fff;
+    --header-secondary: #b9bbbe;
+    --text-normal: #dcddde;
+    --text-muted: #72767d;
+    --text-link: #00b0f4;
+    --channels-default: #8e9297;
+    --interactive-normal: #b9bbbe;
+    --interactive-hover: #dcddde;
+    --interactive-active: #fff;
+    --interactive-muted: #4f545c;
+    --background-primary: #36393f;
+    --background-secondary: #2f3136;
+    --background-secondary-alt: #292b2f;
+    --background-tertiary: #202225;
+    --background-accent: #4f545c;
+    --background-floating: #18191c;
+    --background-mobile-primary: #36393f;
+    --background-mobile-secondary: #2f3136;
+    --background-modifier-hover: rgba(79, 84, 92, 0.16);
+    --background-modifier-active: rgba(79, 84, 92, 0.24);
+    --background-modifier-selected: rgba(79, 84, 92, 0.32);
+    --background-modifier-accent: hsla(0, 0%, 100%, 0.06);
+    --background-mentioned: rgba(250, 166, 26, 0.05);
+    --background-mentioned-hover: rgba(250, 166, 26, 0.08);
+    --background-message-hover: rgba(4, 4, 5, 0.07);
+    --background-help-warning: rgba(250, 166, 26, 0.1);
+    --background-help-info: rgba(0, 176, 244, 0.1);
+}
+
 .waves-effect {
     position: relative;
     cursor: pointer;
@@ -979,6 +1040,10 @@
     margin-top: 12px
 }
 
+.chat-header {
+    z-index: 100;
+  }
+
 .chat-conversation .chat-day-title .title {
     background-color: #36404a;
     position: relative;
@@ -1242,16 +1307,6 @@
         height: calc(100vh - 324px)
     }
 }
-
-
-
-
-
-
-
-
-
-
 
 .channel-list-sidebar {
     height: 100vh;

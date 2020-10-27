@@ -19,10 +19,10 @@
     <meta name="apple-mobile-web-app-title" content="BetterDiscordPanel" />
     <meta name="application-name" content="BetterDiscordPanel" />
 
-    <!-- magnific-popup css -->
+    <!-- magnific-popup CSS -->
     <link href="assets/libs/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css" />
 
-    <!-- owl.carousel css -->
+    <!-- owl.carousel CSS -->
     <link rel="stylesheet" href="assets/libs/owl.carousel/assets/owl.carousel.min.css">
 
     <link rel="stylesheet" href="assets/libs/owl.carousel/assets/owl.theme.default.min.css">
@@ -31,29 +31,27 @@
     <link rel="stylesheet" href="assets/libs/noty/noty.css">
     <link rel="stylesheet" href="assets/libs/noty/nest.css">
 
-    <!-- Bootstrap Css -->
+    <!-- Bootstrap CSS -->
     <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
     <link href="assets/css/bootstrap-dark.min.css" id="bootstrap-dark-style" rel="stylesheet" type="text/css" />
-    <!-- Icons Css -->
+    <!-- Icons CSS -->
     <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
-    <!-- App Css-->
+    <!-- App CSS-->
     <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
     <link href="assets/css/app-dark.min.css" id="app-dark-style" rel="stylesheet" type="text/css" />
-    <!--Discord CSS-->
-    <link href="assets/css/main.css" id="app-dark-style" rel="stylesheet" type="text/css" />
-
 </head>
 
 <body>
     <!-- Preloader -->
     <div class="preloader">
-        <div id="loader">
+        <div class="loader">
             <h1>BetterDiscordPanel</h1>
+            <p id="status">Loading ...</p>
         </div>
     </div>
 
     <!-- App -->
-
+<div class="app">
     <div class="layout-wrapper d-lg-flex">
 
         <div class="side-menu flex-lg-column mr-lg-1">
@@ -110,13 +108,12 @@
             <div class="flex-lg-column d-none d-lg-block">
                 <ul class="nav side-menu-nav justify-content-center">
 
-                    <!-- Fix Light theme Button and themes later 
                     <li class="nav-item">
                         <a class="nav-link" id="light-dark" href="#" data-toggle="tooltip" data-trigger="hover" data-placement="right" title="Dark / Light Mode">
                             <i class="ri-sun-line theme-mode-icon"></i>
                         </a>
                     </li>
-                     -->
+                     
 
                     <li class="nav-item btn-group dropup profile-user-dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -175,21 +172,6 @@
                                             <div class="mt-4">
                                                 <p class="text-muted mb-1">UserID</p>
                                                 <h5 class="font-size-14 bot-userid"></h5>
-                                            </div>
-
-                                            <div class="mt-4">
-                                                <p class="text-muted mb-1">Guilds</p>
-                                                <span class="font-size-14" id="bot-guilds"></span>
-                                            </div>
-
-                                            <div class="mt-4">
-                                                <p class="text-muted mb-1">Channels</p>
-                                                <h5 class="font-size-14" id="bot-channels"></h5>
-                                            </div>
-
-                                            <div class="mt-4">
-                                                <p class="text-muted mb-1">User Size</p>
-                                                <h5 class="font-size-14 mb-0" id="bot-users"></h5>
                                             </div>
 
                                             <div class="mt-4">
@@ -302,16 +284,7 @@
                                                 <h5 class="font-size-14 bot-name"></h5>
                                             </div>
 
-                                            <div class="mt-4">
-                                                <p class="text-muted mb-1">Discrim</p>
-                                                <h5 class="font-size-14 bot-discriminator"></h5>
-                                            </div>
-
-                                            <div class="mt-4">
-                                                <p class="text-muted mb-1">UserID</p>
-                                                <h5 class="bot-userid font-size-14"></h5>
-                                            </div>
-
+                                            <!---
                                             <div class="mt-4">
                                                 <p class="text-muted mb-1">Guilds</p>
                                                 <span class="bot-guilds"></span>
@@ -327,11 +300,7 @@
                                                 <p class="text-muted mb-1">User Size</p>
                                                 <h5 class="bot-users font-size-14"></h5>
                                             </div>
-
-                                            <div class="mt-4">
-                                                <p class="text-muted mb-1">Created At</p>
-                                                <h5 class="font-size-14 mb-0 bot-createdAt"></h5>
-                                            </div>
+                                        -->
                                         </div>
                                     </div>
                                 </div>
@@ -375,7 +344,7 @@
         <div class="user-chat w-100">
             <div class="d-lg-flex">
                 <div class="w-100">
-                    <div class="p-3 p-lg-4 border-bottom">
+                    <div class="chat-header p-3 p-lg-4 border-bottom">
                         <div class="row align-items-center">
                             <div class="col-sm-4 col-8">
                                 <div class="media align-items-center">
@@ -407,6 +376,7 @@
                     <div class="chat-conversation p-3 p-lg-4" data-simplebar="init">
                         <ul class="list-unstyled mb-0">
                             <div class="scrollable" id="chat">
+                            </div>
                         </ul>
                         </div>
 
@@ -414,7 +384,7 @@
                             <div class="row no-gutters">
                                 <div class="col">
                                     <div>
-                                        <div contenteditable="true" id="toSend" class="form-control form-control-lg bg-light border-light"></div>
+                                        <div contenteditable="true" id="toSend" placeholder="Type your message here ..."class="form-control form-control-lg bg-light border-light"></div>
                                     </div>
                                 </div>
                                 <div class="col-auto">
@@ -480,12 +450,31 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="card shadow-none border mb-2">
+                                    <a href="#collapseTwo" class="text-dark" data-toggle="collapse" aria-expanded="true" aria-controls="collapseOne">
+                                        <div class="card-header" id="headingOne">
+                                            <h5 class="font-size-14 m-0">
+                                                <i class="ri-user-2-line mr-2 align-middle d-inline-block"></i> Tools
+                                                <i class="mdi mdi-chevron-up float-right accor-plus-icon"></i>
+                                            </h5>
+                                        </div>
+                                    </a>
+                                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#profile-user-accordion">
+                                        <div class="card-body">
+                                            <div>
+                                                <button onclick="generateInvite();" id="inviteBtn"></button>
+                                                <button id="refreshChat"></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
         <!-- JAVASCRIPT -->
         <script src="assets/libs/jquery/jquery.min.js"></script>
