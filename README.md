@@ -41,17 +41,18 @@
 **Current Features:**
 * Messaging Interface with Discord Design
 * Server Statistics
-* User Profile Statistics 
+* Bot Statistics 
+* Discord Light and Dark Theme
 
 **Coming Soon:**
-* User Profile Editing
+* Bot Profile Editing
 * Electron Desktop Application
 * Website with Documentation
 
 ## Getting Started
 
 This project does not run on any servers and can be self hosted. Simply open 
-```index.html``` to get started or use the control panel by opening ```BetterDiscordPanel.cmd```.
+```index.html``` to get started or use the control panel by opening ```BetterDiscordPanel.cmd``` and executing "W" for the web panel.
 
 <!--
 ### Prerequisites
