@@ -13,10 +13,10 @@
   --indigo: #564ab1;
   --purple: #8e4aec;
   --pink: #e83e8c;
-  --red: #EF476F;
-  --orange: #FC814A;
-  --yellow: #FFD166;
-  --green: #06D6A0;
+  --red: #ef476f;
+  --orange: #fc814a;
+  --yellow: #ffd166;
+  --green: #06d6a0;
   --teal: #050505;
   --cyan: #50a5f1;
   --white: #fff;
@@ -24,10 +24,10 @@
   --gray-dark: #343a40;
   --primary: #7269ef;
   --secondary: #7a7f9a;
-  --success: #06D6A0;
+  --success: #06d6a0;
   --info: #50a5f1;
-  --warning: #FFD166;
-  --danger: #EF476F;
+  --warning: #ffd166;
+  --danger: #ef476f;
   --light: #e6ebf5;
   --dark: #343a40;
   --pink: #e83e8c;
@@ -37,7 +37,8 @@
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
   --font-family-sans-serif: "Public Sans", sans-serif;
-  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
   /* Discord Light Theme */
   --header-primary: #060607;
   --header-secondary: #4f5660;
@@ -1310,11 +1311,6 @@
     height: calc(100vh - 324px);
   }
 }
-
-
-
-
-
 
 .channel-list-sidebar {
   height: 100vh;

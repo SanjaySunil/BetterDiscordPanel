@@ -23,7 +23,6 @@ const refreshToken = $(".refreshToken");
 const refreshChat = $("#refreshChat");
 const overlay = $("#overlay-content");
 
-
 // Translation
 
 Object.values(locales).forEach((locale) => {
@@ -607,9 +606,9 @@ client.on("ready", () => {
   $('.bot-discriminator').html('#' + client.user.discriminator);
   $('.bot-userid').html(client.user.id);
   $('.bot-createdAt').html(client.user.createdAt);
-//  $('#bot-guilds').html(client.guilds.size);
-//  $('#bot-channels').html(client.channels.size);
-//  $('#bot-users').html(client.users.size);
+  //  $('#bot-guilds').html(client.guilds.size);
+  //  $('#bot-channels').html(client.channels.size);
+  //  $('#bot-users').html(client.users.size);
   // $(".bot-presence").html(client.user.presence);
   // $('img.bot-avatar').attr('src', client.user.displayAvatarURL);
   // $('link.bot-avatar').attr('href', client.user.displayAvatarURL);

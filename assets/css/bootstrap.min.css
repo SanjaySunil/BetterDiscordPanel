@@ -365,7 +365,7 @@ textarea {
 
 [placeholder]:empty::before {
     content: attr(placeholder);
-    color: #555; 
+    color: #555;
 }
 
 [placeholder]:empty:focus::before {
@@ -8013,7 +8013,7 @@ button.bg-pink:hover {
 }
 
 .border-bottom {
-    border-bottom: 1px solid rgba(79,84,92,0.3) !important
+    border-bottom: 1px solid rgba(79, 84, 92, 0.3) !important
 }
 
 .border-left {
@@ -13085,9 +13085,9 @@ input:checked+.slider::before {
     text-align: center;
     padding-top: calc(50vh - 45px);
     transition: .25s
-  }
-  
-  .chatHeader h1 {
+}
+
+.chatHeader h1 {
     font-size: 50px;
     animation: fadeIn 1s infinite alternate;
-  }
+}

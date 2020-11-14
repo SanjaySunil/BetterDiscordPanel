@@ -22,12 +22,12 @@
             }
             location.reload();
         }), Waves.init()
-        $("[contenteditable]").focusout(function(){
-            var element = $(this);        
-            if (!element.text().trim().length) {
-                element.empty();
-            }
-        });
+    $("[contenteditable]").focusout(function () {
+        var element = $(this);
+        if (!element.text().trim().length) {
+            element.empty();
+        }
+    });
     if (localStorage.getItem("theme") == "light") {
         a("#bootstrap-style").attr("disabled", !1),
             a("#app-dark-style").attr("disabled", !0),
@@ -65,3 +65,29 @@ $(document).ready(function () {
 $('.000').replaceWith('Copyright © 2020');
 $('.001').replaceWith('Sanjay Sunil');
 $('.002').replaceWith('All rights reserved.');
+
+const hostname = location.hostname;
+const pathname = window.location.pathname;
+
+console.log(hostname)
+console.log(pathname)
+
+//if (hostname != "")
+//    console.log("WARNING: YOU ARE NOT ALLOWED TO DISTRIBUTE BETTERDISCORDPANEL ONTO A DOMAIN!")
+
+var authorizedpath = pathname.startsWith("/");
+
+if (authorizedpath = false) {
+    console.log("RESTRICTED");
+    $("#app").style.display("none");
+
+} else if (hostname != "") {
+    console.log("RESTRICTED");
+    $("#app").style.display("none");
+
+} else {
+    console.log("BetterDiscordPanel is now Authorized.");
+}
+
+//const verification_result = result.startsWith("file:///");
+//console.log(verification_result);
