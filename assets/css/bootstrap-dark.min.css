@@ -286,17 +286,6 @@ label {
   margin-bottom: 0.5rem;
 }
 
-button {
-  width: 100%;
-  height: 35px;
-  font: bold 13px Arial, sans-serif;
-  background-color: var(--background-tertiary);
-  color: var(--text-normal);
-  border: 2px solid var(--background-tertiary);
-  border-radius: 7px;
-  margin: 1px 0 1px 0;
-}
-
 button:focus {
   outline: 1px dotted;
   outline: 5px auto -webkit-focus-ring-color;
@@ -311,6 +300,17 @@ textarea {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
+}
+
+.action {
+  width: 100%;
+  height: 35px;
+  font: bold 13px Arial, sans-serif;
+  background-color: var(--background-tertiary);
+  color: var(--text-normal);
+  border: 2px solid var(--background-tertiary);
+  border-radius: 7px;
+  margin: 1px 0 1px 0;
 }
 
 button,
@@ -13078,7 +13078,25 @@ input:checked+.slider::before {
   background: #000;
   text-align: center;
   padding-top: calc(50vh - 45px);
-  transition: .25s
+  transition: .25s;
+  display: block;
+}
+
+.splashLogin {
+  padding: 5px;
+  width: 25%;
+  background-color: transparent;
+  color: white;
+  font-size: 25px;
+  font-weight: bolder;
+  border: none;
+  color: grey;
+  transition: 0.25s;
+}
+
+.splashLogin:hover {
+  transition: 0.25s;
+  color: #fff;
 }
 
 @keyframes fadeIn {

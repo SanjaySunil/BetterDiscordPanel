@@ -13029,8 +13029,27 @@ input:checked+.slider::before {
     background: #000;
     text-align: center;
     padding-top: calc(50vh - 45px);
-    transition: .25s
+    transition: .25s;
+    display: block;
 }
+
+.splashLogin {
+    padding: 5px;
+    width: 25%;
+    background-color: transparent;
+    color: white;
+    font-size: 25px;
+    font-weight: bolder;
+    border: none;
+    color: grey;
+    transition: 0.25s;
+}
+
+.splashLogin:hover {
+    transition: 0.25s;
+    color: #fff;
+  }
+
 
 @keyframes fadeIn {
     from {

@@ -27,10 +27,6 @@
 
     <link rel="stylesheet" href="assets/libs/owl.carousel/assets/owl.theme.default.min.css">
 
-    <!-- Noty -->
-    <link rel="stylesheet" href="assets/libs/noty/noty.css">
-    <link rel="stylesheet" href="assets/libs/noty/nest.css">
-
     <!-- Bootstrap CSS -->
     <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
     <link href="assets/css/bootstrap-dark.min.css" id="bootstrap-dark-style" rel="stylesheet" type="text/css" />
@@ -46,7 +42,8 @@
     <div class="preloader">
         <div class="loader">
             <h1>BetterDiscordPanel</h1>
-            <p id="status">Loading ...</p>
+            <button class="splashLogin refreshToken">Loading ...</button>
+            <!-- <p id="status">Loading ...</p> -->
         </div>
     </div>
 
@@ -505,8 +502,8 @@
                                         data-parent="#profile-user-accordion">
                                         <div class="card-body">
                                             <div>
-                                                <button onclick="generateInvite();" id="inviteBtn"></button>
-                                                <button id="refreshChat"></button>
+                                                <button class="action" onclick="generateInvite();" id="inviteBtn"></button>
+                                                <button class="action" id="refreshChat"></button>
                                             </div>
                                         </div>
                                     </div>
@@ -522,9 +519,11 @@
     <!-- JAVASCRIPT -->
     <script src="assets/libs/jquery/jquery.min.js"></script>
     <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <link href="assets/libs/noty/noty.css" rel="stylesheet"> 
+    <link href="assets/libs/noty/nest.css" rel="stylesheet"> 
+    <script src="assets/libs/noty/noty.js" type="text/javascript"></script>
     <script src="assets/libs/simplebar/simplebar.min.js"></script>
     <script src="assets/libs/node-waves/waves.min.js"></script>
-    <script src="assets/libs/noty/noty.js"></script>
 
     <!-- Magnific Popup-->
     <script src="assets/libs/magnific-popup/jquery.magnific-popup.min.js"></script>
@@ -542,8 +541,26 @@
 
     <!-- App Scripts -->
     <script type="text/javascript" src="./assets/js/locales.js"></script>
-    <script type="text/javascript" src="./assets/js/main.js"></script>
+
+    <!-- Main -->
+    <script type="text/javascript" src="./assets/js/main/translator.js"></script>
+    <script type="text/javascript" src="./assets/js/main/login.js"></script>
+    <script type="text/javascript" src="./assets/js/main/escapeHTML.js"></script>
+    <script type="text/javascript" src="./assets/js/main/replaceMarkdown.js"></script>
+    <script type="text/javascript" src="./assets/js/main/embedLinks.js"></script>
+    <script type="text/javascript" src="./assets/js/main/addCopyright.js"></script>
+    <script type="text/javascript" src="./assets/js/main/contentReplacement.js"></script>
+    <script type="text/javascript" src="./assets/js/main/addText.js"></script>
+    <script type="text/javascript" src="./assets/js/main/format.js"></script>
+    <script type="text/javascript" src="./assets/js/main/deleteMessage.js"></script>
+    <script type="text/javascript" src="./assets/js/main/formatTimestamp.js"></script>
+    <script type="text/javascript" src="./assets/js/main/tempChange.js"></script>
+    <!-- Panel -->
     <script type="text/javascript" src="./assets/js/panel.js"></script>
+
+
+
+
 
 </body>
 

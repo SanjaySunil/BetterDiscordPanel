@@ -45,9 +45,9 @@
 const status = $("#status");
 
 $(document).ready(function () {
-    setTimeout(function () {
-        $('.preloader').fadeOut(300, function () {});
-    }, 2000);
+    //   setTimeout(function () {
+    //    $('.preloader').fadeOut(300, function () {});
+    //}, 2000);
     setTimeout(function () {
         status.html("Ready!");
     }, 500);
