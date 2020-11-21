@@ -68,7 +68,7 @@ git clone https://github.com/D3VSJ/BetterDiscordPanel
 ```
 2. Open ```index.html``` or open ```BetterDiscordPanel.cmd``` to run the program.
 
-3. Add your token by selecting the profile image on the bottom left corner and click Login/Logout or enter token when prompted. On mobile, it should be located on the bottom right corner.
+3. Login to your Discord Bot by entering your bot token when prompted or by clicking on Login.
 
 4. Start using BetterDiscordPanel!
 
@@ -78,7 +78,6 @@ git clone https://github.com/D3VSJ/BetterDiscordPanel
 Usage info here 
 
 _For more examples, please refer to the [Documentation](https://example.com)_
-
 --> 
 
 <!-- ROADMAP -->
@@ -105,7 +104,7 @@ Distributed under the GPL-3.0 License. See `LICENSE` for more information.
 ### Built With
 
 * [Discord.js](https://github.com/discordjs/discord.js)
-* [JQuery](https://jquery.com)
+* [jQuery](https://jquery.com)
 ---
 
 <div align="center">
