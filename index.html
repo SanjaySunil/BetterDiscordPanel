@@ -42,8 +42,7 @@
     <div class="preloader">
         <div class="loader">
             <h1>BetterDiscordPanel</h1>
-            <button class="splashLogin refreshToken">Loading</button>
-            <!-- <p id="status">Loading ...</p> -->
+            <a href="login.html" id="status" class="splashLogin">Loading ...</a>
         </div>
     </div>
 
@@ -82,13 +81,12 @@
                                 <i class="ri-message-3-line"></i>
                             </a>
                         </li>
-                        <!--
-                    <li class="nav-item" data-toggle="tooltip" data-trigger="hover" data-placement="top" title="Stats">
-                        <a class="nav-link active" id="pills-stats-tab" data-toggle="pill" href="#pills-stats" role="tab">
-                            <i class="ri-bar-chart-2-line"></i>
-                        </a>
-                    </li>
-                        -->
+                        <li class="nav-item" data-toggle="tooltip" data-trigger="hover" data-placement="top"
+                            title="Chat Info">
+                            <a class="btn nav-btn user-profile-show nav-link" data-toggle="pill" role="tab">
+                                <i class="ri-group-line"></i>
+                            </a>
+                        </li>
                         <li class="nav-item" data-toggle="tooltip" data-trigger="hover" data-placement="top"
                             title="Settings">
                             <a class="nav-link" id="pills-setting-tab" data-toggle="pill" href="#pills-setting"
@@ -142,7 +140,7 @@
                     <div class="tab-pane" id="pills-user" role="tabpanel" aria-labelledby="pills-user-tab">
                         <div>
                             <div class="px-4 pt-4">
-                                <h4 class="mb-0">My Profile</h4>
+                                <h4 class="mb-0" id="my-profile">My Profile</h4>
                             </div>
 
                             <div class="text-center p-4 border-bottom">
@@ -162,7 +160,7 @@
                                             <div class="card-header" id="profile-user-headingOne">
                                                 <h5 class="font-size-14 m-0">
                                                     <i class="ri-user-2-line mr-2 align-middle d-inline-block"></i>
-                                                    About
+                                                    <span id="about">About</span>
                                                     <i class="mdi mdi-chevron-up float-right accor-plus-icon"></i>
                                                 </h5>
                                             </div>
@@ -223,12 +221,10 @@
 
                             <div class="px-2">
                                 <div class="chat-message-list">
-                                    <ul class="list-unstyled chat-list chat-user-list">
-                                        <li>
-                                            <select title="guilds" class="half guilds"></select>
-                                            <select title="channels" class="half channels" size="25"></select>
-                                        </li>
-                                    </ul>
+                                    <div class="shadow-none border mb-2">
+                                        <select title="guilds" class="guilds"></select>
+                                        <select title="channels" class="half channels" size="500"></select>
+                                    </div>
                                     <div class="card shadow-none border mb-2">
                                         <div id="profile-setting-helpcollapse">
                                             <div class="card-body">
@@ -326,6 +322,36 @@
                                         </div>
                                     </div>
                                 </div>
+
+                                <div id="language-accordion" class="custom-accordion">
+                                    <div class="card shadow-none border mb-2">
+                                        <a href="#language-personalinfocollapse" class="text-dark"
+                                            data-toggle="collapse" aria-expanded="true"
+                                            aria-controls="language-personalinfocollapse">
+                                            <div class="card-header" id="language-personalinfoheading">
+                                                <h5 class="font-size-14 m-0">
+                                                    Languages
+                                                    <i class="mdi mdi-chevron-up float-right accor-plus-icon"></i>
+                                                </h5>
+                                            </div>
+                                        </a>
+
+                                        <div id="language-personalinfocollapse" class="collapse show"
+                                            aria-labelledby="language-personalinfoheading"
+                                            data-parent="#language-accordion">
+                                            <div class="card shadow-none border mb-2">
+                                                <div id="language-helpcollapse" aria-labelledby="language-helpheading"
+                                                    data-parent="#language-accordion">
+                                                    <div class="card-body">
+                                                        <div id="switchLang">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
                                 <div class="card shadow-none border mb-2">
                                     <div id="profile-setting-helpcollapse" aria-labelledby="profile-setting-helpheading"
                                         data-parent="#profile-setting-accordion">
@@ -502,7 +528,8 @@
                                         data-parent="#profile-user-accordion">
                                         <div class="card-body">
                                             <div>
-                                                <button class="action" onclick="generateInvite();" id="inviteBtn"></button>
+                                                <button class="action" onclick="generateInvite();"
+                                                    id="inviteBtn"></button>
                                                 <button class="action" id="refreshChat"></button>
                                             </div>
                                         </div>
@@ -519,8 +546,8 @@
     <!-- JAVASCRIPT -->
     <script src="assets/libs/jquery/jquery.min.js"></script>
     <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <link href="assets/libs/noty/noty.css" rel="stylesheet"> 
-    <link href="assets/libs/noty/nest.css" rel="stylesheet"> 
+    <link href="assets/libs/noty/noty.css" rel="stylesheet">
+    <link href="assets/libs/noty/nest.css" rel="stylesheet">
     <script src="assets/libs/noty/noty.js" type="text/javascript"></script>
     <script src="assets/libs/simplebar/simplebar.min.js"></script>
     <script src="assets/libs/node-waves/waves.min.js"></script>
@@ -544,7 +571,8 @@
 
     <!-- Main -->
     <script type="text/javascript" src="./assets/js/main/translator.js"></script>
-    <script type="text/javascript" src="./assets/js/main/login.js"></script>
+    <!-- <script type="text/javascript" src="./assets/js/main/login.js"></script> -->
+    <script type="text/javascript" src="./assets/js/main/isLoggedIn.js"></script>
     <script type="text/javascript" src="./assets/js/main/escapeHTML.js"></script>
     <script type="text/javascript" src="./assets/js/main/replaceMarkdown.js"></script>
     <script type="text/javascript" src="./assets/js/main/embedLinks.js"></script>
@@ -557,9 +585,7 @@
     <script type="text/javascript" src="./assets/js/main/tempChange.js"></script>
     <!-- Panel -->
     <script type="text/javascript" src="./assets/js/panel.js"></script>
-
-
-
+    <script type="text/javascript" src="./assets/js/main/translation.js"></script>
 
 
 </body>

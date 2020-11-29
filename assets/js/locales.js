@@ -14,7 +14,8 @@ const locales = {
             "fileSent": "sent some file(s)",
             "attachmentTxt": "Attachments",
             "privateMessages": "DM",
-            "userId": "User ID"
+            "userId": "User ID",
+            "about": "About"
         },
         "buttons": {
             "clearLastMessages": "Clear Last Messages",
@@ -35,9 +36,9 @@ const locales = {
             "emojis": "Emojis"
         },
         "headings": {
-            "lastMessages": "Last Messages",
+            "myprofile": "My Profile",
             "guildName": "Chats",
-            "autoScroll": "Auto-Scroll",
+            "autoScroll": "Auto-Scroll"
         },
         "errors": {
             "error": "ERROR",
@@ -48,7 +49,8 @@ const locales = {
         "token": {
             "prompt": "Enter your Discord Bot Token to Login: ",
             "confirmation": "Are you sure ?",
-            "invalid": "Token is Invalid. Please try again."
+            "invalid": "Token is Invalid. Please try again.",
+            "notloggedin": "You are not logged in. Please click login."
         },
         "messageType": {
             "serverJoin": "joined the server",

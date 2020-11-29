@@ -311,6 +311,10 @@ select {
     height: 42px;
 }
 
+select:focus {
+    outline: none !important;
+  }
+
 button,
 input {
     overflow: visible
@@ -12845,9 +12849,7 @@ a {
 }
 
 .half {
-    height: 100%;
-    width: 100%;
-    float: left;
+    height: 300px;
 }
 
 .codeBlock {

@@ -277,6 +277,10 @@ select {
   height: 42px;
 }
 
+select:focus {
+  outline: none !important;
+}
+
 th {
   text-align: inherit;
 }
@@ -12894,9 +12898,7 @@ a {
 }
 
 .half {
-  height: 100%;
-  width: 100%;
-  float: left;
+  height: 300px;
 }
 
 .codeBlock {

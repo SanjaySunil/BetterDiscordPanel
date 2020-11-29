@@ -22,13 +22,19 @@ const inviteBtn = $("#inviteBtn");
 const refreshToken = $(".refreshToken");
 const refreshChat = $("#refreshChat");
 const overlay = $("#overlay-content");
+const switchLang = $("#switchLang");
 
 // Translation
 
 Object.values(locales).forEach((locale) => {
-  overlay.html(
-    overlay.html() +
-    `<a href="" onclick="localStorage.setItem('locale', '${locale.cCode}'); location.reload()">${locale.language}</a>`
+  switchLang.html(
+    switchLang.html() +
+    `
+    <div class="py-3">
+    <h5 class="font-size-13 mb-0"><a href="" onclick="localStorage.setItem('locale', '${locale.cCode}'); location.reload()">${locale.language}</a>
+    </h5>
+    </div>
+    `
   );
 });
 
@@ -251,14 +257,14 @@ function createMessage(message) {
   }
 
   // Timestamp & mention button
-  html += `<span class="font-size-mini">${timestamp}</span> <button class="mini" data-value="<@!${userId}>" onclick="addText(this.dataset.value)">😐</button>`;
+  html += `<span class="font-size-mini">${timestamp}</span> <button class="mini" data-value="<@!${userId}>" onclick="addText(this.dataset.value)"><i class="mdi mdi-exclamation"></i></button>`;
 
   // Delete button
   if (
     (guilds.val() === "DM" && message.author.id === client.user.id) ||
     message.guild.me.hasPermission("MANAGE_MESSAGES")
   ) {
-    html += `<button class="mini" data-value="${message.id}" onclick="delMsg(this.dataset.value)">🗑️</button>`;
+    html += `<button class="mini" data-value="${message.id}" onclick="delMsg(this.dataset.value)"><i class="mdi mdi-trash-can"></i></button>`;
   }
   html += "</div>";
 
@@ -424,7 +430,7 @@ function updateGuild() {
           `<div style="margin: 4px 0 4px 0"><a href="${avatarUrl}" target="_blank"><img alt="" style="display: inline;" class="avatarIMG" src="${avatarUrl}"/></a> ${member.user.tag} <button data-value="<@!${member.user.id}>" onclick="addText(this.dataset.value)" class="mini">@</button></div>`
         );
       });
-    html += `<button onclick='$("#guildMembers").toggle("fast")'>${
+    html += `<button onclick='$("#guildMembers").toggle("fast")' class="action">${
       localeFile.infos.members
     }</button><div id="guildMembers" style="display:none;">${guildMembers.join(
       ""
@@ -432,7 +438,7 @@ function updateGuild() {
 
     // Roles button
 
-    html += `<button onclick='$("#guildRoles").toggle("fast")'>${
+    html += `<button onclick='$("#guildRoles").toggle("fast")' class="action">${
       localeFile.infos.roles
     }</button><div id="guildRoles" style="display:none;">${guild.roles.cache
       .map((role) => `${escapeHtml(role.name)} (${role.id})`)
@@ -441,7 +447,7 @@ function updateGuild() {
     // Channels button
 
     if (guild.channels.cache.size > 0) {
-      html += `<button onclick='$("#guildChannels").toggle("fast")'>${
+      html += `<button onclick='$("#guildChannels").toggle("fast")' class="action">${
         localeFile.infos.channels
       }</button><div id="guildChannels" style="display:none;">${guild.channels.cache
         .map((channels) => `${escapeHtml(channels.name)} (${channels.id})`)
@@ -462,7 +468,7 @@ function updateGuild() {
           );
         }
       });
-      html += `<button onclick='$("#guildEmojis").toggle("fast")'>${
+      html += `<button onclick='$("#guildEmojis").toggle("fast")' class="action">${
         localeFile.infos.emojis
       }</button><div id="guildEmojis" style="display:none;">${guildEmojis.join(
         " "
@@ -744,7 +750,8 @@ $(document).on("change", ".channels", () => {
 refreshToken.click(() => {
   if (window.confirm(localeFile.token.confirmation)) {
     localStorage.setItem("token", "");
-    window.location.reload();
+    localStorage.setItem("isLoggedIn", "0");
+    location.replace('login.html')
   }
 });
 
