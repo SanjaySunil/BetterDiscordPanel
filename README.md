@@ -23,7 +23,7 @@
 
 * [About the Project](#about-the-project)
 * [Getting Started](#getting-started)
-  <!--* [Prerequisites](#prerequisites)-->
+  <!--* [Prerequisites](#prerequisites) -->
 * [Installation](#installation)
 * [Roadmap](#roadmap)
 * [Contributing](#contributing)
@@ -36,7 +36,7 @@
 
 <img src="assets/images/previews/preview.png" alt="Logo" width="100%" height="100%">
 
-<p align="center">BetterDiscordPanel is a new project that allows users to message and manage inside of their discord bots.</p>
+<p align="center">BetterDiscordPanel is a new panel that allows users to message and manage inside of their discord bots.</p>
 
 **Current Features:**
 * Messaging Interface with Discord Design
@@ -66,9 +66,10 @@ No prerequisites yet, however the Electron Desktop version will require some soo
 ```sh
 git clone https://github.com/D3VSJ/BetterDiscordPanel
 ```
-2. Open ```index.html``` or open ```BetterDiscordPanel.cmd``` to run the program.
+**UPDATES only work if you clone the repository.**
+2. Open ```login.html``` or open ```BetterDiscordPanel.cmd``` to run the program.
 
-3. Login to your Discord Bot by entering your bot token when prompted or by clicking on Login.
+3. Login to your Discord Bot.
 
 4. Start using BetterDiscordPanel!
 
