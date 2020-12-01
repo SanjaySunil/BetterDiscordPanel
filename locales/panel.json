@@ -1,0 +1,39 @@
+{
+    "welcome": "Willkommen,",
+    "select_option": "Wähle aus, was du machen möchtest.",
+
+    "start_web": "&WEB - BetterDiscordPanel",
+    "start_desktop": "&DESKTOP APP - BetterDiscordPanel",
+
+    "support": "Support",
+    "settings": "Einstellungen",
+    "update": "Nach Updates suchen",
+    "language": "Sprache",
+    "go_back": "Zurück",
+    "done": "Fertig!",
+    "exit": "Schließen",
+
+    "betterdiscordpanel_help":"BetterDiscordPanel in deinem Browser Starten.",
+    "desktop_panel_help": "BetterDiscordPanel als Programm Starten.",
+    "settings_help": "Aktualisiere BetterDiscordPanel auf die neueste Version.",
+    "exit_help": "Den Skript beenden.",
+    "support_help": "Support für BetterDiscordPanel anfragen",
+    "update_help": "Aktualisiere BetterDiscordPanel auf die neueste Version.",
+    "language_help": "Wähle eine Sprache, in der du BetterDiscordPanel verwenden möchtest.",
+    "english_help": "Choose a Language for BetterDiscordPanel",
+    "go_back_help": "Zurück zur Auswahl",
+    "discord_help": "Öffne den Discord Support Link.",
+    "issue_help": "Melde einen Fehler auf Github!",
+    "get_help": "Support für BetterDiscordPanel:",
+
+    "check_installation": "Überprüfen, ob BetterDiscordPanel richtig installiert wurde.",
+    "checking_failure": "Systemcheck fehlgeschlagen.",
+    "checking_system": "BetterDiscordPanel-System wird überprüft.",
+    "check_success": "Systemcheck erfolgreich.",
+    "updating": "BetterDiscordPanel wird aktualisiert...",
+    "updating_failure": "Update fehlgeschlagen.",
+    "check_index": "index.html überprüfen...",
+    "check_main": "main.js überprüfen",
+    "check_repo_download_method": "Klone die Repository nochmal und versuche es erneut.",
+    "booting": "BetterDiscordPanel wird gestartet..."
+}
