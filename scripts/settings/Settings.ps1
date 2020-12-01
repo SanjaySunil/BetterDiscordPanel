@@ -16,15 +16,13 @@ If ($config.language -eq 'en') {
     $locales = (Get-Content '../../locales/en/panel.json' -Raw) | ConvertFrom-Json
 }
 
-<#
-ElseIf ($config.language -eq 'New Language') {
-    $locales = (Get-Content '../../locales/New Language/panel.json' -Raw) | ConvertFrom-Json
+ElseIf ($config.language -eq 'de') {
+    $locales = (Get-Content '../../locales/de/panel.json' -Raw) | ConvertFrom-Json
 } 
-#>
 
 Else {
     Start-Sleep -Seconds 0.1
-    Write-Host "[ERROR]: LANGUAGE NOT DEFINED / INVALID LANGUAGE."
+    Write-Host "[ERROR]: INVALID LANGUAGE."
     Exit
 }
 
@@ -32,34 +30,34 @@ Else {
 Settings Menu
 ---------------------------------------#>
 
-$caption = "Settings:
+$caption = "$($locales.settings):
  "
-$description = "[BetterDiscordPanel]: Select the option you would like to perform.
+$description = "[BetterDiscordPanel]: $($locales.select_option)
  "
 
 $choices = New-Object Collections.ObjectModel.Collection[Management.Automation.Host.ChoiceDescription]
 $choices.Add((
     New-Object Management.Automation.Host.ChoiceDescription `
       -ArgumentList `
-      "&Check for Updates",
+      "&$($locales.update)",
     "$($locales.update_help)"
   ))
 $choices.Add((
     New-Object Management.Automation.Host.ChoiceDescription `
       -ArgumentList `
-      "&Language",
+      "&$($locales.language)",
     "$($locales.language_help)"
   ))
 $choices.Add((
     New-Object Management.Automation.Host.ChoiceDescription `
       -ArgumentList `
-      "&Support",
+      "&$($locales.support)",
     "$($locales.support_help)"
   ))
 $choices.Add((
     New-Object Management.Automation.Host.ChoiceDescription `
       -ArgumentList `
-      "&Go Back",
+      "&$($locales.go_back)",
     "$($locales.go_back_help)"
   ))
 

@@ -16,6 +16,10 @@ If ($config.language -eq 'en') {
     $locales = (Get-Content '../../locales/en/panel.json' -Raw) | ConvertFrom-Json
 }
 
+ElseIf ($config.language -eq 'de') {
+    $locales = (Get-Content '../../locales/de/panel.json' -Raw) | ConvertFrom-Json
+} 
+
 <#
 ElseIf ($config.language -eq 'New Language') {
     $locales = (Get-Content '../../locales/New Language/panel.json' -Raw) | ConvertFrom-Json
@@ -24,7 +28,7 @@ ElseIf ($config.language -eq 'New Language') {
 
 Else {
     Start-Sleep -Seconds 0.1
-    Write-Host "[ERROR]: LANGUAGE NOT DEFINED / INVALID LANGUAGE."
+    Write-Host "[ERROR]: INVALID LANGUAGE."
     Exit
 }
 
@@ -53,14 +57,14 @@ If (Test-Path "..\..\index.html") {
     $choices.Add((
             New-Object Management.Automation.Host.ChoiceDescription `
                 -ArgumentList `
-                "&Go back.",
-            "Go back to the selection panel."
+                "&$($locales.go_back)",
+            "$($locales.go_back_help)"
         ))
     $choices.Add((
             New-Object Management.Automation.Host.ChoiceDescription `
                 -ArgumentList `
-                "&Exit",
-            "Exit this script."
+                "&$($locales.exit)",
+            "$($locales.exit_help)."
         ))
 
     $selection = $host.ui.PromptForChoice($empty, $empty2, $choices, -1)

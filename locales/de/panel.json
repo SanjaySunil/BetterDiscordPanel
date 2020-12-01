@@ -2,16 +2,19 @@
     "welcome": "Willkommen,",
     "select_option": "Wähle aus, was du machen möchtest.",
 
-    "start_web": "&WEB - BetterDiscordPanel",
-    "start_desktop": "&DESKTOP APP - BetterDiscordPanel",
+    "start_web": "WEB - BetterDiscordPanel",
+    "start_desktop": "DESKTOP APP - BetterDiscordPanel",
 
-    "support": "Support",
+    "support": "Help/Support",
     "settings": "Einstellungen",
     "update": "Nach Updates suchen",
     "language": "Sprache",
     "go_back": "Zurück",
     "done": "Fertig!",
     "exit": "Schließen",
+
+    "discordserver": "Discord Server",
+    "submit_issue": "Teile uns ein Problem/einen Bug oder einen Vorschlag mit.",
 
     "betterdiscordpanel_help":"BetterDiscordPanel in deinem Browser Starten.",
     "desktop_panel_help": "BetterDiscordPanel als Programm Starten.",
