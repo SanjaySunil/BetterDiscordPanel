@@ -66,7 +66,8 @@ No prerequisites yet, however the Electron Desktop version will require some soo
 ```sh
 git clone https://github.com/D3VSJ/BetterDiscordPanel
 ```
-**UPDATES only work if you clone the repository.**
+**UPDATES only work if you have cloned the repository.**
+
 2. Open ```login.html``` or open ```BetterDiscordPanel.cmd``` to run the program.
 
 3. Login to your Discord Bot.
