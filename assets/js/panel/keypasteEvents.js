@@ -3,6 +3,7 @@
  * @author Sanjay Sunil (a.k.a D3VSJ)
  * @license GPL-3.0
  */
+
 toSend.keypress((event) => {
   if (!event.shiftKey && event.key === "Enter") {
     event.preventDefault();

@@ -54,12 +54,6 @@ $choices.Add((
           "&$($locales.go_back)",
         "$($locales.go_back_help)"
       ))
-$choices.Add((
-        New-Object Management.Automation.Host.ChoiceDescription `
-            -ArgumentList `
-            "&$($locales.exit)",
-        "$($locales.exit_help)"
-    ))
 
 $selection = $host.ui.PromptForChoice($caption, $description, $choices, -1)
 Write-Host
@@ -83,8 +77,5 @@ switch ($selection) {
     }
     2 {
         .\Settings.ps1
-    }
-    3 {
-        Exit
     }
 }
