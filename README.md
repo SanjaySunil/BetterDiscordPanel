@@ -103,6 +103,13 @@ Contributions are what make the open source community such an amazing place to b
 
 Distributed under the GPL-3.0 License. See `LICENSE` for more information.
 
+## Contributors
+### Translators:
+
+| Author                                                  | Language                 |
+| ------------------------------------------------------- | ------------------------ |
+| [devilAPI](https://github.com/devilAPI)                 | German                   |
+
 ### Built With
 
 * [Discord.js](https://github.com/discordjs/discord.js)
