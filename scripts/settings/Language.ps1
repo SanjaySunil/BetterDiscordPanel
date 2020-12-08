@@ -20,6 +20,22 @@ ElseIf ($config.language -eq 'de') {
     $locales = (Get-Content '../../locales/de/panel.json' -Raw) | ConvertFrom-Json
 } 
 
+ElseIf ($config.language -eq 'es') {
+    $locales = (Get-Content '../../locales/es/panel.json' -Raw) | ConvertFrom-Json
+} 
+
+ElseIf ($config.language -eq 'no') {
+    $locales = (Get-Content '../../locales/no/panel.json' -Raw) | ConvertFrom-Json
+} 
+
+ElseIf ($config.language -eq 'ro') {
+    $locales = (Get-Content '../../locales/ro/panel.json' -Raw) | ConvertFrom-Json
+} 
+
+ElseIf ($config.language -eq 'ru') {
+    $locales = (Get-Content '../../locales/ru/panel.json' -Raw) | ConvertFrom-Json
+} 
+
 Else {
     Start-Sleep -Seconds 0.1
     Write-Host "[ERROR]: INVALID LANGUAGE."
@@ -39,19 +55,44 @@ $choices = New-Object Collections.ObjectModel.Collection[Management.Automation.H
 $choices.Add((
         New-Object Management.Automation.Host.ChoiceDescription `
             -ArgumentList `
-            "&English",
+            "&1 English",
         "$($locales.english_help)"
     ))
 $choices.Add((
         New-Object Management.Automation.Host.ChoiceDescription `
             -ArgumentList `
-            "&German",
+            "&2 Spanish",
         "$($locales.english_help)"
     ))
 $choices.Add((
         New-Object Management.Automation.Host.ChoiceDescription `
+            -ArgumentList `
+            "&3 German",
+        "$($locales.english_help)"
+    ))
+$choices.Add((
+        New-Object Management.Automation.Host.ChoiceDescription `
+            -ArgumentList `
+            "&4 Norwegian",
+        "$($locales.english_help)"
+    ))
+$choices.Add((
+        New-Object Management.Automation.Host.ChoiceDescription `
+            -ArgumentList `
+            "&5 Romanian",
+        "$($locales.english_help)"
+    ))
+$choices.Add((
+        New-Object Management.Automation.Host.ChoiceDescription `
+            -ArgumentList `
+            "&6 Russian",
+        "$($locales.english_help)"
+    ))
+    
+$choices.Add((
+        New-Object Management.Automation.Host.ChoiceDescription `
           -ArgumentList `
-          "&$($locales.go_back)",
+          "&7 $($locales.go_back)",
         "$($locales.go_back_help)"
       ))
 
@@ -69,13 +110,45 @@ switch ($selection) {
     }
     1 {
         $locales = (Get-Content "../../config/config.json" -Raw) | ConvertFrom-Json
+        $locales.language='es'
+        $locales | ConvertTo-Json -depth 32| set-content '../../config/config.json'
+        Write-Host "Successfully changed language to Spanish!"
+        Start-Sleep -s 2
+        .\Settings.ps1
+    }
+    2 {
+        $locales = (Get-Content "../../config/config.json" -Raw) | ConvertFrom-Json
         $locales.language='de'
         $locales | ConvertTo-Json -depth 32| set-content '../../config/config.json'
         Write-Host "Successfully changed language to German!"
         Start-Sleep -s 2
         .\Settings.ps1
     }
-    2 {
+    3 {
+        $locales = (Get-Content "../../config/config.json" -Raw) | ConvertFrom-Json
+        $locales.language='no'
+        $locales | ConvertTo-Json -depth 32| set-content '../../config/config.json'
+        Write-Host "Successfully changed language to Norwegian!"
+        Start-Sleep -s 2
+        .\Settings.ps1
+    }
+    4 {
+        $locales = (Get-Content "../../config/config.json" -Raw) | ConvertFrom-Json
+        $locales.language='ro'
+        $locales | ConvertTo-Json -depth 32| set-content '../../config/config.json'
+        Write-Host "Successfully changed language to Romanian!"
+        Start-Sleep -s 2
+        .\Settings.ps1
+    }
+    5 {
+        $locales = (Get-Content "../../config/config.json" -Raw) | ConvertFrom-Json
+        $locales.language='ru'
+        $locales | ConvertTo-Json -depth 32| set-content '../../config/config.json'
+        Write-Host "Successfully changed language to Russian!"
+        Start-Sleep -s 2
+        .\Settings.ps1
+    }
+    6 {
         .\Settings.ps1
     }
 }

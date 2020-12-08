@@ -13,11 +13,27 @@ Language Translator
 $config = (Get-Content "../../config/config.json" -Raw) | ConvertFrom-Json
 
 If ($config.language -eq 'en') {
-    $locales = (Get-Content '../../locales/en/panel.json' -Raw) | ConvertFrom-Json
+  $locales = (Get-Content '../../locales/en/panel.json' -Raw) | ConvertFrom-Json
 }
 
 ElseIf ($config.language -eq 'de') {
-    $locales = (Get-Content '../../locales/de/panel.json' -Raw) | ConvertFrom-Json
+  $locales = (Get-Content '../../locales/de/panel.json' -Raw) | ConvertFrom-Json
+} 
+
+ElseIf ($config.language -eq 'es') {
+  $locales = (Get-Content '../../locales/es/panel.json' -Raw) | ConvertFrom-Json
+} 
+
+ElseIf ($config.language -eq 'no') {
+  $locales = (Get-Content '../../locales/no/panel.json' -Raw) | ConvertFrom-Json
+} 
+
+ElseIf ($config.language -eq 'ro') {
+  $locales = (Get-Content '../../locales/ro/panel.json' -Raw) | ConvertFrom-Json
+} 
+
+ElseIf ($config.language -eq 'ru') {
+  $locales = (Get-Content '../../locales/ru/panel.json' -Raw) | ConvertFrom-Json
 } 
 
 Else {
@@ -39,25 +55,25 @@ $choices = New-Object Collections.ObjectModel.Collection[Management.Automation.H
 $choices.Add((
     New-Object Management.Automation.Host.ChoiceDescription `
       -ArgumentList `
-      "&$($locales.update)",
+      "&1 $($locales.update)",
     "$($locales.update_help)"
   ))
 $choices.Add((
     New-Object Management.Automation.Host.ChoiceDescription `
       -ArgumentList `
-      "&$($locales.language)",
+      "&2 $($locales.language)",
     "$($locales.language_help)"
   ))
 $choices.Add((
     New-Object Management.Automation.Host.ChoiceDescription `
       -ArgumentList `
-      "&$($locales.support)",
+      "&3 $($locales.support)",
     "$($locales.support_help)"
   ))
 $choices.Add((
     New-Object Management.Automation.Host.ChoiceDescription `
       -ArgumentList `
-      "&$($locales.go_back)",
+      "&4 $($locales.go_back)",
     "$($locales.go_back_help)"
   ))
 

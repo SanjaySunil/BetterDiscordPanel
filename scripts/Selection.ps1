@@ -20,6 +20,22 @@ ElseIf ($config.language -eq 'de') {
     $locales = (Get-Content '../locales/de/panel.json' -Raw) | ConvertFrom-Json
 } 
 
+ElseIf ($config.language -eq 'es') {
+    $locales = (Get-Content '../locales/es/panel.json' -Raw) | ConvertFrom-Json
+} 
+
+ElseIf ($config.language -eq 'no') {
+    $locales = (Get-Content '../locales/no/panel.json' -Raw) | ConvertFrom-Json
+} 
+
+ElseIf ($config.language -eq 'ro') {
+    $locales = (Get-Content '../locales/ro/panel.json' -Raw) | ConvertFrom-Json
+} 
+
+ElseIf ($config.language -eq 'ru') {
+    $locales = (Get-Content '../locales/ru/panel.json' -Raw) | ConvertFrom-Json
+} 
+
 Else {
     Start-Sleep -Seconds 0.1
     Write-Host "[ERROR]: INVALID LANGUAGE."
@@ -39,7 +55,7 @@ $choices = New-Object Collections.ObjectModel.Collection[Management.Automation.H
 $choices.Add((
         New-Object Management.Automation.Host.ChoiceDescription `
             -ArgumentList `
-            "&$($locales.start_web)",
+            "&1 $($locales.start_web)",
         "$($locales.betterdiscordpanel_help)"
     ))
 <#
@@ -53,13 +69,13 @@ $choices.Add((
 $choices.Add((
         New-Object Management.Automation.Host.ChoiceDescription `
             -ArgumentList `
-            "&$($locales.settings)",
+            "&2 $($locales.settings)",
         "$($locales.settings_help)"
     ))
 $choices.Add((
         New-Object Management.Automation.Host.ChoiceDescription `
             -ArgumentList `
-            "&$($locales.exit)",
+            "&3 $($locales.exit)",
         "$($locales.exit_help)"
     ))
 
