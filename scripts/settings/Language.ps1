@@ -82,17 +82,19 @@ $choices.Add((
             "&5 Romanian",
         "$($locales.english_help)"
     ))
+<#---------------------------------------
 $choices.Add((
         New-Object Management.Automation.Host.ChoiceDescription `
             -ArgumentList `
             "&6 Russian",
         "$($locales.english_help)"
     ))
+---------------------------------------#>
     
 $choices.Add((
         New-Object Management.Automation.Host.ChoiceDescription `
           -ArgumentList `
-          "&7 $($locales.go_back)",
+          "&6 $($locales.go_back)",
         "$($locales.go_back_help)"
       ))
 
@@ -141,14 +143,6 @@ switch ($selection) {
         .\Settings.ps1
     }
     5 {
-        $locales = (Get-Content "../../config/config.json" -Raw) | ConvertFrom-Json
-        $locales.language='ru'
-        $locales | ConvertTo-Json -depth 32| set-content '../../config/config.json'
-        Write-Host "Successfully changed language to Russian!"
-        Start-Sleep -s 2
-        .\Settings.ps1
-    }
-    6 {
         .\Settings.ps1
     }
 }
