@@ -10,12 +10,27 @@ const locales = {
         "language": "English",
         "text": {
             "channelNameLabel": "Chat",
-            "scrollCheck": "Enable auto-scrolling animation",
             "fileSent": "sent some file(s)",
             "attachmentTxt": "Attachments",
             "privateMessages": "DM",
-            "userId": "User ID",
+        },
+        // Main Panel
+        "status": {
+            "loading": "Loading ..."
+        },
+        "headings": {
+            "myprofile": "My Profile",
+            "guildName": "Chats",
+            "autoScroll": "Auto-Scroll"
+        },
+        "sub-headings": {
             "about": "About"
+        },
+        "about": {
+            "name": "Name",
+            "discrim": "Discrim",
+            "userId": "User ID",
+            "created-at": "Created At"
         },
         "buttons": {
             "clearLastMessages": "Clear Last Messages",
@@ -23,7 +38,7 @@ const locales = {
             "refreshChat": "Refresh chat",
             "changeLanguage": "Change language",
             "send": "Send",
-            "leave": "Leave the server",
+            "leave": "Leave server",
             "invite": "Invite"
         },
         "infos": {
@@ -35,20 +50,15 @@ const locales = {
             "channels": "Channels",
             "emojis": "Emojis"
         },
-        "headings": {
-            "myprofile": "My Profile",
-            "guildName": "Chats",
-            "autoScroll": "Auto-Scroll"
-        },
         "errors": {
             "error": "ERROR",
             "dm": "ERROR : DM",
-            "emptyMsg": "ERROR : EMPTY MESSAGE",
-            "missingPermissions": "ERROR : MISSING PERMISSIONS"
+            "emptyMsg": "Empty Message!",
+            "missingPermissions": "Missing Permissions!"
         },
         "token": {
             "prompt": "Enter your Discord Bot Token to Login: ",
-            "confirmation": "Are you sure ?",
+            "confirmation": "Are you sure?",
             "invalid": "Token is Invalid. Please try again.",
             "notloggedin": "You are not logged in. Please click login."
         },

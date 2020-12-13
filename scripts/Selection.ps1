@@ -89,7 +89,7 @@ Write-Host
 switch ($selection) {
     0 {
         Set-Location boot
-        .\Start.ps1
+        .\Checks.ps1
     }
     1 {
         Set-Location Settings

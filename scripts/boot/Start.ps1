@@ -4,8 +4,6 @@
  * License: GPL-3.0
 #>
 
-Clear-Host
-
 <#---------------------------------------
 Language Translator 
 ---------------------------------------#>
@@ -50,6 +48,7 @@ Else {
 BetterDiscordPanel Web Boot-up
 ---------------------------------------#>
 
+Write-Host ""
 Write-Host "[BetterDiscordPanel]: $($locales.checking_system)"
 If (Test-Path "..\..\index.html") {
     Write-Host "[BetterDiscordPanel]: $($locales.check_success)"
@@ -62,7 +61,9 @@ If (Test-Path "..\..\index.html") {
 
     Write-Host "[BetterDiscordPanel]: $($locales.done)"
 
-  
+    Write-Host
+    node index.js
+
     $caption = ""
     $description = ""
 
@@ -78,7 +79,7 @@ If (Test-Path "..\..\index.html") {
             New-Object Management.Automation.Host.ChoiceDescription `
                 -ArgumentList `
                 "&2 $($locales.exit)",
-            "$($locales.exit_help)."
+            "$($locales.exit_help)"
         ))
 
     $selection = $host.ui.PromptForChoice($empty, $empty2, $choices, -1)

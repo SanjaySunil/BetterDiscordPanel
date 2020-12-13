@@ -1,0 +1,18 @@
+{
+  "name": "betterdiscordpanel",
+  "version": "2.4.3",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/D3VSJ/BetterDiscordPanel.git"
+  },
+  "author": "Sanjay Sunil (D3VSJ)",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/D3VSJ/BetterDiscordPanel/issues"
+  },
+  "homepage": "https://github.com/D3VSJ/BetterDiscordPanel#readme",
+  "dependencies": {
+    "chalk": "^4.1.0"
+  }
+}

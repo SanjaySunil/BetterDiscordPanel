@@ -35,6 +35,11 @@
     <!-- App CSS-->
     <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
     <link href="assets/css/app-dark.min.css" id="app-dark-style" rel="stylesheet" type="text/css" />
+    <style>
+        #lastMessages {
+            display: none;
+        }
+    </style>
 </head>
 
 <body>
@@ -76,9 +81,16 @@
                         </li>
                         <li class="nav-item" data-toggle="tooltip" data-trigger="hover" data-placement="top"
                             title="Chats">
-                            <a class="nav-link active" id="pills-chat-tab" data-toggle="pill" href="#pills-chat"
+                            <a class="nav-link active" id="pills-chat-tab" data-toggle="pill" href="#pills-chat" onclick="OpenChat();"
                                 role="tab">
                                 <i class="ri-message-3-line"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item" data-toggle="tooltip" data-trigger="hover" data-placement="top"
+                        title="Past Messages">
+                            <a class="nav-link" id="pills-lastMessages-tab" data-toggle="pill" onclick="OpenlastMessages();"
+                                role="tab">
+                                <i class="ri-time-line"></i>
                             </a>
                         </li>
                         <li class="nav-item" data-toggle="tooltip" data-trigger="hover" data-placement="top"
@@ -98,7 +110,7 @@
                             <a class="nav-link dropdown-toggle" href="javascript: void(0);" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <img src="assets/images/discord_defaults_avatars/0.png" alt=""
-                                    class="profile-user rounded-circle botavatar">
+                                    class="profile-user rounded-circle bot-avatar">
                             </a>
                             <div class="dropdown-menu">
                                 <button class="dropdown-item refreshToken"><i
@@ -123,7 +135,7 @@
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false">
                                 <img src="assets/images/discord_defaults_avatars/0.png" alt=""
-                                    class="profile-user rounded-circle botavatar">
+                                    class="profile-user rounded-circle bot-avatar">
                             </a>
                             <div class="dropdown-menu">
                                 <button class="dropdown-item refreshToken"><i
@@ -150,6 +162,7 @@
                                 </div>
 
                                 <h5 class="bot-name font-size-16 mb-1 text-truncate"></h5>
+                                <p class="font-size-16 mb-1 text-truncate bot-status"></h5>
                             </div>
 
                             <div class="p-4 user-profile-desc" data-simplebar>
@@ -170,7 +183,6 @@
                                             aria-labelledby="profile-user-headingOne"
                                             data-parent="#profile-user-accordion-1">
                                             <div class="card-body">
-
                                                 <div>
                                                     <p class="text-muted mb-1">Name</p>
                                                     <h5 class="font-size-14 bot-name"></h5>
@@ -256,8 +268,10 @@
                                 </div>
 
                                 <h5 class="bot-name font-size-16 mb-1 text-truncate"></h5>
+                                <p class="font-size-16 mb-1 text-truncate bot-status"></h5>
+                                <!--
                                 <div class="dropdown d-inline-block mb-1">
-                                    <!--
+                                    
                                     <a class="text-muted dropdown-toggle pb-1 d-block" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         Available <i class="mdi mdi-chevron-down"></i>
                                     </a>
@@ -267,8 +281,9 @@
                                       <a class="dropdown-item" href="#">Available</a>
                                       <a class="dropdown-item" href="#">Busy</a>
                                     </div>
-                                -->
+                                
                                 </div>
+                                -->
                             </div>
 
                             <div class="p-4 user-profile-desc" data-simplebar>
@@ -413,6 +428,8 @@
                             <ul class="list-unstyled mb-0">
                                 <div class="scrollable" id="chat">
                                 </div>
+                                <div class="scrollable" id="lastMessages">
+                                </div>
                             </ul>
                         </div>
 
@@ -467,8 +484,7 @@
 
                         <div class="text-center p-4 border-bottom">
                             <div class="mb-4">
-                                <img src="assets/images/discord_defaults_avatars/0.png"
-                                    class="rounded-circle avatar-lg img-thumbnail botavatar" alt="">
+                                <div class="guildPic" alt="">
                             </div>
 
                             <h5 class="font-size-16 mb-1 text-truncate guildNameNoPic"></h5>
@@ -512,6 +528,7 @@
                                             <div>
                                                 <button class="action" onclick="generateInvite();"
                                                     id="inviteBtn"></button>
+                                                <button class="action" id='leaveGuild'></button>
                                                 <button class="action" id="refreshChat"></button>
                                             </div>
                                         </div>
@@ -549,6 +566,8 @@
     <script type="text/javascript" src="./assets/js/discord.12.1.1.min.js"></script>
 
     <!-- App Scripts -->
+    <script src="version.js"></script>
+    <script src="assets/js/update.js"></script>
     <script type="text/javascript" src="./assets/js/locales.js"></script>
 
     <!-- Main -->
@@ -568,13 +587,14 @@
     <!-- Panel -->
     <script type="text/javascript" src="./assets/js/panel/constants.js"></script>
     <script type="text/javascript" src="./assets/js/panel/languages.js"></script>
-    <script type="text/javascript" src="./assets/js/panel/content.js"></script>
+    <script type="text/javascript" src="./assets/js/content.js"></script>
     <script type="text/javascript" src="./assets/js/panel/functions.js"></script>
     <script type="text/javascript" src="./assets/js/panel/discordEvents.js"></script>
     <script type="text/javascript" src="./assets/js/panel/documentEvents.js"></script>
     <script type="text/javascript" src="./assets/js/panel/buttonEvents.js"></script>
     <script type="text/javascript" src="./assets/js/panel/keypasteEvents.js"></script>
     <script type="text/javascript" src="./assets/js/panel/copyright.js"></script>
+    <script type="text/javascript" src="./assets/js/main/translation.js"></script>
 
 </body>
 

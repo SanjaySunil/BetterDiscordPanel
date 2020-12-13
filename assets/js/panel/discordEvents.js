@@ -52,8 +52,18 @@ client.on("ready", () => {
   //  $('#bot-channels').html(client.channels.size);
   //  $('#bot-users').html(client.users.size);
   // $(".bot-presence").html(client.user.presence);
-  // $('img.bot-avatar').attr('src', client.user.displayAvatarURL);
+  $('.bot-avatar').attr('src', client.user.avatarURL({ format: 'png', dynamic: true, size: 1024 }));
   // $('link.bot-avatar').attr('href', client.user.displayAvatarURL);
+  botstatus = JSON.stringify(client.user.presence.status)
+  if (botstatus == '\"online\"') {
+    $(".bot-status").html("Online")
+  }
+  else if (botstatus == '\"idle\"') {
+    $(".bot-status").html("Idle")
+  }
+  else {
+    $(".bot-status").html()
+  }
   fetchGuilds();
 });
 

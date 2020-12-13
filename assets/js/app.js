@@ -44,20 +44,6 @@
 
 const status = $("#status");
 
-$(document).ready(function () {
-    new Noty({
-        type: 'info',
-        theme: "nest",
-        closeWith: ['button'],
-        text: '<a href="https://github.com/D3VSJ/BetterDiscordPanel" target="blank">Welcome to BetterDiscordPanel!<iframe src="https://ghbtns.com/github-btn.html?user=D3VSJ&repo=BetterDiscordPanel&type=star&count=true" frameborder="0" scrolling="0" width="150" height="20" title="GitHub"></iframe></a>',
-        dismissQueue: true,
-    }).show()
-});
-
-$('.000').replaceWith('Copyright © 2020');
-$('.001').replaceWith('Sanjay Sunil');
-$('.002').replaceWith('All rights reserved.');
-
 const hostname = location.hostname;
 const pathname = window.location.pathname;
 

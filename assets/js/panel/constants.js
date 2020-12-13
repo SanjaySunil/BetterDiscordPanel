@@ -17,6 +17,7 @@ const clearChat = $("#clearChat");
 const send = $("#send");
 const guildName = $(".guildName");
 const guildNameNoPic = $(".guildNameNoPic");
+const guildPic = $(".guildPic");
 const leaveGuild = $("#leaveGuild");
 const inviteBtn = $("#inviteBtn");
 const refreshToken = $(".refreshToken");

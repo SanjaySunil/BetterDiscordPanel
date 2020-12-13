@@ -229,6 +229,9 @@ function updateChannel() {
         user.username
       )}`
     );
+    guildPic.html(
+      `<a href="${avatarUrl}" target="_blank"><img alt="" src="${avatarUrl}" class="rounded-circle avatar-lg img-thumbnail"/></a>`
+    )
     guildNameNoPic.html(`${escapeHtml(user.username)}`);
     $(".guildInfo").html(
       `${localeFile.text.userId} : (${user.id}) <button class="mini" data-value="<@!${user.id}>" onclick="addText(this.dataset.value)">@</button>`
@@ -327,6 +330,13 @@ function updateGuild() {
         guild.iconURL() || "./img/icon/info.png"
       }" class="avatarIMG"/></a> ${escapeHtml(guild.name)}`
     );
+    guildPic.html(
+      `<a href="${
+        guild.iconURL() || "./img/icon/info.png"
+      }" target="_blank"><img alt="" src="${
+        guild.iconURL() || "./img/icon/info.png"
+      }" class="rounded-circle avatar-lg img-thumbnail"/></a>`
+    )
     guildNameNoPic.html(`${escapeHtml(guild.name)}`);
 
     // General information
@@ -516,4 +526,16 @@ function generateInvite() {
         );
       });
   }
+}
+
+function OpenlastMessages() {
+  $(".channelName").html("Last Messages")
+  $("#chat").css("display", "none")
+  $("#lastMessages").css("display", "block")
+}
+
+function OpenChat() {
+  $(".channelName").html("Chat")
+  $("#chat").css("display", "block")
+  $("#lastMessages").css("display", "none")
 }

@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,600,700|Work+Sans:300,400,700,900");
 * {
   outline-width: 0;
-  font-family: 'Montserrat' !important;
 }
 
 html {
@@ -10,6 +9,12 @@ html {
 
 body {
   background-color: #2F3136;
+}
+
+.welcome-tag {
+  font-weight: 400;
+  color: rgb(255,255,255);
+  text-decoration: none;
 }
 
 #container {
