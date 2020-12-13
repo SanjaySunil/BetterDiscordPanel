@@ -109,6 +109,11 @@ Distributed under the GPL-3.0 License. See `LICENSE` for more information.
 | Author                                                  | Language                 |
 | ------------------------------------------------------- | ------------------------ |
 | [devilAPI](https://github.com/devilAPI)                 | German                   |
+| [llamaiscoollmao](https://github.com/llamaiscoollmao)   | Spanish                  |
+| [llamaiscoollmao](https://github.com/llamaiscoollmao)   | Norwegian                |
+| [llamaiscoollmao](https://github.com/llamaiscoollmao)   | Romanian                 |
+| [llamaiscoollmao](https://github.com/llamaiscoollmao)   | Russian                  |
+| [GabiK65](https://github.com/GabiK65)                   | Hungarian                |
 
 ### Built With
 
