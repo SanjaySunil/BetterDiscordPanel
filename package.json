@@ -1,7 +1,7 @@
 {
   "name": "betterdiscordpanel",
   "version": "2.4.3",
-  "description": "",
+  "description": "Discord Messaging Panel that allows you to message inside of a bot!",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/D3VSJ/BetterDiscordPanel.git"
