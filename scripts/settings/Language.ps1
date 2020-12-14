@@ -60,44 +60,44 @@ $choices.Add((
         New-Object Management.Automation.Host.ChoiceDescription `
             -ArgumentList `
             "&1 English",
-        "$($locales.english_help)"
+        "Select English."
     ))
 $choices.Add((
         New-Object Management.Automation.Host.ChoiceDescription `
             -ArgumentList `
             "&2 Spanish",
-        "$($locales.english_help)"
+        "Select Spanish."
     ))
 $choices.Add((
         New-Object Management.Automation.Host.ChoiceDescription `
             -ArgumentList `
             "&3 German",
-        "$($locales.english_help)"
+        "Select German."
     ))
 $choices.Add((
         New-Object Management.Automation.Host.ChoiceDescription `
             -ArgumentList `
             "&4 Norwegian",
-        "$($locales.english_help)"
+        "Select Norwegian."
     ))
 $choices.Add((
         New-Object Management.Automation.Host.ChoiceDescription `
             -ArgumentList `
             "&5 Romanian",
-        "$($locales.english_help)"
+        "Select Romanian."
     ))
 $choices.Add((
         New-Object Management.Automation.Host.ChoiceDescription `
             -ArgumentList `
             "&6 Hungarian",
-        "$($locales.english_help)"
+        "Select Hungarian."
     ))
 <#---------------------------------------
 $choices.Add((
         New-Object Management.Automation.Host.ChoiceDescription `
             -ArgumentList `
             "&6 Russian",
-        "$($locales.english_help)"
+        "Select Russian"
     ))
 ---------------------------------------#>
     

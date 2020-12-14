@@ -1,5 +1,5 @@
 {
-    "welcome": "",
+    "welcome": "", 
     "select_option": "",
 
     "start_web": "",
@@ -13,6 +13,9 @@
     "done": "",
     "exit": "",
 
+    "discordserver": "",
+    "submit_issue": "",
+
     "betterdiscordpanel_help":"",
     "desktop_panel_help": "",
     "settings_help": "",
@@ -20,7 +23,6 @@
     "support_help": "",
     "update_help": "",
     "language_help": "",
-    "english_help": "",
     "go_back_help": "",
     "discord_help": "",
     "issue_help": "",
