@@ -8,8 +8,6 @@
 
 ![changes](../assets/images/contribution/upload.png)
 
-**Note :** Please DO NOT use any software to automatically translate, consider translating only if you're a native speaker or at least bilingual.
-
 ## 3. Make a pull request
 
 ![pr](../assets/images/contribution/create_pull.png)
