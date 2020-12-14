@@ -6,11 +6,11 @@
 
 ## 2. Make your changes
 
-![changes](../assets/images/contribution/upload.png)
+![uploadchanges](../assets/images/contribution/upload.png)
 
 ## 3. Make a pull request
 
-![pr](../assets/images/contribution/create_pull.png)
+![pull-request](../assets/images/contribution/create_pull.png)
 
 ***
 
