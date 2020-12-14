@@ -16,4 +16,4 @@
 
 ***
 
-## If you encounter any problems when translation/creating pull request, please email D3VSJ@protonmail.com or message me on Discord.
+## If you encounter any problems, please email D3VSJ@protonmail.com or message me on [Discord](https://discordapp.com/users/732336924559278181).
