@@ -15,6 +15,8 @@
     <a href="https://github.com/D3VSJ/BetterDiscordPanel/issues/new?assignees=&labels=Bug&template=bug_report.md&title=%5BBUG%5D">Report Bug</a>
     ·
     <a href="https://github.com/D3VSJ/BetterDiscordPanel/issues/new?assignees=&labels=Suggestions&template=suggestions.md&title=%5BSUGGESTION%5D">Request Feature</a>
+    ·
+    <a href="https://discord.gg/9h822H3">Discord Server</a>
   </p>
 </p>
 
