@@ -1,4 +1,6 @@
-./assets/js/panel.js
+# Remove Debug logs
 scripts/boot/debug.log
+# Node Modules
 node_modules
+# Package
 package-lock.json
