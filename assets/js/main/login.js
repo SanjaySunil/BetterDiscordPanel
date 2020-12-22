@@ -61,7 +61,7 @@ function testLogin() {
     // localStorage.setItem("isLoggedIn", "1");
     window.location.replace('index.html')
   })
-  .catch((err) => {
+  .catch(() => {
     /**
      * User has not logged into a bot.
      */
