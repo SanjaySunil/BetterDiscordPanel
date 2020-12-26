@@ -531,11 +531,20 @@ function generateInvite() {
 function OpenlastMessages() {
   $(".channelName").html("Last Messages")
   $("#chat").css("display", "none")
+  $("#createPermissionsInvite").css("display", "none")
   $("#lastMessages").css("display", "block")
 }
 
 function OpenChat() {
   $(".channelName").html("Chat")
   $("#chat").css("display", "block")
+  $("#createPermissionsInvite").css("display", "none")
+  $("#lastMessages").css("display", "none")
+}
+
+function OpenPermissionsInviteSettings() {
+  $(".channelName").html("Create Bot Invite")
+  $("#chat").css("display", "none")
+  $("#createPermissionsInvite").css("display", "block")
   $("#lastMessages").css("display", "none")
 }

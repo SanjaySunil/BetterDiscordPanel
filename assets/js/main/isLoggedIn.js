@@ -5,17 +5,9 @@
  */
 
 let token;
+const status = $("#status");
 
-if (
-    !localStorage.getItem("token") ||
-    localStorage.getItem("token") === "" ||
-    localStorage.getItem("token") === null
-) {
-    localStorage.setItem("isLoggedIn", "0");
-    window.location.replace('login.html')
-}
-
-status.html("Connecting to Bot Token ...")
+status.html("Connecting to Discord Bot ...")
 
 token = localStorage.getItem("token")
 
@@ -24,16 +16,14 @@ const client = new Discord.Client({
     fetchAllMembers: false
 });
 
-
 client.login(token)
     .then(() => {
         status.html("Ready!");
         setTimeout(function () {
             $('.preloader').fadeOut(300, function () {});
         }, 1500);
-        localStorage.setItem("isLoggedIn", "1");
     })
-    .catch(() => {
+    .catch((err) => {
         status.html("ERROR! Invalid Token!");
         location.replace('login.html')
     });

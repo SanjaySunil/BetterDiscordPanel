@@ -42,30 +42,8 @@
     }
 }(jQuery);
 
-const status = $("#status");
-
 const hostname = location.hostname;
 const pathname = window.location.pathname;
 
-console.log(hostname)
-console.log(pathname)
-
-//if (hostname != "")
-//    console.log("WARNING: YOU ARE NOT ALLOWED TO DISTRIBUTE BETTERDISCORDPANEL ONTO A DOMAIN!")
-
-var authorizedpath = pathname.startsWith("/");
-
-if (authorizedpath = false) {
-    console.log("RESTRICTED");
-    $("#app").style.display("none");
-
-} else if (hostname != "") {
-    console.log("RESTRICTED");
-    $("#app").style.display("none");
-
-} else {
-    console.log("BetterDiscordPanel is now Authorized.");
-}
-
-//const verification_result = result.startsWith("file:///");
-//console.log(verification_result);
+console.log("Host: ",hostname)
+console.log("File path: ",pathname)
