@@ -9,8 +9,7 @@ function createMessage(message) {
   let userId = message.author.id;
   let avatarUrl =
     message.author.avatarURL() ||
-    `./assets/images/discord_defaults_avatars/${
-      message.author.discriminator % 5
+    `./assets/images/discord_defaults_avatars/${message.author.discriminator % 5
     }.png`; // Get the user's avatar, if not, find the color of his default avatar
   let userAvatar = `<a href="${avatarUrl}" target="_blank"><img alt="" src="${avatarUrl}" class="avatarIMG"></a>`;
   let timestamp = formatTimestamp(message.createdAt);
@@ -58,9 +57,8 @@ function createMessage(message) {
     let embed = message.embeds[0];
     let images = [];
     let fields = [];
-    let html = `<div class="embed" ${
-      embed.hexColor ? `style="border-left: 5px solid ${embed.hexColor}"` : ""
-    }>`;
+    let html = `<div class="embed" ${embed.hexColor ? `style="border-left: 5px solid ${embed.hexColor}"` : ""
+      }>`;
     if (embed.url) {
       links.push(embed.url);
     }
@@ -136,8 +134,7 @@ function createMessage(message) {
       embed.fields.forEach((field) => {
         if (field.inline) {
           fields.push(
-            `<span style="display: inline-block;min-width: 50%;word-break: break-word;"><b>${
-              field.name
+            `<span style="display: inline-block;min-width: 50%;word-break: break-word;"><b>${field.name
             }</b><br>${contentReplacement(field.value)}</span>`
           );
         } else {
@@ -166,9 +163,8 @@ function createMessage(message) {
     embeds.push(html);
   }
 
-  html = `<div class="chatMsg" id="${
-    message.id
-  }"><div>${userAvatar} ${escapeHtml(userTag)} `;
+  html = `<div class="chatMsg" id="${message.id
+    }"><div>${userAvatar} ${escapeHtml(userTag)} `;
 
   // Different types of messages
   if (message.type === "GUILD_MEMBER_JOIN") {
@@ -195,9 +191,8 @@ function createMessage(message) {
   }
   html += "</div>";
 
-  html += `<div class="messageContent">${
-    message.content ? contentReplacement(message.content, links) : ""
-  }</div>`;
+  html += `<div class="messageContent">${message.content ? contentReplacement(message.content, links) : ""
+    }</div>`;
 
   if (embeds.length) {
     html += `${embeds.join("")}`;
@@ -324,36 +319,26 @@ function updateGuild() {
     }
 
     guildName.html(
-      `<a href="${
-        guild.iconURL() || "./img/icon/info.png"
-      }" target="_blank"><img alt="" src="${
-        guild.iconURL() || "./img/icon/info.png"
+      `<a href="${guild.iconURL() || "./img/icon/info.png"
+      }" target="_blank"><img alt="" src="${guild.iconURL() || "./img/icon/info.png"
       }" class="avatarIMG"/></a> ${escapeHtml(guild.name)}`
     );
     guildPic.html(
-      `<a href="${
-        guild.iconURL() || "./img/icon/info.png"
-      }" target="_blank"><img alt="" src="${
-        guild.iconURL() || "./img/icon/info.png"
+      `<a href="${guild.iconURL() || "./img/icon/info.png"
+      }" target="_blank"><img alt="" src="${guild.iconURL() || "./img/icon/info.png"
       }" class="rounded-circle avatar-lg img-thumbnail"/></a>`
     )
     guildNameNoPic.html(`${escapeHtml(guild.name)}`);
 
     // General information
 
-    html += `<div>${localeFile.infos.owner}: ${
-      guild.owner.user.tag
-    } <button data-value="<@!${
-      guild.owner.user.id
-    }>" class="mini" onclick="addText(this.dataset.value)">@</button></div><div>${
-      localeFile.infos.members
-    }: ${
-      guild.members.cache.filter((member) => !member.user.bot).size
-    }</div><div>${localeFile.infos.vChannels}: ${
-      guild.channels.cache.filter((c) => c.type === "voice").size
-    }</div><div>${localeFile.infos.tChannels}: ${
-      guild.channels.cache.filter((c) => c.type === "text").size
-    }</div><br>`;
+    html += `<div>${localeFile.infos.owner}: ${guild.owner.user.tag
+      } <button data-value="<@!${guild.owner.user.id
+      }>" class="mini" onclick="addText(this.dataset.value)">@</button></div><div>${localeFile.infos.members
+      }: ${guild.members.cache.filter((member) => !member.user.bot).size
+      }</div><div>${localeFile.infos.vChannels}: ${guild.channels.cache.filter((c) => c.type === "voice").size
+      }</div><div>${localeFile.infos.tChannels}: ${guild.channels.cache.filter((c) => c.type === "text").size
+      }</div><br>`;
 
     // Members button
 
@@ -362,35 +347,31 @@ function updateGuild() {
       .forEach((member) => {
         let avatarUrl =
           member.user.avatarURL() ||
-          `./assets/images//discord_defaults_avatars/${
-            member.user.discriminator % 5
+          `./assets/images//discord_defaults_avatars/${member.user.discriminator % 5
           }.png`;
         guildMembers.push(
           `<div style="margin: 4px 0 4px 0"><a href="${avatarUrl}" target="_blank"><img alt="" style="display: inline;" class="avatarIMG" src="${avatarUrl}"/></a> ${member.user.tag} <button data-value="<@!${member.user.id}>" onclick="addText(this.dataset.value)" class="mini">@</button></div>`
         );
       });
-    html += `<button onclick='$("#guildMembers").toggle("fast")' class="action">${
-      localeFile.infos.members
-    }</button><div id="guildMembers" style="display:none;">${guildMembers.join(
-      ""
-    )}</div>`;
+    html += `<button onclick='$("#guildMembers").toggle("fast")' class="action">${localeFile.infos.members
+      }</button><div id="guildMembers" style="display:none;">${guildMembers.join(
+        ""
+      )}</div>`;
 
     // Roles button
 
-    html += `<button onclick='$("#guildRoles").toggle("fast")' class="action">${
-      localeFile.infos.roles
-    }</button><div id="guildRoles" style="display:none;">${guild.roles.cache
-      .map((role) => `${escapeHtml(role.name)} (${role.id})`)
-      .join("<div style='margin: 8px 0 8px 0'></div>")}</div>`;
+    html += `<button onclick='$("#guildRoles").toggle("fast")' class="action">${localeFile.infos.roles
+      }</button><div id="guildRoles" style="display:none;">${guild.roles.cache
+        .map((role) => `${escapeHtml(role.name)} (${role.id})`)
+        .join("<div style='margin: 8px 0 8px 0'></div>")}</div>`;
 
     // Channels button
 
     if (guild.channels.cache.size > 0) {
-      html += `<button onclick='$("#guildChannels").toggle("fast")' class="action">${
-        localeFile.infos.channels
-      }</button><div id="guildChannels" style="display:none;">${guild.channels.cache
-        .map((channels) => `${escapeHtml(channels.name)} (${channels.id})`)
-        .join("<div style='margin: 8px 0 8px 0'></div>")}</div>`;
+      html += `<button onclick='$("#guildChannels").toggle("fast")' class="action">${localeFile.infos.channels
+        }</button><div id="guildChannels" style="display:none;">${guild.channels.cache
+          .map((channels) => `${escapeHtml(channels.name)} (${channels.id})`)
+          .join("<div style='margin: 8px 0 8px 0'></div>")}</div>`;
     }
 
     // Emoji button
@@ -407,11 +388,10 @@ function updateGuild() {
           );
         }
       });
-      html += `<button onclick='$("#guildEmojis").toggle("fast")' class="action">${
-        localeFile.infos.emojis
-      }</button><div id="guildEmojis" style="display:none;">${guildEmojis.join(
-        " "
-      )}</div>`;
+      html += `<button onclick='$("#guildEmojis").toggle("fast")' class="action">${localeFile.infos.emojis
+        }</button><div id="guildEmojis" style="display:none;">${guildEmojis.join(
+          " "
+        )}</div>`;
     }
 
     $(".guildInfo").html(html);
@@ -433,9 +413,11 @@ function fetchGuilds() {
       `<option value="${guild.id}">${escapeHtml(guild.name)}</option>`
     );
   });
+  /**
   guilds.append(
     `<option value="DM">[${localeFile.text.privateMessages}]</option>`
   );
+  */
 
   updateGuild();
 }
@@ -547,4 +529,35 @@ function OpenPermissionsInviteSettings() {
   $("#chat").css("display", "none")
   $("#createPermissionsInvite").css("display", "block")
   $("#lastMessages").css("display", "none")
+}
+
+function changeBotUsername() {
+  const usernameInput = document.getElementById('changeUsername').value
+
+  try {
+    client.user.setUsername(usernameInput).catch((err) => {
+      console.log(err)
+    });
+  }
+  catch (err) {
+    console.log(err)
+  }
+}
+
+function setStatus(status) {
+  try {
+    client.user.setPresence({
+      status: status
+    })
+    localStorage.setItem('bot-status', status);
+    if (status !== 'dnd') {
+      $(".bot-status").html(status[0].toUpperCase() + status.substring(1));
+    } else {
+      $(".bot-status").html("Do Not Disturb");
+    }
+    console.log("Success!");
+  }
+  catch (err) {
+    console.log(err);
+  }
 }

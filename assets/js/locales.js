@@ -14,7 +14,6 @@ const locales = {
             "attachmentTxt": "Attachments",
             "privateMessages": "DM",
         },
-        // Main Panel
         "status": {
             "loading": "Loading ..."
         },
@@ -63,10 +62,10 @@ const locales = {
             "notloggedin": "You are not logged in. Please click login."
         },
         "messageType": {
-            "serverJoin": "joined the server",
-            "pin": "pinned a message",
-            "channelNews": "added a remote channel news",
-            "boost": "boosted the server"
+            "serverJoin": "joined the server.",
+            "pin": "pinned a message.",
+            "channelNews": "added a remote channel news.",
+            "boost": "boosted the server."
         },
         "fileType": {
             "unknown": "unknown",
