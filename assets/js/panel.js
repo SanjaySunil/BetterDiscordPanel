@@ -1,17 +1,90 @@
 /**
- * @file functions.js
+ * @file panel.js
  * @author Sanjay Sunil (a.k.a D3VSJ)
  * @license GPL-3.0
  */
 
+$("html").attr("lang", localeFile.cCode);
+
+const guilds = $(".guilds");
+const channels = $(".channels");
+const channelNameLabel = $("#channelNameLabel");
+const channelName = $(".channelName");
+const chat = $("#chat");
+const toSend = $("#toSend");
+const lastMessages = $("#lastMessages");
+const clearChat = $("#clearChat");
+const send = $("#send");
+const guildName = $(".guildName");
+const guildNameNoPic = $(".guildNameNoPic");
+const leaveGuild = $("#leaveGuild");
+const inviteBtn = $("#inviteBtn");
+const refreshToken = $(".refreshToken");
+const refreshChat = $("#refreshChat");
+const overlay = $("#overlay-content");
+const switchLang = $("#switchLang");
+
+// Translation
+
+Object.values(locales).forEach((locale) => {
+  switchLang.html(
+    switchLang.html() +
+    `
+    <div class="py-3">
+    <h5 class="font-size-13 mb-0"><a href="" onclick="localStorage.setItem('locale', '${locale.cCode}'); location.reload()">${locale.language}</a>
+    </h5>
+    </div>
+    `
+  );
+});
+
+// Text
+
+channelNameLabel.html(localeFile.text.channelNameLabel);
+$("#animCheck").html(localeFile.text.scrollCheck);
+channelName.html(`${localeFile.text.channelNameLabel}`);
+
+// Headings
+
+guildName.html(
+  `<img class="avatarIMG" src="" alt=""> ${localeFile.headings.guildName}`
+);
+guildNameNoPic.html(`${localeFile.headings.guildName}`);
+$("#autoScrollHead").html(localeFile.headings.autoScroll);
+$("#lastMessagesHead").html(
+  `<img class="avatarIMG" src='./img/icon/clock.png' alt="clock"> ${localeFile.headings.lastMessages}`
+);
+$("#last").html(localeFile.headings.lastMessages);
+
+// Buttons
+refreshToken.html(
+  `${localeFile.buttons.editToken}<i class="ri-logout-circle-r-line float-right text-muted"></i>`
+);
+refreshChat.html(`${localeFile.buttons.refreshChat}`);
+$("#language").html(`${localeFile.buttons.changeLanguage}`);
+leaveGuild.html(`${localeFile.buttons.leave}`);
+inviteBtn.html(`${localeFile.buttons.invite}`);
+send.html(`${localeFile.buttons.send}`);
+clearChat.html(`${localeFile.buttons.clearLastMessages}`);
+
+// Formatting
+$("#bold").attr("title", localeFile.formatting.bold);
+$("#emphasis").attr("title", localeFile.formatting.emphasis);
+$("#underline").attr("title", localeFile.formatting.underline);
+$("#strike").attr("title", localeFile.formatting.strike);
+$("#clear").attr("title", localeFile.formatting.clear);
+
+/*///////////////////////////////////////////
+                    FUNCTIONS
+    //////////////////////////////////////////*/
+
+// This function creates a message to display in the chat, takes a Discord.Message as parameter
 function createMessage(message) {
   let userTag = escapeHtml(message.author.tag);
   let userId = message.author.id;
   let avatarUrl =
     message.author.avatarURL() ||
-    `./assets/images/discord_defaults_avatars/${
-      message.author.discriminator % 5
-    }.png`; // Get the user's avatar, if not, find the color of his default avatar
+    `./assets/images/discord_defaults_avatars/${message.author.discriminator % 5}.png`; // Get the user's avatar, if not, find the color of his default avatar
   let userAvatar = `<a href="${avatarUrl}" target="_blank"><img alt="" src="${avatarUrl}" class="avatarIMG"></a>`;
   let timestamp = formatTimestamp(message.createdAt);
   let html;
@@ -229,9 +302,6 @@ function updateChannel() {
         user.username
       )}`
     );
-    guildPic.html(
-      `<a href="${avatarUrl}" target="_blank"><img alt="" src="${avatarUrl}" class="rounded-circle avatar-lg img-thumbnail"/></a>`
-    )
     guildNameNoPic.html(`${escapeHtml(user.username)}`);
     $(".guildInfo").html(
       `${localeFile.text.userId} : (${user.id}) <button class="mini" data-value="<@!${user.id}>" onclick="addText(this.dataset.value)">@</button>`
@@ -330,13 +400,6 @@ function updateGuild() {
         guild.iconURL() || "./img/icon/info.png"
       }" class="avatarIMG"/></a> ${escapeHtml(guild.name)}`
     );
-    guildPic.html(
-      `<a href="${
-        guild.iconURL() || "./img/icon/info.png"
-      }" target="_blank"><img alt="" src="${
-        guild.iconURL() || "./img/icon/info.png"
-      }" class="rounded-circle avatar-lg img-thumbnail"/></a>`
-    )
     guildNameNoPic.html(`${escapeHtml(guild.name)}`);
 
     // General information
@@ -362,9 +425,7 @@ function updateGuild() {
       .forEach((member) => {
         let avatarUrl =
           member.user.avatarURL() ||
-          `./assets/images//discord_defaults_avatars/${
-            member.user.discriminator % 5
-          }.png`;
+          `./assets/images//discord_defaults_avatars/${member.user.discriminator % 5}.png`;
         guildMembers.push(
           `<div style="margin: 4px 0 4px 0"><a href="${avatarUrl}" target="_blank"><img alt="" style="display: inline;" class="avatarIMG" src="${avatarUrl}"/></a> ${member.user.tag} <button data-value="<@!${member.user.id}>" onclick="addText(this.dataset.value)" class="mini">@</button></div>`
         );
@@ -484,7 +545,7 @@ function sendMessage() {
   }
 }
 
-document.getElementById("toSend").placeholder = "Type a message.";
+document.getElementById("toSend").placeholder = "Type a message."
 
 function selectChannelOnReload(channel) {
   $(`.channels option[value="${channel}"]`).prop("selected", true);
@@ -496,17 +557,225 @@ function selectChannelOnReload(channel) {
 function scrollAnim(DOM1, DOM2, time) {
   if (document.querySelector(DOM1).checked) {
     if (document.querySelector("#chk3").checked) {
-      $(DOM2).animate(
-        {
-          scrollTop: $(DOM2)[0].scrollHeight - $(DOM2).height(),
-        },
-        time
-      );
+      $(DOM2).animate({
+        scrollTop: $(DOM2)[0].scrollHeight - $(DOM2).height()
+      }, time);
     } else {
       $(DOM2).scrollTop($(DOM2)[0].scrollHeight - $(DOM2).height());
     }
   }
 }
+
+// Discord Events
+
+client.on("message", (message) => {
+  if (Number(message.channel.id) === Number(channels.val())) {
+    chat.html(chat.html() + createMessage(message));
+  }
+
+  if (
+    (Number(message.author.id) === Number(channels.val()) ||
+      message.author.id === client.user.id) &&
+    message.channel.type === "dm"
+  ) {
+    updateChannel();
+  }
+
+  if (
+    message.channel.type !== "dm" &&
+    (Number(message.author.id) === Number(client.user.id) ||
+      !message.author.bot)
+  ) {
+    lastMessages.html(
+      lastMessages.html() +
+      `<br>[<b>#${escapeHtml(message.channel.name)} | ${escapeHtml(
+          message.guild.name
+        )} | ${message.guild.id} | ${escapeHtml(message.author.tag)} | ${
+          message.author.id
+        }] </b> \n${contentReplacement(message.content)}`
+    );
+  } else if (message.channel.type === "dm" && !message.author.bot) {
+    lastMessages.html(
+      lastMessages.html() +
+      `<br><b>[${localeFile.text.privateMessages}] ${escapeHtml(
+          message.author.tag
+        )} | ${message.author.id} </b> \n${contentReplacement(message.content)}`
+    );
+  }
+
+  localStorage.setItem("lastMessages", $("#lastMessages").html());
+});
+
+client.on("ready", () => {
+  lastMessages.html(localStorage.getItem("lastMessages") || "");
+  $('.bot-name').html(client.user.username);
+  $('.bot-discriminator').html('#' + client.user.discriminator);
+  $('.bot-userid').html(client.user.id);
+  $('.bot-createdAt').html(client.user.createdAt);
+  //  $('#bot-guilds').html(client.guilds.size);
+  //  $('#bot-channels').html(client.channels.size);
+  //  $('#bot-users').html(client.users.size);
+  // $(".bot-presence").html(client.user.presence);
+  // $('img.bot-avatar').attr('src', client.user.displayAvatarURL);
+  // $('link.bot-avatar').attr('href', client.user.displayAvatarURL);
+  fetchGuilds();
+});
+
+client.on("messageDelete", (message) => {
+  if (Number(message.channel.id) === Number(channels.val())) {
+    $(`#${message.id}`).remove();
+  }
+
+  if (
+    (Number(message.author.id) === Number(channels.val()) ||
+      message.author.id === client.user.id) &&
+    message.channel.type === "dm"
+  ) {
+    updateChannel();
+  }
+});
+
+client.on("messageUpdate", (oldMessage, newMessage) => {
+  if (Number(oldMessage.channel.id) === Number(channels.val())) {
+    $(`#${oldMessage.id}`).replaceWith(createMessage(newMessage));
+    $(`#${oldMessage.id} > span.font-size-mini`).html(
+      `Edited at : ${formatTimestamp(newMessage.editedAt)}`
+    );
+  }
+
+  if (
+    (Number(oldMessage.author.id) === Number(channels.val()) ||
+      oldMessage.author.id === client.user.id) &&
+    oldMessage.channel.type === "dm"
+  ) {
+    updateChannel();
+  }
+});
+
+client.on("guildCreate", () => {
+  fetchGuilds();
+});
+
+client.on("guildDelete", () => {
+  fetchGuilds();
+});
+
+client.on("guildUpdate", (oldGuild) => {
+  if (oldGuild.id === guilds.val()) {
+    let channel = channels.val();
+    updateGuild();
+    selectChannelOnReload(channel);
+  }
+});
+
+client.on("guildMemberAdd", (member) => {
+  if (member.guild.id === guilds.val()) {
+    updateGuild();
+    selectChannelOnReload();
+  }
+});
+
+client.on("guildMemberRemove", (member) => {
+  if (member.guild.id === guilds.val()) {
+    let channel = channels.val();
+    updateGuild();
+    selectChannelOnReload(channel);
+  }
+});
+
+client.on("channelCreate", (channel) => {
+  if (guilds.val() === "[DM]" || channel.type === "dm") {
+    return;
+  }
+
+  if (channel.guild.id === guilds.val()) {
+    let channel = channels.val();
+    updateGuild();
+    selectChannelOnReload(channel);
+  }
+});
+
+client.on("channelDelete", (channel) => {
+  if (channel.guild.id === guilds.val()) {
+    let channel = channels.val();
+    updateGuild();
+    selectChannelOnReload(channel);
+  }
+});
+
+client.on("channelUpdate", (oldChannel) => {
+  if (oldChannel.guild.id === guilds.val()) {
+    let channel = channels.val();
+    updateGuild();
+    selectChannelOnReload(channel);
+  }
+});
+
+client.on("emojiCreate", (emoji) => {
+  if (emoji.guild.id === guilds.val()) {
+    let channel = channels.val();
+    updateGuild();
+    selectChannelOnReload(channel);
+  }
+});
+
+client.on("emojiDelete", (emoji) => {
+  if (emoji.guild.id === guilds.val()) {
+    let channel = channels.val();
+    updateGuild();
+    selectChannelOnReload(channel);
+  }
+});
+
+client.on("emojiUpdate", (oldEmoji) => {
+  if (oldEmoji.guild.id === guilds.val()) {
+    let channel = channels.val();
+    updateGuild();
+    selectChannelOnReload(channel);
+  }
+});
+
+// Document Events
+
+$(document).on("change", ".guilds", () => {
+  updateGuild();
+});
+
+$(document).on("change", ".channels", () => {
+  updateChannel();
+});
+
+// Button Events
+
+refreshToken.click(() => {
+  if (window.confirm(localeFile.token.confirmation)) {
+    localStorage.setItem("token", "");
+    localStorage.setItem("isLoggedIn", "0");
+    location.replace('login.html')
+  }
+});
+
+send.click(() => {
+  sendMessage();
+});
+
+clearChat.click(() => {
+  localStorage.setItem("lastMessages", "");
+  $("#lastMessages").empty();
+});
+
+leaveGuild.click(() => {
+  if (guilds.val() !== "DM") {
+    if (window.confirm(localeFile.token.confirmation)) {
+      client.guilds.cache
+        .find((guild) => guild.id === guilds.val())
+        .leave()
+        .catch(() => {
+          tempChange("#leaveGuild", `[${localeFile.errors.error}]`, 1000);
+        });
+    }
+  }
+});
 
 function generateInvite() {
   if (guilds.val() === "DM") {
@@ -528,23 +797,54 @@ function generateInvite() {
   }
 }
 
-function OpenlastMessages() {
-  $(".channelName").html("Last Messages")
-  $("#chat").css("display", "none")
-  $("#createPermissionsInvite").css("display", "none")
-  $("#lastMessages").css("display", "block")
-}
 
-function OpenChat() {
-  $(".channelName").html("Chat")
-  $("#chat").css("display", "block")
-  $("#createPermissionsInvite").css("display", "none")
-  $("#lastMessages").css("display", "none")
-}
+$('.000').replaceWith('Copyright © 2020');
+$('.001').replaceWith('Sanjay Sunil');
+$('.002').replaceWith('All rights reserved.');
 
-function OpenPermissionsInviteSettings() {
-  $(".channelName").html("Create Bot Invite")
-  $("#chat").css("display", "none")
-  $("#createPermissionsInvite").css("display", "block")
-  $("#lastMessages").css("display", "none")
-}
+refreshChat.click(() => {
+  updateChannel();
+});
+
+// Keypaste Events
+
+toSend.keypress((event) => {
+  if (!event.shiftKey && event.key === "Enter") {
+    event.preventDefault();
+    send.click();
+  }
+  event.stopPropagation();
+});
+
+toSend.on("paste", (event) => {
+  event.preventDefault();
+  let text = (event.originalEvent || event).clipboardData.getData("text/plain");
+  document.execCommand("insertHTML", false, text);
+});
+
+document.addEventListener("keyup", (event) => {
+  if (event.code === "Escape") {
+    event.preventDefault();
+    closeNav();
+  }
+  event.stopPropagation();
+});
+
+// Autoscroll
+/*
+chat.bind("wheel", (event) => {
+  if (event.originalEvent.deltaY < 0) {
+    $("#chk3")[0].checked = false;
+  } else if (
+    event.originalEvent.deltaY > 0 &&
+    $("#chk3").scrollTop() + $("#chat").innerHeight() >=
+      $("#chat")[0].scrollHeight - 100
+  ) {
+    $("#chk3")[0].checked = true;
+  }
+});
+
+setInterval(() => {
+  scrollAnim("#chk3", "#chat", 100);
+}, 1000);
+*/

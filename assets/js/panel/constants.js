@@ -24,4 +24,3 @@ const refreshToken = $(".refreshToken");
 const refreshChat = $("#refreshChat");
 const overlay = $("#overlay-content");
 const switchLang = $("#switchLang");
-const changeUsername = $("#changeUsername");

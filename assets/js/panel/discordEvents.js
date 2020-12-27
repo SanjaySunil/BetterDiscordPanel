@@ -43,46 +43,27 @@ client.on("message", (message) => {
 });
 
 client.on("ready", () => {
-  let storageBotStatus;
-  let botstatus;
-
   lastMessages.html(localStorage.getItem("lastMessages") || "");
   $(".bot-name").html(client.user.username);
   $(".bot-discriminator").html("#" + client.user.discriminator);
   $(".bot-userid").html(client.user.id);
   $(".bot-createdAt").html(client.user.createdAt);
+  //  $('#bot-guilds').html(client.guilds.size);
+  //  $('#bot-channels').html(client.channels.size);
+  //  $('#bot-users').html(client.users.size);
+  // $(".bot-presence").html(client.user.presence);
   $('.bot-avatar').attr('src', client.user.avatarURL({ format: 'png', dynamic: true, size: 1024 }));
-
-  storageBotStatus = localStorage.getItem('bot-status')
-
-  if (storageBotStatus === 'online' || storageBotStatus === 'idle' || storageBotStatus === 'dnd' || storageBotStatus === 'invisible') {
-    setStatus(storageBotStatus)
+  // $('link.bot-avatar').attr('href', client.user.displayAvatarURL);
+  botstatus = JSON.stringify(client.user.presence.status)
+  if (botstatus == '\"online\"') {
+    $(".bot-status").html("Online")
+  }
+  else if (botstatus == '\"idle\"') {
+    $(".bot-status").html("Idle")
   }
   else {
-    setStatus('online')
+    $(".bot-status").html()
   }
-
-  setTimeout(function(){ 
-    botstatus = JSON.stringify(client.user.presence.status)
-    $("#changeUsername").attr('placeholder', client.user.username);
-  
-    if (botstatus == '\"online\"') {
-      $(".bot-status").html("Online")
-    }
-    else if (botstatus == '\"idle\"') {
-      $(".bot-status").html("Idle")
-    }
-    else if (botstatus == '\"invisible\"') {
-      $(".bot-status").html("Invisible")
-    }
-    else if (botstatus == '\"dnd\"') {
-      $(".bot-status").html("Do Not Disturb")
-    }
-    else {
-      $(".bot-status").html()
-    }
-  }, 3000);
-
   fetchGuilds();
 });
 
