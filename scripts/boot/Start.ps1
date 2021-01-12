@@ -1,6 +1,6 @@
 <#
  * File: Start.ps1
- * Author: Sanjay Sunil (a.k.a D3VSJ)
+ * Author: Sanjay Sunil 
  * License: GPL-3.0
 #>
 
@@ -9,6 +9,7 @@ Language Translator
 ---------------------------------------#>
 
 $config = (Get-Content "../../config/config.json" -Raw) | ConvertFrom-Json
+$package = (Get-Content "../../package.json" -Raw) | ConvertFrom-Json
 
 If ($config.language -eq 'en') {
     $locales = (Get-Content '../../locales/en/panel.json' -Raw) | ConvertFrom-Json
@@ -61,8 +62,9 @@ If (Test-Path "..\..\index.html") {
 
     Write-Host "[BetterDiscordPanel]: $($locales.done)"
 
-    Write-Host
-    node index.js
+    Write-Host  
+    Write-Host "BetterDiscordPanel v$($package.version)"
+    Write-Host "Copyright $([char]0x00A9) 2020 Sanjay Sunil"
 
     $caption = ""
     $description = ""

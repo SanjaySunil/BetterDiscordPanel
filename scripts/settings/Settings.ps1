@@ -1,6 +1,6 @@
 <#
  * File: Settings.ps1
- * Author: Sanjay Sunil (a.k.a D3VSJ)
+ * Author: Sanjay Sunil 
  * License: GPL-3.0
 #>
 

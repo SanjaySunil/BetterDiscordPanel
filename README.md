@@ -11,9 +11,9 @@
     Discord Messaging Panel that allows you to message inside of a bot!
     <br />
     <br />
-    <a href="https://github.com/D3VSJ/BetterDiscordPanel/issues/new?assignees=&labels=Bug&template=bug_report.md&title=%5BBUG%5D">Report Bug</a>
+    <a href="https://github.com/SanjaySunil/BetterDiscordPanel/issues/new?assignees=&labels=Bug&template=bug_report.md&title=%5BBUG%5D">Report Bug</a>
     ·
-    <a href="https://github.com/D3VSJ/BetterDiscordPanel/issues/new?assignees=&labels=Suggestions&template=suggestions.md&title=%5BSUGGESTION%5D">Request Feature</a>
+    <a href="https://github.com/SanjaySunil/BetterDiscordPanel/issues/new?assignees=&labels=Suggestions&template=suggestions.md&title=%5BSUGGESTION%5D">Request Feature</a>
     ·
     <a href="https://discord.gg/9h822H3">Discord Server</a>
   </p>
@@ -41,7 +41,7 @@
 <!-- Features -->
 ## ✨ Features
 
-* 📊 **Discord Bot Statistics:** Gain full insights and details of your discord bot with server and bot information.
+* 📊 **Discord Bot Statistics** Gain full insights and details of your discord bot with server and bot information.
 * 💬 **Simple Messaging Interface:** BetterDiscordPanel allows you to easily message users and chat within servers using your discord bot. The panel also has a light and dark theme to suit your needs!
 * 🔒 **Security:**  BetterDiscordPanel does not run on any servers and can be self hosted. All bot details are stored locally and is completely secure.
 * 👀 **Opensource:** BetterDiscordPanel is open source on GitHub so you can see all the code behind the project.
@@ -81,9 +81,9 @@ See the [open issues](https://github.com/sanjaysunil/betterdiscordpanel/issues) 
 
 Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
-View [translation guide](https://github.com/D3VSJ/BetterDiscordPanel/blob/master/.github/TRANSLATION.md).
+View [translation guide](https://github.com/SanjaySunil/BetterDiscordPanel/blob/master/.github/TRANSLATION.md).
 
-View [contribution guide](https://github.com/D3VSJ/BetterDiscordPanel/blob/master/.github/CONTRIBUTION.md).
+View [contribution guide](https://github.com/SanjaySunil/BetterDiscordPanel/blob/master/.github/CONTRIBUTION.md).
 <br/>
 
 ## Supporters/Contributors
@@ -111,7 +111,7 @@ View [contribution guide](https://github.com/D3VSJ/BetterDiscordPanel/blob/maste
 
 ## License
 
-Copyright © 2020 Sanjay Sunil (D3VSJ@protonmail.com)
+Copyright © 2020 Sanjay Sunil (sanjaysunil@protonmail.com)
 
 Distributed under the MIT License. See `LICENSE` for more information.
 

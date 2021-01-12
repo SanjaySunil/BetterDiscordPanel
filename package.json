@@ -1,18 +1,15 @@
 {
   "name": "betterdiscordpanel",
-  "version": "2.6.1",
+  "version": "2.6.2",
   "description": "Discord Messaging Panel that allows you to message inside of a bot!",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/D3VSJ/BetterDiscordPanel.git"
+    "url": "git+https://github.com/SanjaySunil/BetterDiscordPanel.git"
   },
-  "author": "Sanjay Sunil (D3VSJ)",
+  "author": "Sanjay Sunil",
   "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/D3VSJ/BetterDiscordPanel/issues"
+    "url": "https://github.com/SanjaySunil/BetterDiscordPanel/issues"
   },
-  "homepage": "https://github.com/D3VSJ/BetterDiscordPanel#readme",
-  "dependencies": {
-    "chalk": "^4.1.0"
-  }
+  "homepage": "https://github.com/SanjaySunil/BetterDiscordPanel#readme",
 }

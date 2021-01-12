@@ -1,6 +1,6 @@
 <#
  * File: Support.ps1
- * Author: Sanjay Sunil (a.k.a D3VSJ)
+ * Author: Sanjay Sunil 
  * License: GPL-3.0
 #>
 
@@ -90,7 +90,7 @@ switch ($selection) {
     .\Support.ps1
   }
   1 {
-    Start-Process 'https://github.com/D3VSJ/BetterDiscordPanel/issues/new/choose'
+    Start-Process 'https://github.com/SanjaySunil/BetterDiscordPanel/issues/new/choose'
     .\Support.ps1
   }
   2 {
