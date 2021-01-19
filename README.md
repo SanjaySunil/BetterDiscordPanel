@@ -41,7 +41,7 @@
 <!-- Features -->
 ## ✨ Features
 
-* 📊 **Discord Bot Statistics** Gain full insights and details of your discord bot with server and bot information.
+* 📊 **Discord Bot Statistics:** Gain full insights and details of your discord bot with server and bot information.
 * 💬 **Simple Messaging Interface:** BetterDiscordPanel allows you to easily message users and chat within servers using your discord bot. The panel also has a light and dark theme to suit your needs!
 * 🔒 **Security:**  BetterDiscordPanel does not run on any servers and can be self hosted. All bot details are stored locally and is completely secure.
 * 👀 **Opensource:** BetterDiscordPanel is open source on GitHub so you can see all the code behind the project.
