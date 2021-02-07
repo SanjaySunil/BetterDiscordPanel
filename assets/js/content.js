@@ -1,11 +1,10 @@
 /**
  * @file content.js
- * @author Sanjay Sunil 
+ * @author Sanjay Sunil
  * @license GPL-3.0
  */
 
 // Text
-channelNameLabel.html(localeFile.text.channelNameLabel);
 $("#animCheck").html(localeFile.text.scrollCheck);
 channelName.html(`${localeFile.text.channelNameLabel}`);
 

@@ -58,7 +58,7 @@ function versionCompare(current, latest, options) {
 				type: "info",
 				theme: "nest",
 				closeWith: ["button"],
-				text: "New update available!",
+				text: "<a href='https://github.com/SanjaySunil/BetterDiscordPanel/releases/tag/2.6.2' target='_blank'>New update available!</a>",
 				timeout: 5000,
 				progressBar: true,
 				dismissQueue: true,
@@ -74,7 +74,7 @@ function versionCompare(current, latest, options) {
 			type: "info",
 			theme: "nest",
 			closeWith: ["button"],
-			text: "New update available!",
+			text: "<a href='https://github.com/SanjaySunil/BetterDiscordPanel/releases/tag/2.6.2' target='_blank'>New update available!</a>",
 			timeout: 5000,
 			progressBar: true,
 			dismissQueue: true,
@@ -117,8 +117,8 @@ $(document).ready(function () {
 					'! <iframe src="https://ghbtns.com/github-btn.html?user=SanjaySunil&repo=BetterDiscordPanel&type=star&count=true" frameborder="0" scrolling="0" width="150" height="20" title="GitHub"></iframe></a>',
 				dismissQueue: true,
 			}).show();
-			console.log("Current Version: " + version);
-			console.log("Latest Version: " + latestVersion);
+			BetterDiscordConsole(`BetterDiscordPanel v${version}`, "lightblue")
+			BetterDiscordConsole(`Latest Version: v${latestVersion}`, "lightblue")
 			console.log(versionCompare(version, latestVersion));
 		}
 	);

@@ -1,6 +1,6 @@
 /**
  * @file constants.js
- * @author Sanjay Sunil 
+ * @author Sanjay Sunil
  * @license GPL-3.0
  */
 
@@ -8,7 +8,6 @@ $("html").attr("lang", localeFile.cCode);
 
 const guilds = $(".guilds");
 const channels = $(".channels");
-const channelNameLabel = $("#channelNameLabel");
 const channelName = $(".channelName");
 const chat = $("#chat");
 const toSend = $("#toSend");

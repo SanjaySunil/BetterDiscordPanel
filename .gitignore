@@ -2,5 +2,3 @@
 scripts/boot/debug.log
 # Node Modules
 node_modules
-# Package
-package-lock.json
