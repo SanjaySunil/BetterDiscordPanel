@@ -51,16 +51,24 @@
 	});
 	function checkTheme() {
 		if (localStorage.getItem("theme") == "light") {
-			a("#bootstrap-style").attr("disabled", !1),
+			setTimeout(() => {
+				a("#bootstrap-style").attr("disabled", !1);
+			}, 50)
+			setTimeout(() => {
+				a("#bootstrap-dark-style").attr("disabled", !0);
 				a("#app-dark-style").attr("disabled", !0),
-				a("#app-style").attr("disabled", !1);
-			a("#bootstrap-dark-style").attr("disabled", !0);
+					a("#app-style").attr("disabled", !1);
+			}, 100)
 		} else {
 			localStorage.setItem("theme", "dark");
-			a("#bootstrap-style").attr("disabled", !0),
-				a("#app-dark-style").attr("disabled", !1),
-				a("#app-style").attr("disabled", !0);
-			a("#bootstrap-dark-style").attr("disabled", !1);
+			setTimeout(() => {
+				a("#bootstrap-dark-style").attr("disabled", !1);
+			}, 50)
+			setTimeout(() => {
+				a("#bootstrap-style").attr("disabled", !0),
+					a("#app-dark-style").attr("disabled", !1),
+					a("#app-style").attr("disabled", !0);
+			}, 100)
 		}
 	}
 	checkTheme();
