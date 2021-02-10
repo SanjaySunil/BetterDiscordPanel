@@ -48,7 +48,7 @@ client.on("ready", () => {
 	lastMessages.html(localStorage.getItem("lastMessages") || "");
 	$(".bot-name").html(client.user.username);
 	$(".bot-discriminator").html("#" + client.user.discriminator);
-	$(".bot-userid").html(client.user.id);
+	$(".bot-id").html(client.user.id);
 	$(".bot-createdAt").html(client.user.createdAt);
 	$(".bot-avatar").attr(
 		"src",

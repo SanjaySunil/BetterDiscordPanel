@@ -409,10 +409,10 @@ function fetchGuilds() {
 		);
 	});
 	/**
-  guilds.append(
+	guilds.append(
 	`<option value="DM">[${localeFile.text.privateMessages}]</option>`
-  );
-  */
+	);
+	*/
 
 	updateGuild();
 }
@@ -537,5 +537,36 @@ function setStatus(status) {
 		console.log("Status successfully updated!");
 	} catch (err) {
 		console.log(err);
+	}
+}
+
+function evalCommand() {
+	try {
+		const code = document.getElementById('eval').value;
+		let executeEval = eval(code)
+		new Noty({
+			type: "success",
+			theme: "nest",
+			closeWith: ["button"],
+			text: "Eval was successful! Check console!",
+			timeout: 5000,
+			progressBar: true,
+			dismissQueue: true,
+			force: false,
+			maxVisible: 5,
+		}).show();
+		console.log(JSON.stringify(executeEval, null, 2))
+	} catch (err) {
+		new Noty({
+			type: "error",
+			theme: "nest",
+			closeWith: ["button"],
+			text: `ERROR: ${err}`,
+			timeout: 5000,
+			progressBar: true,
+			dismissQueue: true,
+			force: false,
+			maxVisible: 5,
+		}).show();
 	}
 }
