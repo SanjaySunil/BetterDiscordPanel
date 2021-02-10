@@ -1,6 +1,6 @@
 /**
  * @file discordEvents.js
- * @author Sanjay Sunil 
+ * @author Sanjay Sunil
  * @license GPL-3.0
  */
 
@@ -24,18 +24,17 @@ client.on("message", (message) => {
 	) {
 		lastMessages.html(
 			lastMessages.html() +
-				`<br>[<b>#${escapeHtml(message.channel.name)} | ${escapeHtml(
-					message.guild.name
-				)} | ${message.guild.id} | ${escapeHtml(message.author.tag)} | ${
-					message.author.id
-				}] </b> \n${contentReplacement(message.content)}`
+			`<br>[<b>#${escapeHtml(message.channel.name)} | ${escapeHtml(
+				message.guild.name
+			)} | ${message.guild.id} | ${escapeHtml(message.author.tag)} | ${message.author.id
+			}] </b> \n${contentReplacement(message.content)}`
 		);
 	} else if (message.channel.type === "dm" && !message.author.bot) {
 		lastMessages.html(
 			lastMessages.html() +
-				`<br><b>[${localeFile.text.privateMessages}] ${escapeHtml(
-					message.author.tag
-				)} | ${message.author.id} </b> \n${contentReplacement(message.content)}`
+			`<br><b>[${localeFile.text.privateMessages}] ${escapeHtml(
+				message.author.tag
+			)} | ${message.author.id} </b> \n${contentReplacement(message.content)}`
 		);
 	}
 
@@ -55,6 +54,7 @@ client.on("ready", () => {
 		"src",
 		client.user.avatarURL({ format: "png", dynamic: true, size: 1024 })
 	);
+	$('.bot-guilds').html(client.guilds.cache.size)
 
 	storageBotStatus = localStorage.getItem("bot-status");
 
