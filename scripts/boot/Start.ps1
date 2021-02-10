@@ -1,11 +1,11 @@
 <#
  * File: Start.ps1
- * Author: Sanjay Sunil 
+ * Author: Sanjay Sunil
  * License: GPL-3.0
 #>
 
 <#---------------------------------------
-Language Translator 
+Language Translator
 ---------------------------------------#>
 
 $config = (Get-Content "../../config/config.json" -Raw) | ConvertFrom-Json
@@ -15,29 +15,33 @@ If ($config.language -eq 'en') {
     $locales = (Get-Content '../../locales/en/panel.json' -Raw) | ConvertFrom-Json
 }
 
+ElseIf ($config.language -eq 'fr') {
+    $locales = (Get-Content '../../locales/fr/panel.json' -Raw) | ConvertFrom-Json
+}
+
 ElseIf ($config.language -eq 'de') {
     $locales = (Get-Content '../../locales/de/panel.json' -Raw) | ConvertFrom-Json
-} 
+}
 
 ElseIf ($config.language -eq 'es') {
     $locales = (Get-Content '../../locales/es/panel.json' -Raw) | ConvertFrom-Json
-} 
+}
 
 ElseIf ($config.language -eq 'no') {
     $locales = (Get-Content '../../locales/no/panel.json' -Raw) | ConvertFrom-Json
-} 
+}
 
 ElseIf ($config.language -eq 'ro') {
     $locales = (Get-Content '../../locales/ro/panel.json' -Raw) | ConvertFrom-Json
-} 
+}
 
 ElseIf ($config.language -eq 'ru') {
     $locales = (Get-Content '../../locales/ru/panel.json' -Raw) | ConvertFrom-Json
-} 
+}
 
 ElseIf ($config.language -eq 'hu') {
     $locales = (Get-Content '../../locales/hu/panel.json' -Raw) | ConvertFrom-Json
-} 
+}
 
 Else {
     Start-Sleep -Seconds 0.1
@@ -62,7 +66,7 @@ If (Test-Path "..\..\index.html") {
 
     Write-Host "[BetterDiscordPanel]: $($locales.done)"
 
-    Write-Host  
+    Write-Host
     Write-Host "BetterDiscordPanel v$($package.version)"
     Write-Host "Copyright $([char]0x00A9) 2020 Sanjay Sunil"
 

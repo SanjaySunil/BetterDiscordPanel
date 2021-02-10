@@ -33,50 +33,57 @@
 <br/>
 
 <!-- Information -->
+
 ## What's BetterDiscordPanel?
 
 <a href="https://github.com/betterdiscordpanel" target="_blank">BetterDiscordPanel</a> is a new panel that allows you to message, manage and gain statistics inside of your discord bot.
 <br/>
 
 <!-- Features -->
+
 ## ✨ Features
 
-* 📊 **Discord Bot Statistics:** Gain full insights and details of your discord bot with server and bot information.
-* 💬 **Simple Messaging Interface:** BetterDiscordPanel allows you to easily message users and chat within servers using your discord bot. The panel also has a light and dark theme to suit your needs!
-* 🔒 **Security:**  BetterDiscordPanel does not run on any servers and can be self hosted. All bot details are stored locally and is completely secure.
-* 👀 **Opensource:** BetterDiscordPanel is open source on GitHub so you can see all the code behind the project.
+- 📊 **Discord Bot Statistics:** Gain full insights and details of your discord bot with server and bot information.
+- 💬 **Simple Messaging Interface:** BetterDiscordPanel allows you to easily message users and chat within servers using your discord bot. The panel also has a light and dark theme to suit your needs!
+- 🔒 **Security:** BetterDiscordPanel does not run on any servers and can be self hosted. All bot details are stored locally and is completely secure.
+- 👀 **Opensource:** BetterDiscordPanel is open source on GitHub so you can see all the code behind the project.
 
 <br/>
 
 <!-- Getting Started -->
+
 ## 🛠 Getting Started
 
-This project does not run on any servers and can be self hosted. Simply open 
-```index.html``` to get started or use the control panel by opening ```BetterDiscordPanel.cmd``` and executing "W" for the web panel.
+This project does not run on any servers and can be self hosted. Simply open
+`index.html` to get started or use the control panel by opening `BetterDiscordPanel.cmd` and executing "W" for the web panel.
 <br/>
 
 <!-- Installation -->
+
 ### **Step 2:** Setup / Installation
 
 1. Clone the repository
+
 ```sh
 git clone https://github.com/sanjaysunil/betterdiscordpanel
 ```
-> ⚠️ **NOTE**: The updater only works if you have cloned the repository.
-2. Open ```login.html``` or open ```BetterDiscordPanel.cmd``` to run the panel.
+
+> ⚠️ **NOTE**: The updater only works if you have cloned the repository. 2. Open `login.html` or open `BetterDiscordPanel.cmd` to run the panel.
 
 3. Login to your Discord Bot.
 
 4. Start using BetterDiscordPanel!
-<br/>
+   <br/>
 
 <!-- ROADMAP -->
+
 ## Roadmap
 
 See the [open issues](https://github.com/sanjaysunil/betterdiscordpanel/issues) for a list of proposed features (and known issues).
 <br/>
 
 <!-- CONTRIBUTING -->
+
 ## Contributing
 
 Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
@@ -90,14 +97,15 @@ View [contribution guide](https://github.com/SanjaySunil/BetterDiscordPanel/blob
 
 ### Translators:
 
-| Author                                                  | Language                 |
-| ------------------------------------------------------- | ------------------------ |
-| [devilAPI](https://github.com/devilAPI)                 | German                   |
-| [llamaiscoollmao](https://github.com/llamaiscoollmao)   | Spanish                  |
-| [llamaiscoollmao](https://github.com/llamaiscoollmao)   | Norwegian                |
-| [llamaiscoollmao](https://github.com/llamaiscoollmao)   | Romanian                 |
-| [llamaiscoollmao](https://github.com/llamaiscoollmao)   | Russian                  |
-| [GabiK65](https://github.com/GabiK65)                   | Hungarian                |
+| Author                                                | Language  |
+| ----------------------------------------------------- | --------- |
+| [GreepTheSheep](https://github.com/GreepTheSheep)     | French    |
+| [devilAPI](https://github.com/devilAPI)               | German    |
+| [llamaiscoollmao](https://github.com/llamaiscoollmao) | Spanish   |
+| [llamaiscoollmao](https://github.com/llamaiscoollmao) | Norwegian |
+| [llamaiscoollmao](https://github.com/llamaiscoollmao) | Romanian  |
+| [llamaiscoollmao](https://github.com/llamaiscoollmao) | Russian   |
+| [GabiK65](https://github.com/GabiK65)                 | Hungarian |
 
 [![Stargazers repo roster for @sanjaysunil/betterdiscordpanel](https://reporoster.com/stars/sanjaysunil/betterdiscordpanel)](https://github.com/sanjaysunil/betterdiscordpanel/stargazers)
 
@@ -106,12 +114,11 @@ View [contribution guide](https://github.com/SanjaySunil/BetterDiscordPanel/blob
 
 ### Built With
 
-* [Discord.js](https://github.com/discordjs/discord.js)
-* [jQuery](https://jquery.com)
+- [Discord.js](https://github.com/discordjs/discord.js)
+- [jQuery](https://jquery.com)
 
 ## License
 
 Copyright © 2020 Sanjay Sunil (sanjaysunil@protonmail.com)
 
 Distributed under the MIT License. See `LICENSE` for more information.
-

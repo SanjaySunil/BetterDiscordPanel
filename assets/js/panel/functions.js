@@ -1,6 +1,6 @@
 /**
  * @file functions.js
- * @author Sanjay Sunil 
+ * @author Sanjay Sunil
  * @license GPL-3.0
  */
 
@@ -9,8 +9,7 @@ function createMessage(message) {
 	let userId = message.author.id;
 	let avatarUrl =
 		message.author.avatarURL() ||
-		`./assets/images/discord_defaults_avatars/${
-			message.author.discriminator % 5
+		`./assets/images/discord_defaults_avatars/${message.author.discriminator % 5
 		}.png`; // Get the user's avatar, if not, find the color of his default avatar
 	let userAvatar = `<a href="${avatarUrl}" target="_blank"><img alt="" src="${avatarUrl}" class="avatarIMG"></a>`;
 	let timestamp = formatTimestamp(message.createdAt);
@@ -58,9 +57,8 @@ function createMessage(message) {
 		let embed = message.embeds[0];
 		let images = [];
 		let fields = [];
-		let html = `<div class="embed" ${
-			embed.hexColor ? `style="border-left: 5px solid ${embed.hexColor}"` : ""
-		}>`;
+		let html = `<div class="embed" ${embed.hexColor ? `style="border-left: 5px solid ${embed.hexColor}"` : ""
+			}>`;
 		if (embed.url) {
 			links.push(embed.url);
 		}
@@ -136,8 +134,7 @@ function createMessage(message) {
 			embed.fields.forEach((field) => {
 				if (field.inline) {
 					fields.push(
-						`<span style="display: inline-block;min-width: 50%;word-break: break-word;"><b>${
-							field.name
+						`<span style="display: inline-block;min-width: 50%;word-break: break-word;"><b>${field.name
 						}</b><br>${contentReplacement(field.value)}</span>`
 					);
 				} else {
@@ -166,9 +163,8 @@ function createMessage(message) {
 		embeds.push(html);
 	}
 
-	html = `<div class="chatMsg" id="${
-		message.id
-	}"><div>${userAvatar} ${escapeHtml(userTag)} `;
+	html = `<div class="chatMsg" id="${message.id
+		}"><div>${userAvatar} ${escapeHtml(userTag)} `;
 
 	// Different types of messages
 	if (message.type === "GUILD_MEMBER_JOIN") {
@@ -184,20 +180,19 @@ function createMessage(message) {
 	}
 
 	// Timestamp & mention button
-	html += `<span class="font-size-mini">${timestamp}</span> <button class="mini" data-value="<@!${userId}>" onclick="addText(this.dataset.value)"><i class="mdi mdi-exclamation"></i></button>`;
+	html += `<span class="font-size-mini">${timestamp}</span> <button class="mini chat-action" data-value="<@!${userId}>" onclick="addText(this.dataset.value)"><i class="mdi mdi-at"></i></button>`;
 
 	// Delete button
 	if (
 		(guilds.val() === "DM" && message.author.id === client.user.id) ||
 		message.guild.me.hasPermission("MANAGE_MESSAGES")
 	) {
-		html += `<button class="mini" data-value="${message.id}" onclick="delMsg(this.dataset.value)"><i class="mdi mdi-trash-can"></i></button>`;
+		html += `<button class="mini chat-action" data-value="${message.id}" onclick="delMsg(this.dataset.value)"><i class="mdi mdi-trash-can"></i></button>`;
 	}
 	html += "</div>";
 
-	html += `<div class="messageContent">${
-		message.content ? contentReplacement(message.content, links) : ""
-	}</div>`;
+	html += `<div class="messageContent">${message.content ? contentReplacement(message.content, links) : ""
+		}</div>`;
 
 	if (embeds.length) {
 		html += `${embeds.join("")}`;
@@ -237,9 +232,6 @@ function updateChannel() {
 			`${localeFile.text.userId} : (${user.id}) <button class="mini" data-value="<@!${user.id}>" onclick="addText(this.dataset.value)">@</button>`
 		);
 
-		channelNameLabel.text(
-			`${localeFile.text.channelNameLabel} [${user.username}]`
-		);
 		channelName.html(`#${escapeHtml(user.username)}`);
 
 		if (channel !== null) {
@@ -258,10 +250,8 @@ function updateChannel() {
 			return;
 		}
 
-		channelNameLabel.text(
-			`${localeFile.text.channelNameLabel} [${channel.name}]`
-		);
 		channelName.html(`#${escapeHtml(channel.name)}`);
+
 		channel.messages.fetch().then((messages) => {
 			Array.from(messages)
 				.reverse()
@@ -269,7 +259,7 @@ function updateChannel() {
 					chat.html(chat.html() + createMessage(msg[1]));
 				});
 		});
-		$("#chk2")[0].checked = true;
+		// $("#chk2")[0].checked = true;
 	}
 }
 
@@ -324,36 +314,26 @@ function updateGuild() {
 		}
 
 		guildName.html(
-			`<a href="${
-				guild.iconURL() || "./img/icon/info.png"
-			}" target="_blank"><img alt="" src="${
-				guild.iconURL() || "./img/icon/info.png"
+			`<a href="${guild.iconURL() || "./img/icon/info.png"
+			}" target="_blank"><img alt="" src="${guild.iconURL() || "./img/icon/info.png"
 			}" class="avatarIMG"/></a> ${escapeHtml(guild.name)}`
 		);
 		guildPic.html(
-			`<a href="${
-				guild.iconURL() || "./img/icon/info.png"
-			}" target="_blank"><img alt="" src="${
-				guild.iconURL() || "./img/icon/info.png"
+			`<a href="${guild.iconURL() || "./img/icon/info.png"
+			}" target="_blank"><img alt="" src="${guild.iconURL() || "./img/icon/info.png"
 			}" class="rounded-circle avatar-lg img-thumbnail"/></a>`
 		);
 		guildNameNoPic.html(`${escapeHtml(guild.name)}`);
 
 		// General information
 
-		html += `<div>${localeFile.infos.owner}: ${
-			guild.owner.user.tag
-		} <button data-value="<@!${
-			guild.owner.user.id
-		}>" class="mini" onclick="addText(this.dataset.value)">@</button></div><div>${
-			localeFile.infos.members
-		}: ${
-			guild.members.cache.filter((member) => !member.user.bot).size
-		}</div><div>${localeFile.infos.vChannels}: ${
-			guild.channels.cache.filter((c) => c.type === "voice").size
-		}</div><div>${localeFile.infos.tChannels}: ${
-			guild.channels.cache.filter((c) => c.type === "text").size
-		}</div><br>`;
+		html += `<div>${localeFile.infos.owner}: ${guild.owner.user.tag
+			} <button data-value="<@!${guild.owner.user.id
+			}>" class="mini" onclick="addText(this.dataset.value)"><i class="mdi mdi-at"></i></button></div><div>${localeFile.infos.members
+			}: ${guild.members.cache.filter((member) => !member.user.bot).size
+			}</div><div>${localeFile.infos.vChannels}: ${guild.channels.cache.filter((c) => c.type === "voice").size
+			}</div><div>${localeFile.infos.tChannels}: ${guild.channels.cache.filter((c) => c.type === "text").size
+			}</div><br>`;
 
 		// Members button
 
@@ -362,35 +342,31 @@ function updateGuild() {
 			.forEach((member) => {
 				let avatarUrl =
 					member.user.avatarURL() ||
-					`./assets/images//discord_defaults_avatars/${
-						member.user.discriminator % 5
+					`./assets/images//discord_defaults_avatars/${member.user.discriminator % 5
 					}.png`;
 				guildMembers.push(
-					`<div style="margin: 4px 0 4px 0"><a href="${avatarUrl}" target="_blank"><img alt="" style="display: inline;" class="avatarIMG" src="${avatarUrl}"/></a> ${member.user.tag} <button data-value="<@!${member.user.id}>" onclick="addText(this.dataset.value)" class="mini">@</button></div>`
+					`<div style="margin: 4px 0 4px 0"><a href="${avatarUrl}" target="_blank"><img alt="" style="display: inline;" class="avatarIMG" src="${avatarUrl}"/></a> ${member.user.tag} <button data-value="<@!${member.user.id}>" onclick="addText(this.dataset.value)" class="mini"><i class="mdi mdi-at"></i></button></div>`
 				);
 			});
-		html += `<button onclick='$("#guildMembers").toggle("fast")' class="action">${
-			localeFile.infos.members
-		}</button><div id="guildMembers" style="display:none;">${guildMembers.join(
-			""
-		)}</div>`;
+		html += `<button onclick='$("#guildMembers").toggle("fast")' class="action">${localeFile.infos.members
+			}</button><div id="guildMembers" style="display:none;">${guildMembers.join(
+				""
+			)}</div>`;
 
 		// Roles button
 
-		html += `<button onclick='$("#guildRoles").toggle("fast")' class="action">${
-			localeFile.infos.roles
-		}</button><div id="guildRoles" style="display:none;">${guild.roles.cache
-			.map((role) => `${escapeHtml(role.name)} (${role.id})`)
-			.join("<div style='margin: 8px 0 8px 0'></div>")}</div>`;
+		html += `<button onclick='$("#guildRoles").toggle("fast")' class="action">${localeFile.infos.roles
+			}</button><div id="guildRoles" style="display:none;">${guild.roles.cache
+				.map((role) => `${escapeHtml(role.name)} (${role.id})`)
+				.join("<div style='margin: 8px 0 8px 0'></div>")}</div>`;
 
 		// Channels button
 
 		if (guild.channels.cache.size > 0) {
-			html += `<button onclick='$("#guildChannels").toggle("fast")' class="action">${
-				localeFile.infos.channels
-			}</button><div id="guildChannels" style="display:none;">${guild.channels.cache
-				.map((channels) => `${escapeHtml(channels.name)} (${channels.id})`)
-				.join("<div style='margin: 8px 0 8px 0'></div>")}</div>`;
+			html += `<button onclick='$("#guildChannels").toggle("fast")' class="action">${localeFile.infos.channels
+				}</button><div id="guildChannels" style="display:none;">${guild.channels.cache
+					.map((channels) => `${escapeHtml(channels.name)} (${channels.id})`)
+					.join("<div style='margin: 8px 0 8px 0'></div>")}</div>`;
 		}
 
 		// Emoji button
@@ -407,11 +383,10 @@ function updateGuild() {
 					);
 				}
 			});
-			html += `<button onclick='$("#guildEmojis").toggle("fast")' class="action">${
-				localeFile.infos.emojis
-			}</button><div id="guildEmojis" style="display:none;">${guildEmojis.join(
-				" "
-			)}</div>`;
+			html += `<button onclick='$("#guildEmojis").toggle("fast")' class="action">${localeFile.infos.emojis
+				}</button><div id="guildEmojis" style="display:none;">${guildEmojis.join(
+					" "
+				)}</div>`;
 		}
 
 		$(".guildInfo").html(html);
@@ -434,10 +409,10 @@ function fetchGuilds() {
 		);
 	});
 	/**
-  guilds.append(
-    `<option value="DM">[${localeFile.text.privateMessages}]</option>`
-  );
-  */
+	guilds.append(
+	`<option value="DM">[${localeFile.text.privateMessages}]</option>`
+	);
+	*/
 
 	updateGuild();
 }
@@ -495,21 +470,6 @@ function selectChannelOnReload(channel) {
 	}, 1000);
 }
 
-function scrollAnim(DOM1, DOM2, time) {
-	if (document.querySelector(DOM1).checked) {
-		if (document.querySelector("#chk3").checked) {
-			$(DOM2).animate(
-				{
-					scrollTop: $(DOM2)[0].scrollHeight - $(DOM2).height(),
-				},
-				time
-			);
-		} else {
-			$(DOM2).scrollTop($(DOM2)[0].scrollHeight - $(DOM2).height());
-		}
-	}
-}
-
 function generateInvite() {
 	if (guilds.val() === "DM") {
 		tempChange("#inviteBtn", `[${localeFile.errors.dm}]`, 1000);
@@ -532,23 +492,23 @@ function generateInvite() {
 
 function OpenlastMessages() {
 	$(".channelName").html("Last Messages");
-	$("#chat").css("display", "none");
-	$("#createPermissionsInvite").css("display", "none");
-	$("#lastMessages").css("display", "block");
+	$("#chat").fadeOut();
+	$("#createPermissionsInvite").fadeOut();
+	$("#lastMessages").fadeIn();
 }
 
 function OpenChat() {
 	$(".channelName").html("Chat");
-	$("#chat").css("display", "block");
-	$("#createPermissionsInvite").css("display", "none");
-	$("#lastMessages").css("display", "none");
+	$("#chat").fadeIn();
+	$("#createPermissionsInvite").fadeOut();
+	$("#lastMessages").fadeOut();
 }
 
 function OpenPermissionsInviteSettings() {
 	$(".channelName").html("Create Bot Invite");
-	$("#chat").css("display", "none");
-	$("#createPermissionsInvite").css("display", "block");
-	$("#lastMessages").css("display", "none");
+	$("#chat").fadeOut();
+	$("#createPermissionsInvite").fadeIn();
+	$("#lastMessages").fadeOut();
 }
 
 function changeBotUsername() {
@@ -574,8 +534,50 @@ function setStatus(status) {
 		} else {
 			$(".bot-status").html("Do Not Disturb");
 		}
-		console.log("Success!");
+		new Noty({
+			type: "success",
+			theme: "nest",
+			closeWith: ["button"],
+			text: `Successfully updated status to ${status}.`,
+			timeout: 5000,
+			progressBar: true,
+			dismissQueue: true,
+			force: false,
+			maxVisible: 5,
+		}).show();
+
 	} catch (err) {
 		console.log(err);
+	}
+}
+
+function evalCommand() {
+	try {
+		const code = document.getElementById('eval').value;
+		let executeEval = eval(code)
+		new Noty({
+			type: "success",
+			theme: "nest",
+			closeWith: ["button"],
+			text: "Eval was successful! Check console!",
+			timeout: 5000,
+			progressBar: true,
+			dismissQueue: true,
+			force: false,
+			maxVisible: 5,
+		}).show();
+		console.log(JSON.stringify(executeEval, null, 2))
+	} catch (err) {
+		new Noty({
+			type: "error",
+			theme: "nest",
+			closeWith: ["button"],
+			text: `ERROR: ${err}`,
+			timeout: 5000,
+			progressBar: true,
+			dismissQueue: true,
+			force: false,
+			maxVisible: 5,
+		}).show();
 	}
 }
