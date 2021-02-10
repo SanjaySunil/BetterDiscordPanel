@@ -534,7 +534,18 @@ function setStatus(status) {
 		} else {
 			$(".bot-status").html("Do Not Disturb");
 		}
-		console.log("Status successfully updated!");
+		new Noty({
+			type: "success",
+			theme: "nest",
+			closeWith: ["button"],
+			text: `Successfully updated status to ${status}.`,
+			timeout: 5000,
+			progressBar: true,
+			dismissQueue: true,
+			force: false,
+			maxVisible: 5,
+		}).show();
+
 	} catch (err) {
 		console.log(err);
 	}
