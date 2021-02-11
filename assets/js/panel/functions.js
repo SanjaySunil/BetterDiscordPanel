@@ -552,21 +552,36 @@ function setStatus(status) {
 }
 
 function evalCommand() {
+	const code = document.getElementById('eval').value;
 	try {
-		const code = document.getElementById('eval').value;
 		let executeEval = eval(code)
-		new Noty({
-			type: "success",
-			theme: "nest",
-			closeWith: ["button"],
-			text: "Eval was successful! Check console!",
-			timeout: 5000,
-			progressBar: true,
-			dismissQueue: true,
-			force: false,
-			maxVisible: 5,
-		}).show();
-		console.log(JSON.stringify(executeEval, null, 2))
+
+		if (executeEval == undefined) {
+			new Noty({
+				type: "error",
+				theme: "nest",
+				closeWith: ["button"],
+				text: `ERROR: undefined`,
+				timeout: 5000,
+				progressBar: true,
+				dismissQueue: true,
+				force: false,
+				maxVisible: 5,
+			}).show();
+		} else {
+			new Noty({
+				type: "success",
+				theme: "nest",
+				closeWith: ["button"],
+				text: executeEval,
+				timeout: 5000,
+				progressBar: true,
+				dismissQueue: true,
+				force: false,
+				maxVisible: 5,
+			}).show();
+			console.log(JSON.stringify(executeEval, null, 2))
+		}
 	} catch (err) {
 		new Noty({
 			type: "error",
