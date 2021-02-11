@@ -24,66 +24,27 @@ function versionCompare(current, latest, options) {
 
 	for (var i = 0; i < currentparts.length; ++i) {
 		if (latestparts.length == i) {
-			new Noty({
-				type: "error",
-				theme: "nest",
-				closeWith: ["button"],
-				text: "You have a version that does not exist on GitHub!",
-				timeout: 5000,
-				progressBar: true,
-				dismissQueue: true,
-				force: false,
-				maxVisible: 5,
-			}).show();
+			errorNotification("You have a version that does not exist on GitHub!",)
 			return "You have a version that does not exist on GitHub!";
 		}
 
 		if (currentparts[i] == latestparts[i]) {
 			continue;
 		} else if (currentparts[i] > latestparts[i]) {
-			new Noty({
-				type: "error",
-				theme: "nest",
-				closeWith: ["button"],
-				text: "You have a version that does not exist on GitHub!",
-				timeout: 5000,
-				progressBar: true,
-				dismissQueue: true,
-				force: false,
-				maxVisible: 5,
-			}).show();
+			errorNotification("You have a version that does not exist on GitHub!",)
 			return "You have a version that does not exist on GitHub!";
 		} else {
-			new Noty({
-				type: "info",
-				theme: "nest",
-				closeWith: ["button"],
-				text: "<a href='https://github.com/SanjaySunil/BetterDiscordPanel/releases/tag/2.6.2' target='_blank'>New update available!</a>",
-				timeout: 5000,
-				progressBar: true,
-				dismissQueue: true,
-				force: false,
-				maxVisible: 5,
-			}).show();
+			successNotification("<a href='https://github.com/SanjaySunil/BetterDiscordPanel/releases/tag/2.6.2' target='_blank'>New update available!</a>")
 			return "New update available!";
 		}
 	}
 
 	if (currentparts.length != latestparts.length) {
-		new Noty({
-			type: "info",
-			theme: "nest",
-			closeWith: ["button"],
-			text: "<a href='https://github.com/SanjaySunil/BetterDiscordPanel/releases/tag/2.6.2' target='_blank'>New update available!</a>",
-			timeout: 5000,
-			progressBar: true,
-			dismissQueue: true,
-			force: false,
-			maxVisible: 5,
-		}).show();
+		successNotification("<a href='https://github.com/SanjaySunil/BetterDiscordPanel/releases/tag/2.6.2' target='_blank'>New update available!</a>")
 		return "New update available!";
 	}
 
+	successNotification("No update available.")
 	return "No update available.";
 }
 
@@ -107,16 +68,9 @@ $(document).ready(function () {
 		function (response) {
 			var data = JSON.parse(response);
 			var latestVersion = data.tag_name;
-			new Noty({
-				type: "info",
-				theme: "nest",
-				closeWith: ["button"],
-				text:
-					'<a href="https://github.com/SanjaySunil/BetterDiscordPanel" target="blank" class="welcome-tag">Welcome to BetterDiscordPanel v' +
-					version +
-					'! <iframe src="https://ghbtns.com/github-btn.html?user=SanjaySunil&repo=BetterDiscordPanel&type=star&count=true" frameborder="0" scrolling="0" width="150" height="20" title="GitHub"></iframe></a>',
-				dismissQueue: true,
-			}).show();
+			infoNotification('<a href="https://github.com/SanjaySunil/BetterDiscordPanel" target="blank" class="welcome-tag">Welcome to BetterDiscordPanel v' +
+				version +
+				'! <iframe src="https://ghbtns.com/github-btn.html?user=SanjaySunil&repo=BetterDiscordPanel&type=star&count=true" frameborder="0" scrolling="0" width="150" height="20" title="GitHub"></iframe></a>')
 			BetterDiscordConsole(`BetterDiscordPanel v${version}`, "lightblue")
 			BetterDiscordConsole(`Latest Version: v${latestVersion}`, "lightblue")
 			console.log(versionCompare(version, latestVersion));

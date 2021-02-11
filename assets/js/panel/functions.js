@@ -534,17 +534,8 @@ function setStatus(status) {
 		} else {
 			$(".bot-status").html("Do Not Disturb");
 		}
-		new Noty({
-			type: "success",
-			theme: "nest",
-			closeWith: ["button"],
-			text: `Successfully updated status to ${status}.`,
-			timeout: 5000,
-			progressBar: true,
-			dismissQueue: true,
-			force: false,
-			maxVisible: 5,
-		}).show();
+
+		console.log(`Successfully updated status to ${status}.`)
 
 	} catch (err) {
 		console.log(err);
@@ -557,42 +548,12 @@ function evalCommand() {
 		let executeEval = eval(code)
 
 		if (executeEval == undefined) {
-			new Noty({
-				type: "error",
-				theme: "nest",
-				closeWith: ["button"],
-				text: `ERROR: undefined`,
-				timeout: 5000,
-				progressBar: true,
-				dismissQueue: true,
-				force: false,
-				maxVisible: 5,
-			}).show();
+			errorNotification(`ERROR: undefined`)
 		} else {
-			new Noty({
-				type: "success",
-				theme: "nest",
-				closeWith: ["button"],
-				text: executeEval,
-				timeout: 5000,
-				progressBar: true,
-				dismissQueue: true,
-				force: false,
-				maxVisible: 5,
-			}).show();
+			successNotification(executeEval)
 			console.log(JSON.stringify(executeEval, null, 2))
 		}
 	} catch (err) {
-		new Noty({
-			type: "error",
-			theme: "nest",
-			closeWith: ["button"],
-			text: `ERROR: ${err}`,
-			timeout: 5000,
-			progressBar: true,
-			dismissQueue: true,
-			force: false,
-			maxVisible: 5,
-		}).show();
+		errorNotification(`ERROR: ${err}`)
 	}
 }
