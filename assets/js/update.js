@@ -51,14 +51,14 @@ function versionCompare(current, latest, options) {
 $(document).ready(function () {
 	var HttpClient = function () {
 		this.get = function (aUrl, aCallback) {
-			var anHttpRequest = new XMLHttpRequest();
-			anHttpRequest.onreadystatechange = function () {
-				if (anHttpRequest.readyState == 4 && anHttpRequest.status == 200)
-					aCallback(anHttpRequest.responseText);
+			var request = new XMLHttpRequest();
+			request.onreadystatechange = function () {
+				if (request.readyState == 4 && request.status == 200)
+					aCallback(request.responseText);
 			};
 
-			anHttpRequest.open("GET", aUrl, true);
-			anHttpRequest.send(null);
+			request.open("GET", aUrl, true);
+			request.send(null);
 		};
 	};
 
