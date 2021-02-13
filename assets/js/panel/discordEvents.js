@@ -32,7 +32,7 @@ client.on("message", (message) => {
 	} else if (message.channel.type === "dm" && !message.author.bot) {
 		lastMessages.html(
 			lastMessages.html() +
-			`<br><b>[${localeFile.text.privateMessages}] ${escapeHtml(
+			`<br><b>[${translation.text.privateMessages}] ${escapeHtml(
 				message.author.tag
 			)} | ${message.author.id} </b> \n${contentReplacement(message.content)}`
 		);

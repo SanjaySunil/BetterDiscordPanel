@@ -4,7 +4,7 @@
  * @license GPL-3.0
  */
 
-$("html").attr("lang", localeFile.cCode);
+$("html").attr("lang", translation.langCode);
 
 const guilds = $(".guilds");
 const channels = $(".channels");

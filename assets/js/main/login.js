@@ -24,7 +24,7 @@ function login() {
       window.location.replace('index.html')
     })
     .catch((err) => {
-			errorNotification(localeFile.token.invalid)
+      errorNotification(translation.token.invalid)
       console.log(err)
       localStorage.setItem("token", null);
     });
@@ -43,21 +43,21 @@ function testLogin() {
     fetchAllMembers: false
   });
   client.login(token).then()
-  .then(() => {
-    /**
-     * User is already logged in.
-     */
-    console.log("You are already logged into an account.")
-    // localStorage.setItem("isLoggedIn", "1");
-    window.location.replace('index.html')
-  })
-  .catch(() => {
-    /**
-     * User has not logged into a bot.
-     */
-    console.log("Currently not logged into a bot.")
-    localStorage.setItem("token", null);
-  });
+    .then(() => {
+      /**
+       * User is already logged in.
+       */
+      console.log("You are already logged into an account.")
+      // localStorage.setItem("isLoggedIn", "1");
+      window.location.replace('index.html')
+    })
+    .catch(() => {
+      /**
+       * User has not logged into a bot.
+       */
+      console.log("Currently not logged into a bot.")
+      localStorage.setItem("token", null);
+    });
 }
 
 /**

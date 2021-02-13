@@ -1,11 +1,11 @@
 /**
  * @file buttonEvents.js
- * @author Sanjay Sunil 
+ * @author Sanjay Sunil
  * @license GPL-3.0
  */
 
 refreshToken.click(() => {
-	if (window.confirm(localeFile.token.confirmation)) {
+	if (window.confirm(translation.token.confirmation)) {
 		localStorage.setItem("token", "");
 		localStorage.setItem("isLoggedIn", "0");
 		location.replace("login.html");
@@ -23,12 +23,12 @@ clearChat.click(() => {
 
 leaveGuild.click(() => {
 	if (guilds.val() !== "DM") {
-		if (window.confirm(localeFile.token.confirmation)) {
+		if (window.confirm(translation.token.confirmation)) {
 			client.guilds.cache
 				.find((guild) => guild.id === guilds.val())
 				.leave()
 				.catch(() => {
-					tempChange("#leaveGuild", `[${localeFile.errors.error}]`, 1000);
+					tempChange("#leaveGuild", `[${translation.errors.error}]`, 1000);
 				});
 		}
 	}
