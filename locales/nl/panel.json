@@ -1,0 +1,42 @@
+{
+    "welcome": "Hallo,",
+    "select_option": "Selecteer de optie die jij wilt uitvoeren.",
+
+    "start_web": "WEB - BetterDiscordPanel",
+    "start_desktop": "DESKTOP APP - BetterDiscordPanel",
+
+    "support": "Support",
+    "settings": "Instellingen",
+    "update": "Controleer voor updates",
+    "language": "Taal",
+    "go_back": "Ga terug",
+    "done": "Klaar",
+    "exit": "Verlaat",
+
+    "discordserver": "Discord Server",
+    "submit_issue": "Dien een Probleem/Bug Report/Suggestie in",
+
+    "betterdiscordpanel_help":"Start BetterDiscordPanel in jouw standaard browser.",
+    "desktop_panel_help": "Start de Desktop app van BetterDiscordPanel.",
+    "settings_help": "Open de instellingen van BetterDiscordPanel.",
+    "exit_help": "Verlaat deze script.",
+    "support_help": "Krijg support voor BetterDiscordPanel.",
+    "update_help": "Update BetterDiscordPanel naar de nieuwste versie.",
+    "language_help": "Kies een taal voor BetterDiscordPanel",
+    "go_back_help": "Ga terug naar het selectie paneel.",
+    "discord_help": "Open de Discord support server link in uw standaard browser.",
+    "issue_help": "Dien een probleem / bugrapport / suggestie in via GitHub.",
+    "get_help": "Krijg hulp/support voor BetterDiscordPanel:",
+
+    "check_installation": "Controleer of je BetterDiscordPanel juist hebt geïnstalleerd.",
+    "checking_failure": "Systeemcontrole is mislukt.",
+    "checking_system": "Het BetterDiscordPanel systeem controleren ...",
+    "check_success": "Systeem controle voltooid.",
+    "updating": "BetterDiscordPanel is aan het updaten ...",
+    "updating_failure": "BetterDiscordPanel kon niet worden geupdated, Er is een fout opgetreden tijdens het updaten.",
+    "check_index": "Controleer of index.html bestaat.",
+    "check_main": "Controleer of main.js bestaat.",
+    "check_repo_download_method": "Kopieer de Repository en probeer opnieuw.",
+    "booting": "BetterDiscordPanel aan het starten ..."
+}
+
