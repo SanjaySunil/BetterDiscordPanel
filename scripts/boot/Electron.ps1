@@ -45,7 +45,7 @@ ElseIf ($config.language -eq 'hu') {
 }
 
 ElseIf ($config.language -eq 'nl') {
-    $locales = (Get-Content '../../locales/hu/panel.json' -Raw) | ConvertFrom-Json
+	$locales = (Get-Content '../../locales/nl/panel.json' -Raw) | ConvertFrom-Json
 }
 
 Else {

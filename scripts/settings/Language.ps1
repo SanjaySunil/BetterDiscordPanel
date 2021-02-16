@@ -45,7 +45,7 @@ ElseIf ($config.language -eq 'hu') {
 }
 
 ElseIf ($config.language -eq 'nl') {
-    $locales = (Get-Content '../../locales/hu/panel.json' -Raw) | ConvertFrom-Json
+	$locales = (Get-Content '../../locales/nl/panel.json' -Raw) | ConvertFrom-Json
 }
 
 Else {
@@ -116,7 +116,7 @@ $choices.Add((
 $choices.Add((
         New-Object Management.Automation.Host.ChoiceDescription `
             -ArgumentList `
-            "&6 Russian",
+            "&9 Russian",
         "Select Russian"
     ))
 ---------------------------------------#>
