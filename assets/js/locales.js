@@ -1,45 +1,63 @@
 /**
  * @file locales.js
- * @author Sanjay Sunil 
+ * @author Sanjay Sunil
  * @license GPL-3.0
  */
 
 const locales = {
 	en: {
-		cCode: "en",
+		langCode: "en",
 		language: "English",
+		// ========================= PANEL =========================
+		status: {
+			loading: "Loading ...",
+		},
+		headings: {
+			profile: "Discord Bot",
+			guildName: "Chats",
+			settings: "Settings"
+		},
+		"sub-headings": {
+			about: "About",
+			tools: "Tools",
+			info: "Info",
+		},
+		navbar: {
+			profileNav: "Profile",
+			chatNav: "Chat",
+			lastMessagesNav: "Last Messages",
+			infoNav: "Chat / Server Info",
+			settingsNav: "Settings",
+			lightDark: "Light / Dark Mode",
+			logoutTitle: "Logout",
+		},
 		text: {
 			channelNameLabel: "Chat",
 			fileSent: "sent some file(s)",
 			attachmentTxt: "Attachments",
 			privateMessages: "DM",
-		},
-		status: {
-			loading: "Loading ...",
-		},
-		headings: {
-			myprofile: "My Profile",
-			guildName: "Chats",
-			autoScroll: "Auto-Scroll",
-		},
-		"sub-headings": {
-			about: "About",
-		},
-		about: {
-			name: "Name",
-			discrim: "Discrim",
-			userId: "User ID",
-			"created-at": "Created At",
+			profileSection: {
+				name: "Name",
+				discrim: "Discrim",
+				id: "ID",
+				guilds: "Guilds",
+				createdAt: "Created At"
+			},
+			settingsSection: {
+				createBotInvite: "Create Bot Invite",
+				eval: "EVAL",
+				languages: "Languages",
+			},
 		},
 		buttons: {
 			clearLastMessages: "Clear Last Messages",
-			editToken: "Login/Logout",
+			editToken: "Logout",
 			refreshChat: "Refresh chat",
-			changeLanguage: "Change language",
 			send: "Send",
 			leave: "Leave server",
 			invite: "Invite",
 		},
+		// ========================= DISCORD =========================
 		infos: {
 			owner: "Owner",
 			members: "Members",
@@ -56,10 +74,8 @@ const locales = {
 			missingPermissions: "Missing Permissions!",
 		},
 		token: {
-			prompt: "Enter your Discord Bot Token to Login: ",
-			confirmation: "Are you sure?",
+			confirmation: "Are you sure you want to logout?",
 			invalid: "Token is Invalid. Please try again.",
-			notloggedin: "You are not logged in. Please click login.",
 		},
 		messageType: {
 			serverJoin: "joined the server.",
@@ -74,13 +90,6 @@ const locales = {
 			pdf: "pdf",
 			video: "video",
 			audio: "audio",
-		},
-		formatting: {
-			bold: "Bold",
-			emphasis: "Emphasis",
-			underline: "Underline",
-			strike: "Strikethrough",
-			clear: "Clear formatting",
 		},
 	},
 };

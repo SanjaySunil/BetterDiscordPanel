@@ -44,6 +44,10 @@ ElseIf ($config.language -eq 'hu') {
     $locales = (Get-Content '../../locales/hu/panel.json' -Raw) | ConvertFrom-Json
 }
 
+ElseIf ($config.language -eq 'nl') {
+	$locales = (Get-Content '../../locales/nl/panel.json' -Raw) | ConvertFrom-Json
+}
+
 Else {
     Start-Sleep -Seconds 0.1
     Write-Host "[ERROR]: INVALID LANGUAGE."
@@ -102,11 +106,17 @@ $choices.Add((
             "&7 Hungarian",
         "Select Hungarian."
     ))
+	$choices.Add((
+        New-Object Management.Automation.Host.ChoiceDescription `
+            -ArgumentList `
+            "&8 Dutch",
+        "Select Dutch."
+    ))
 <#---------------------------------------
 $choices.Add((
         New-Object Management.Automation.Host.ChoiceDescription `
             -ArgumentList `
-            "&6 Russian",
+            "&9 Russian",
         "Select Russian"
     ))
 ---------------------------------------#>
@@ -114,7 +124,7 @@ $choices.Add((
 $choices.Add((
         New-Object Management.Automation.Host.ChoiceDescription `
           -ArgumentList `
-          "&8 $($locales.go_back)",
+          "&9 $($locales.go_back)",
         "$($locales.go_back_help)"
       ))
 
@@ -178,7 +188,15 @@ switch ($selection) {
         Start-Sleep -s 2
         .\Settings.ps1
     }
-    7 {
+	7 {
+        $locales = (Get-Content "../../config/config.json" -Raw) | ConvertFrom-Json
+        $locales.language='nl'
+        $locales | ConvertTo-Json -depth 32| set-content '../../config/config.json'
+        Write-Host "Successfully changed language to Dutch!"
+        Start-Sleep -s 2
+        .\Settings.ps1
+    }
+    8 {
         .\Settings.ps1
     }
 }

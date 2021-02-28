@@ -44,6 +44,10 @@ ElseIf ($config.language -eq 'hu') {
     $locales = (Get-Content '../../locales/hu/panel.json' -Raw) | ConvertFrom-Json
 }
 
+ElseIf ($config.language -eq 'nl') {
+	$locales = (Get-Content '../../locales/nl/panel.json' -Raw) | ConvertFrom-Json
+}
+
 Else {
     Start-Sleep -Seconds 0.1
     Write-Host "[ERROR]: INVALID LANGUAGE."

@@ -100,6 +100,7 @@ View [contribution guide](https://github.com/SanjaySunil/BetterDiscordPanel/blob
 | Author                                                | Language  |
 | ----------------------------------------------------- | --------- |
 | [GreepTheSheep](https://github.com/GreepTheSheep)     | French    |
+| [Marijn2341](https://github.com/Marijn2341)           | Dutch     |
 | [devilAPI](https://github.com/devilAPI)               | German    |
 | [llamaiscoollmao](https://github.com/llamaiscoollmao) | Spanish   |
 | [llamaiscoollmao](https://github.com/llamaiscoollmao) | Norwegian |

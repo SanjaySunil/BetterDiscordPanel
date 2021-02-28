@@ -1,6 +1,6 @@
 /**
  * @file login.js
- * @author Sanjay Sunil 
+ * @author Sanjay Sunil
  * @license GPL-3.0
  */
 
@@ -12,29 +12,19 @@ function login() {
    */
   localStorage.setItem("token", token);
   token = localStorage.getItem("token");
-  
+
   const client = new Discord.Client({
     messageCacheMaxSize: 5,
     fetchAllMembers: false
   });
-  
+
   client.login(token).then()
     .then(() => {
       console.log("Success!")
       window.location.replace('index.html')
     })
     .catch((err) => {
-      new Noty({
-        type: 'error',
-        theme: "nest",
-        closeWith: ['button'],
-        text: localeFile.token.invalid,
-        timeout: 5000,
-        progressBar: true,
-        dismissQueue: true, 
-        force: false, 
-        maxVisible: 5, 
-      }).show()
+      errorNotification(translation.token.invalid)
       console.log(err)
       localStorage.setItem("token", null);
     });
@@ -53,21 +43,21 @@ function testLogin() {
     fetchAllMembers: false
   });
   client.login(token).then()
-  .then(() => {
-    /**
-     * User is already logged in.
-     */
-    console.log("You are already logged into an account.")
-    // localStorage.setItem("isLoggedIn", "1");
-    window.location.replace('index.html')
-  })
-  .catch(() => {
-    /**
-     * User has not logged into a bot.
-     */
-    console.log("Currently not logged into a bot.")
-    localStorage.setItem("token", null);
-  });
+    .then(() => {
+      /**
+       * User is already logged in.
+       */
+      console.log("You are already logged into an account.")
+      // localStorage.setItem("isLoggedIn", "1");
+      window.location.replace('index.html')
+    })
+    .catch(() => {
+      /**
+       * User has not logged into a bot.
+       */
+      console.log("Currently not logged into a bot.")
+      localStorage.setItem("token", null);
+    });
 }
 
 /**
@@ -76,4 +66,4 @@ function testLogin() {
 $(document).ready(function () {
   testLogin();
 });
- 
+
