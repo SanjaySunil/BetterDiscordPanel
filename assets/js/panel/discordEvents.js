@@ -202,3 +202,33 @@ client.on("emojiUpdate", (oldEmoji) => {
 		selectChannelOnReload(channel);
 	}
 });
+
+/* AutoScroll Tests - Ignore
+let scrollState = true;
+
+var chatElement = new SimpleBar(document.getElementById('scrollBarChat'));
+
+function scrollAnim(time) {
+	if (scrollState == true) {
+		$(chatElement).animate({
+			scrollTop: $(chatElement)[0].scrollHeight - $(chatElement).height()
+		}, time);
+		console.log("Scrolling!")
+	}
+}
+
+$("#chat").bind("wheel", (event) => {
+	if (event.originalEvent.deltaY < 0) {
+		console.log("False")
+		scrollState = false;
+	} else if (event.originalEvent.deltaY > 0 && $("#chat").scrollTop() + $("#chat").innerHeight() >= $("#chat")[0].scrollHeight - 100) {
+		console.log("True")
+		scrollState = true;
+	}
+});
+
+setInterval(() => {
+	scrollAnim(100);
+	console.log("Checking.")
+}, 1000);
+*/
