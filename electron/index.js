@@ -3,6 +3,7 @@ const path = require('path');
 const debug = require('electron-debug');
 
 debug({ showDevTools: false });
+
 // Note: Must match `build.appId` in package.json.
 app.setAppUserModelId('com.company.AppName');
 
