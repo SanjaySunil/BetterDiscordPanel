@@ -1,15 +1,15 @@
 /**
  * @file tempChange.js
- * @author Sanjay Sunil 
+ * @author Sanjay Sunil
  * @license GPL-3.0
  */
 
 function tempChange(DOM, text, time) {
-	let newText = `${$(DOM).text().replace(text, "")} ${text}`;
+  const newText = `${$(DOM).text().replace(text, '')} ${text}`;
 
-	$(DOM).html(newText);
+  $(DOM).html(newText);
 
-	setTimeout(() => {
-		$(DOM).html(newText.replace(text, ""));
-	}, time);
+  setTimeout(() => {
+    $(DOM).html(newText.replace(text, ''));
+  }, time);
 }

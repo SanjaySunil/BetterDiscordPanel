@@ -5,43 +5,43 @@
  */
 
 function successNotification(message) {
-	new Noty({
-		type: "success",
-		theme: "nest",
-		closeWith: ["button"],
-		text: message,
-		timeout: 5000,
-		progressBar: true,
-		dismissQueue: true,
-		force: false,
-		maxVisible: 5,
-	}).show();
+  new Noty({
+    type: 'success',
+    theme: 'nest',
+    closeWith: ['button'],
+    text: message,
+    timeout: 5000,
+    progressBar: true,
+    dismissQueue: true,
+    force: false,
+    maxVisible: 5,
+  }).show();
 }
 
 function errorNotification(message) {
-	new Noty({
-		type: "error",
-		theme: "nest",
-		closeWith: ["button"],
-		text: message,
-		timeout: 5000,
-		progressBar: true,
-		dismissQueue: true,
-		force: false,
-		maxVisible: 5,
-	}).show();
+  new Noty({
+    type: 'error',
+    theme: 'nest',
+    closeWith: ['button'],
+    text: message,
+    timeout: 5000,
+    progressBar: true,
+    dismissQueue: true,
+    force: false,
+    maxVisible: 5,
+  }).show();
 }
 
 function infoNotification(message) {
-	new Noty({
-		type: "info",
-		theme: "nest",
-		closeWith: ["button"],
-		text: message,
-		timeout: 5000,
-		progressBar: true,
-		dismissQueue: true,
-		force: false,
-		maxVisible: 5,
-	}).show();
+  new Noty({
+    type: 'info',
+    theme: 'nest',
+    closeWith: ['button'],
+    text: message,
+    timeout: 5000,
+    progressBar: true,
+    dismissQueue: true,
+    force: false,
+    maxVisible: 5,
+  }).show();
 }

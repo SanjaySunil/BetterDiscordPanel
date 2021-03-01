@@ -5,8 +5,8 @@
  */
 
 function formatTimestamp(timestamp) {
-	let date = new Date(timestamp);
-	return `${date.toLocaleDateString(
-		translation.langCode
-	)} ${date.toLocaleTimeString(translation.langCode)}`;
+  const date = new Date(timestamp);
+  return `${date.toLocaleDateString(
+      translation.langCode,
+  )} ${date.toLocaleTimeString(translation.langCode)}`;
 }
