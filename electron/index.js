@@ -18,12 +18,12 @@ const createMainWindow = async () => {
     width: 600,
     height: 400,
     // opacity: 0.7,  Add Opacity to app.
-    icon: __dirname + './electron/build/icon.png',
+    icon: __dirname + './build/icon.png',
     webPreferences: {
       nodeIntegration: false,
       contextIsolation: true, // Protect against prototype pollution.
       enableRemoteModule: false, // Turn off Remote
-      preload: path.join(app.getAppPath(), './electron/app/preload.js'),
+      preload: path.join(app.getAppPath(), './app/preload.js'),
     },
   });
   win.on('ready-to-show', () => {
@@ -40,7 +40,7 @@ const createMainWindow = async () => {
   win.removeMenu(); // Remove menu.
   // win.webContents.openDevTools(); // Open DevTools.
 
-  await win.loadFile(path.join(__dirname, './index.html'));
+  await win.loadFile(path.join(__dirname, '../index.html'));
   return win;
 };
 
