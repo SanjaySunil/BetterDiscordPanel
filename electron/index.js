@@ -9,70 +9,70 @@ app.setAppUserModelId('com.company.AppName');
 
 // Electron Reloader
 try {
-  require('electron-reloader')(module);
+	require('electron-reloader')(module);
 } catch { }
 
 let mainWindow;
 // Create Window.
 const createMainWindow = async () => {
-  const win = new BrowserWindow({
-    title: app.name,
-    show: false,
-    width: 600,
-    height: 400,
-    // opacity: 0.7,  Add Opacity to app.
-    icon: __dirname + './build/icon.png',
-    webPreferences: {
-      nodeIntegration: false,
-      contextIsolation: true, // Protect against prototype pollution.
-      enableRemoteModule: false, // Turn off Remote
-      preload: path.join(app.getAppPath(), './app/preload.js'),
-    },
-  });
-  win.on('ready-to-show', () => {
-    win.show();
-  });
-  win.on('closed', () => {
-    // Dereference the window.
-    // For multiple windows store them in an array.
-    mainWindow = undefined;
-  });
+	const win = new BrowserWindow({
+		title: app.name,
+		show: false,
+		width: 600,
+		height: 400,
+		opacity: 0.98,
+		icon: __dirname + './build/icon.png',
+		webPreferences: {
+			nodeIntegration: false,
+			contextIsolation: true, // Protect against prototype pollution.
+			enableRemoteModule: false, // Turn off Remote
+			preload: path.join(app.getAppPath(), './app/preload.js'),
+		},
+	});
+	win.on('ready-to-show', () => {
+		win.show();
+	});
+	win.on('closed', () => {
+		// Dereference the window.
+		// For multiple windows store them in an array.
+		mainWindow = undefined;
+	});
 
-  // Optional:
+	// Optional:
 
-  win.removeMenu(); // Remove menu.
-  // win.webContents.openDevTools(); // Open DevTools.
+	win.removeMenu(); // Remove menu.
+	// win.webContents.openDevTools(); // Open DevTools.
 
-  await win.loadFile(path.join(__dirname, '../index.html'));
-  return win;
+	await win.loadFile(path.join(__dirname, '../index.html'));
+	return win;
 };
 
 // Prevent multiple instances of the app
 if (!app.requestSingleInstanceLock()) {
-  app.quit();
+	app.quit();
 }
 
 app.on('second-instance', () => {
-  if (mainWindow) {
-    if (mainWindow.isMinimized()) {
-      mainWindow.restore();
-    }
+	if (mainWindow) {
+		if (mainWindow.isMinimized()) {
+			mainWindow.restore();
+		}
 
-    mainWindow.show();
-  }
+		mainWindow.show();
+	}
 });
 
 app.on('window-all-closed', function () {
-  if (process.platform !== 'darwin') app.quit();
+	if (process.platform !== 'darwin') app.quit();
 });
 
 app.on('activate', async () => {
-  if (!mainWindow) {
-    mainWindow = await createMainWindow();
-  }
+	if (!mainWindow) {
+		mainWindow = await createMainWindow();
+	}
 });
 
 (async () => {
-  await app.whenReady();
-  mainWindow = await createMainWindow();
+	await app.whenReady();
+	mainWindow = await createMainWindow();
 })();
