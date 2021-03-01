@@ -1,6 +1,8 @@
-const {app, BrowserWindow} = require('electron');
+const { app, BrowserWindow } = require('electron');
 const path = require('path');
+const debug = require('electron-debug');
 
+debug({ showDevTools: false });
 // Note: Must match `build.appId` in package.json.
 app.setAppUserModelId('com.company.AppName');
 
@@ -59,7 +61,7 @@ app.on('second-instance', () => {
   }
 });
 
-app.on('window-all-closed', function() {
+app.on('window-all-closed', function () {
   if (process.platform !== 'darwin') app.quit();
 });
 
