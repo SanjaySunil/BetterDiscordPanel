@@ -261,6 +261,12 @@ function updateChannel() {
 					chat.html(chat.html() + createMessage(msg[1]));
 				});
 		});
+
+		$('.user-chat').removeClass('user-chat-show');
+		$('#chat').fadeIn();
+		$('#createPermissionsInvite').fadeOut();
+		$('#lastMessages').fadeOut();
+
 		// $("#chk2")[0].checked = true;
 	}
 }
@@ -494,6 +500,7 @@ function generateInvite() {
 
 function OpenlastMessages() {
 	$('.channelName').html('Last Messages');
+	$('.user-chat').addClass('user-chat-show');
 	$('#chat').fadeOut();
 	$('#createPermissionsInvite').fadeOut();
 	$('#lastMessages').fadeIn();
@@ -501,6 +508,7 @@ function OpenlastMessages() {
 
 function OpenChat() {
 	$('.channelName').html('Chat');
+	$('.user-chat').removeClass('user-chat-show');
 	$('#chat').fadeIn();
 	$('#createPermissionsInvite').fadeOut();
 	$('#lastMessages').fadeOut();
