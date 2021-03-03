@@ -120,6 +120,6 @@ View [contribution guide](https://github.com/SanjaySunil/BetterDiscordPanel/blob
 
 ## License
 
-Copyright © 2020 Sanjay Sunil (sanjaysunil@protonmail.com)
+Copyright © 2021 Sanjay Sunil (sanjaysunil@protonmail.com)
 
 Distributed under the GNU General Public License v3.0. See `LICENSE` for more information.
