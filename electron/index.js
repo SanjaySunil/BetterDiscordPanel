@@ -18,8 +18,8 @@ const createMainWindow = async () => {
 	const win = new BrowserWindow({
 		title: app.name,
 		show: false,
-		width: 600,
-		height: 400,
+		minWidth: 600,
+		minHeight: 400,
 		opacity: 0.98,
 		icon: __dirname + './build/icon.png',
 		webPreferences: {
@@ -30,6 +30,7 @@ const createMainWindow = async () => {
 		},
 	});
 	win.on('ready-to-show', () => {
+		win.maximize()
 		win.show();
 	});
 	win.on('closed', () => {
@@ -75,4 +76,5 @@ app.on('activate', async () => {
 (async () => {
 	await app.whenReady();
 	mainWindow = await createMainWindow();
+	console.log(`[BetterDiscordPanel]: Ready!`)
 })();
