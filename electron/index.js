@@ -21,6 +21,7 @@ const createMainWindow = async () => {
 		minWidth: 600,
 		minHeight: 400,
 		opacity: 0.98,
+		backgroundColor: '#000',
 		icon: __dirname + './build/icon.png',
 		webPreferences: {
 			nodeIntegration: false,
