@@ -43,9 +43,8 @@ const createMainWindow = async () => {
 	// Optional:
 
 	win.removeMenu(); // Remove menu.
-	// win.webContents.openDevTools(); // Open DevTools.
 
-	await win.loadFile(path.join(__dirname, '../index.html'));
+	await win.loadFile(path.join(__dirname, './index.html'));
 	return win;
 };
 
