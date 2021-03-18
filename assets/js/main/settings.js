@@ -4,8 +4,7 @@
  * @license GPL-3.0
  */
 
-const authorizationUrl =
-	'https://discordapp.com/api/oauth2/authorize?client_id={clientId}&scope=bot&permissions={permissions}';
+const authorizationUrl = 'https://discordapp.com/api/oauth2/authorize?client_id={clientId}&scope=bot&permissions={permissions}';
 let permissionInteger = 0;
 
 

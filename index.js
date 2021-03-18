@@ -1,80 +1,80 @@
-const { app, BrowserWindow } = require('electron');
+const {app, BrowserWindow} = require('electron');
 const path = require('path');
 const debug = require('electron-debug');
 
-debug({ showDevTools: false });
+debug({showDevTools: false});
 
 // Note: Must match `build.appId` in package.json.
 app.setAppUserModelId('com.company.AppName');
 
 // Electron Reloader
 try {
-	require('electron-reloader')(module);
+  require('electron-reloader')(module);
 } catch { }
 
 let mainWindow;
 // Create Window.
 const createMainWindow = async () => {
-	const win = new BrowserWindow({
-		title: app.name,
-		show: false,
-		minWidth: 600,
-		minHeight: 400,
-		opacity: 0.98,
-		backgroundColor: '#000',
-		icon: __dirname + './build/icon.png',
-		webPreferences: {
-			nodeIntegration: false,
-			contextIsolation: true, // Protect against prototype pollution.
-			enableRemoteModule: false, // Turn off Remote
-			preload: path.join(app.getAppPath(), './app/preload.js'),
-		},
-	});
-	win.on('ready-to-show', () => {
-		win.maximize()
-		win.show();
-	});
-	win.on('closed', () => {
-		// Dereference the window.
-		// For multiple windows store them in an array.
-		mainWindow = undefined;
-	});
+  const win = new BrowserWindow({
+    title: app.name,
+    show: false,
+    minWidth: 600,
+    minHeight: 400,
+    opacity: 0.98,
+    backgroundColor: '#000',
+    icon: __dirname + './build/icon.png',
+    webPreferences: {
+      nodeIntegration: false,
+      contextIsolation: true, // Protect against prototype pollution.
+      enableRemoteModule: false, // Turn off Remote
+      preload: path.join(app.getAppPath(), './app/preload.js'),
+    },
+  });
+  win.on('ready-to-show', () => {
+    win.maximize();
+    win.show();
+  });
+  win.on('closed', () => {
+    // Dereference the window.
+    // For multiple windows store them in an array.
+    mainWindow = undefined;
+  });
 
-	// Optional:
+  // Optional:
 
-	win.removeMenu(); // Remove menu.
+  win.removeMenu(); // Remove menu.
 
-	await win.loadFile(path.join(__dirname, './index.html'));
-	return win;
+  await win.loadFile(path.join(__dirname, './index.html'));
+  return win;
 };
 
 // Prevent multiple instances of the app
 if (!app.requestSingleInstanceLock()) {
-	app.quit();
+  app.quit();
 }
 
 app.on('second-instance', () => {
-	if (mainWindow) {
-		if (mainWindow.isMinimized()) {
-			mainWindow.restore();
-		}
+  if (mainWindow) {
+    if (mainWindow.isMinimized()) {
+      mainWindow.restore();
+    }
 
-		mainWindow.show();
-	}
+    mainWindow.show();
+  }
 });
 
-app.on('window-all-closed', function () {
-	if (process.platform !== 'darwin') app.quit();
+app.on('window-all-closed', function() {
+  if (process.platform !== 'darwin') app.quit();
 });
 
 app.on('activate', async () => {
-	if (!mainWindow) {
-		mainWindow = await createMainWindow();
-	}
+  if (!mainWindow) {
+    mainWindow = await createMainWindow();
+  }
 });
 
 (async () => {
-	await app.whenReady();
-	mainWindow = await createMainWindow();
-	console.log(`[BetterDiscordPanel]: Ready!`)
+  await app.whenReady();
+  mainWindow = await createMainWindow();
+  console.log(`[BetterDiscordPanel]: Ready!`);
 })();

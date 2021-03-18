@@ -11,30 +11,31 @@ client.on('message', (message) => {
 
   if (
     (Number(message.author.id) === Number(channels.val()) ||
-			message.author.id === client.user.id) &&
-		message.channel.type === 'dm'
+      message.author.id === client.user.id) &&
+    message.channel.type === 'dm'
   ) {
     updateChannel();
   }
 
   if (
     message.channel.type !== 'dm' &&
-		(Number(message.author.id) === Number(client.user.id) ||
-			!message.author.bot)
+    (Number(message.author.id) === Number(client.user.id) ||
+      !message.author.bot)
   ) {
     lastMessages.html(
         lastMessages.html() +
-			`<br>[<b>#${escapeHtml(message.channel.name)} | ${escapeHtml(
-			    message.guild.name,
-			)} | ${message.guild.id} | ${escapeHtml(message.author.tag)} | ${message.author.id
-			}] </b> \n${contentReplacement(message.content)}`,
+        `<br>[<b>#${escapeHtml(message.channel.name)} | ${escapeHtml(
+            message.guild.name,
+        )} | ${message.guild.id} | ${escapeHtml(message.author.tag)} | ${
+          message.author.id
+        }] </b> \n${contentReplacement(message.content)}`,
     );
   } else if (message.channel.type === 'dm' && !message.author.bot) {
     lastMessages.html(
         lastMessages.html() +
-			`<br><b>[${translation.text.privateMessages}] ${escapeHtml(
-			    message.author.tag,
-			)} | ${message.author.id} </b> \n${contentReplacement(message.content)}`,
+        `<br><b>[${translation.text.privateMessages}] ${escapeHtml(
+            message.author.tag,
+        )} | ${message.author.id} </b> \n${contentReplacement(message.content)}`,
     );
   }
 
@@ -42,7 +43,7 @@ client.on('message', (message) => {
 });
 
 client.on('ready', () => {
-  let storageBotStatus;
+  const storageBotStatus = localStorage.getItem('bot-status');
   let botstatus;
 
   lastMessages.html(localStorage.getItem('lastMessages') || '');
@@ -56,13 +57,11 @@ client.on('ready', () => {
   );
   $('.bot-guilds').html(client.guilds.cache.size);
 
-  storageBotStatus = localStorage.getItem('bot-status');
-
   if (
     storageBotStatus === 'online' ||
-		storageBotStatus === 'idle' ||
-		storageBotStatus === 'dnd' ||
-		storageBotStatus === 'invisible'
+    storageBotStatus === 'idle' ||
+    storageBotStatus === 'dnd' ||
+    storageBotStatus === 'invisible'
   ) {
     setStatus(storageBotStatus);
   } else {
@@ -96,8 +95,8 @@ client.on('messageDelete', (message) => {
 
   if (
     (Number(message.author.id) === Number(channels.val()) ||
-			message.author.id === client.user.id) &&
-		message.channel.type === 'dm'
+      message.author.id === client.user.id) &&
+    message.channel.type === 'dm'
   ) {
     updateChannel();
   }
@@ -113,8 +112,8 @@ client.on('messageUpdate', (oldMessage, newMessage) => {
 
   if (
     (Number(oldMessage.author.id) === Number(channels.val()) ||
-			oldMessage.author.id === client.user.id) &&
-		oldMessage.channel.type === 'dm'
+      oldMessage.author.id === client.user.id) &&
+    oldMessage.channel.type === 'dm'
   ) {
     updateChannel();
   }
@@ -209,26 +208,26 @@ let scrollState = true;
 var chatElement = new SimpleBar(document.getElementById('scrollBarChat'));
 
 function scrollAnim(time) {
-	if (scrollState == true) {
-		$(chatElement).animate({
-			scrollTop: $(chatElement)[0].scrollHeight - $(chatElement).height()
-		}, time);
-		console.log("Scrolling!")
-	}
+  if (scrollState == true) {
+    $(chatElement).animate({
+      scrollTop: $(chatElement)[0].scrollHeight - $(chatElement).height()
+    }, time);
+    console.log("Scrolling!")
+  }
 }
 
 $("#chat").bind("wheel", (event) => {
-	if (event.originalEvent.deltaY < 0) {
-		console.log("False")
-		scrollState = false;
-	} else if (event.originalEvent.deltaY > 0 && $("#chat").scrollTop() + $("#chat").innerHeight() >= $("#chat")[0].scrollHeight - 100) {
-		console.log("True")
-		scrollState = true;
-	}
+  if (event.originalEvent.deltaY < 0) {
+    console.log("False")
+    scrollState = false;
+  } else if (event.originalEvent.deltaY > 0 && $("#chat").scrollTop() + $("#chat").innerHeight() >= $("#chat")[0].scrollHeight - 100) {
+    console.log("True")
+    scrollState = true;
+  }
 });
 
 setInterval(() => {
-	scrollAnim(100);
-	console.log("Checking.")
+  scrollAnim(100);
+  console.log("Checking.")
 }, 1000);
 */

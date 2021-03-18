@@ -35,7 +35,6 @@ function testLogin() {
    * This function will check if the user has already logged into their account.
    * A redirection will be made back to the panel if they have already logged in.
    */
-
   token = localStorage.getItem('token');
 
   const client = new Discord.Client({
