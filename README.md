@@ -68,7 +68,9 @@ This project does not run on any servers and can be self hosted. Simply open
 git clone https://github.com/sanjaysunil/betterdiscordpanel
 ```
 
-> ⚠️ **NOTE**: The updater only works if you have cloned the repository. 2. Open `login.html` or open `BetterDiscordPanel.cmd` to run the panel.
+> ⚠️ **NOTE**: The updater only works if you have cloned the repository. 
+
+2. Open `login.html` or open `BetterDiscordPanel.cmd` to run the panel.
 
 3. Login to your Discord Bot.
 
