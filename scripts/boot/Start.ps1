@@ -59,20 +59,14 @@ BetterDiscordPanel Web Boot-up
 
 Write-Host ""
 Write-Host "[BetterDiscordPanel]: $($locales.checking_system)"
-If (Test-Path "..\..\index.html") {
+If (Test-Path "..\..\index.js") {
     Write-Host "[BetterDiscordPanel]: $($locales.check_success)"
     Write-Host
 
     Write-Host "[BetterDiscordPanel]: $($locales.booting)"
     Write-Host
 
-    Start-Process '../../index.html'
-
-    Write-Host "[BetterDiscordPanel]: $($locales.done)"
-
-    Write-Host
-    Write-Host "BetterDiscordPanel v$($package.version)"
-    Write-Host "Copyright $([char]0x00A9) 2020 Sanjay Sunil"
+    node ./boot.js
 
     $caption = ""
     $description = ""

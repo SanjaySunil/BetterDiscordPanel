@@ -67,7 +67,7 @@ $choices = New-Object Collections.ObjectModel.Collection[Management.Automation.H
 $choices.Add((
         New-Object Management.Automation.Host.ChoiceDescription `
             -ArgumentList `
-            "&1 $($locales.start_web)",
+            "&1 Start $($locales.start_app)",
         "$($locales.betterdiscordpanel_help)"
     ))
 <#

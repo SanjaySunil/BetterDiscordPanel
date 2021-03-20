@@ -20,7 +20,6 @@ const createMainWindow = async () => {
     show: false,
     minWidth: 600,
     minHeight: 400,
-    opacity: 0.98,
     backgroundColor: '#000',
     icon: __dirname + './build/icon.png',
     webPreferences: {
@@ -76,5 +75,4 @@ app.on('activate', async () => {
 (async () => {
   await app.whenReady();
   mainWindow = await createMainWindow();
-  console.log(`[BetterDiscordPanel]: Ready!`);
 })();
