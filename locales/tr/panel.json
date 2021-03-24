@@ -34,8 +34,8 @@
     "check_success": "Sistem kontrolü başarılı.",
     "updating": "BetterDiscordPanel güncelleniyor ...",
     "updating_failure": "BetterDiscordPanel güncellenemiyor, BetterDiscordPanel güncellenirken bir hata meydana geldi.",
-    "check_index": "İndex.html in mevcut olup olmadığını kontrol et.",
-    "check_main": "main.js in mevcut olup olmadığını kontrol et.",
+    "check_index": "İndex.html'in mevcut olup olmadığını kontrol et.",
+    "check_main": "main.js'in mevcut olup olmadığını kontrol et.",
     "check_repo_download_method": "Depoyu klonla ve tekrar dene.",
     "booting": "BetterDiscordPanel başlatılıyor ..."
 }
