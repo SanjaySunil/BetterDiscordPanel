@@ -1,0 +1,41 @@
+{
+    "welcome": "Merhaba,",
+    "select_option": "Gerçekleştirmek istediğin işlemi seç.",
+
+    "start_web": "WEB - BetterDiscordPanel",
+    "start_desktop": "MASAÜSTÜ UYGULAMASI - BetterDiscordPanel",
+
+    "support": "Destek",
+    "settings": "Ayarlar",
+    "update": "Güncellemeleri Denetle",
+    "language": "Dil",
+    "go_back": "Geri Git",
+    "done": "Tamamlandı!",
+    "exit": "Çık",
+
+    "discordserver": "Discord Sunucusu",
+    "submit_issue": "Bir sorun/Hata Raporu/Öneri gönder.",
+
+    "betterdiscordpanel_help":"Varsayılan tarayıcında BetterDiscordPanel'i çalıştır.",
+    "desktop_panel_help": "BetterDiscordPanel Masaüstü uygulamasını çalıştır.",
+    "settings_help": "BetterDiscordPanel ayarlarını aç.",
+    "exit_help": "Bu komut dosyasından çık.",
+    "support_help": "BetterDiscordPanel için destek al.",
+    "update_help": "BetterDiscordPanel'i mevcut en son sürüme güncelle.",
+    "language_help": "BetterDiscordPanel için bir dil seç",
+    "go_back_help": "Seçim paneline geri dön.",
+    "discord_help": "Varsayılan tarayıcıda Discord destek sunucusu bağlantısını aç.",
+    "issue_help": "Github üzerinden bir Sorun/Hata Raporu/Öneri gönder.",
+    "get_help": "BetterDiscordPanel için destek/yardım al:",
+
+    "check_installation": "BetterDiscordPanel'in doğru yüklenip yüklenmediğini kontrol et.",
+    "checking_failure": "Sistem kontrolü başarısız oldu.",
+    "checking_system": "BetterDiscordPanel sistemi kontrol ediliyor ...",
+    "check_success": "Sistem kontrolü başarılı.",
+    "updating": "BetterDiscordPanel güncelleniyor ...",
+    "updating_failure": "BetterDiscordPanel güncellenemiyor, BetterDiscordPanel güncellenirken bir hata meydana geldi.",
+    "check_index": "İndex.html'in mevcut olup olmadığını kontrol et.",
+    "check_main": "main.js'in mevcut olup olmadığını kontrol et.",
+    "check_repo_download_method": "Depoyu klonla ve tekrar dene.",
+    "booting": "BetterDiscordPanel başlatılıyor ..."
+}
