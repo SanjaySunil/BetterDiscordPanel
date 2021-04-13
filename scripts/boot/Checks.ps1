@@ -131,6 +131,20 @@ If (-Not ($?)) {
   Exit-BetterDiscordPanel-Updater
 }
 
+If (-Not (Test-Path "node_modules")) {
+  Write-Host "[BetterDiscordPanel]: Installing dependicies."
+  Write-Host
+
+  npm install
+  If (-Not ($?)) {
+    Write-Host "[BetterDiscordPanel]: $($locales.updating_failure)"
+    Write-Host "[BetterDiscordPanel]: $($locales.get_help) https://discord.gg/9h822H3"
+    Write-Host
+
+    Exit-BetterDiscordPanel-Updater
+  }
+}
+
 # Update was successful
 Set-Location scripts
 Set-Location boot
