@@ -4,8 +4,6 @@
  * @license GPL-3.0
  */
 
-const chalk = require('chalk');
-const package = require('../../package.json');
 const {exec} = require('child_process');
 
 exec('cd ../../ && npm start', (error, stdout, stderr) => {

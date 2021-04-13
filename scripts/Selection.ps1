@@ -72,16 +72,8 @@ $choices.Add((
         New-Object Management.Automation.Host.ChoiceDescription `
             -ArgumentList `
             "&1 Start $($locales.start_app)",
-        "$($locales.betterdiscordpanel_help)"
-    ))
-<#
-$choices.Add((
-        New-Object Management.Automation.Host.ChoiceDescription `
-            -ArgumentList `
-            "&DESKTOP APP - BetterDiscordPanel",
         "$($locales.desktop_panel_help)"
     ))
-#>
 $choices.Add((
         New-Object Management.Automation.Host.ChoiceDescription `
             -ArgumentList `

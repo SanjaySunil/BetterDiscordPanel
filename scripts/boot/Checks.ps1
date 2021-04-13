@@ -131,7 +131,6 @@ If (-Not ($?)) {
   Exit-BetterDiscordPanel-Updater
 }
 
-
 # Update was successful
 Set-Location scripts
 Set-Location boot
