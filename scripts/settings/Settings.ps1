@@ -48,6 +48,10 @@ ElseIf ($config.language -eq 'nl') {
 	$locales = (Get-Content '../../locales/nl/panel.json' -Raw) | ConvertFrom-Json
 }
 
+ElseIf ($config.language -eq 'tr') {
+	$locales = (Get-Content '../../locales/tr/panel.json' -Raw) | ConvertFrom-Json
+}
+
 Else {
     Start-Sleep -Seconds 0.1
     Write-Host "[ERROR]: INVALID LANGUAGE."
@@ -97,7 +101,7 @@ switch ($selection) {
     .\Update.ps1
   }
   1 {
-    .\Language.ps1
+    .\Languages\Languages1.ps1
   }
   2 {
     .\Support.ps1
