@@ -115,11 +115,6 @@ View [contribution guide](https://github.com/SanjaySunil/BetterDiscordPanel/blob
 [![Forkers repo roster for @sanjaysunil/betterdiscordpanel](https://reporoster.com/forks/sanjaysunil/betterdiscordpanel)](https://github.com/sanjaysunil/betterdiscordpanel/network/members)
 <br/>
 
-### Built With
-
-- [Discord.js](https://github.com/discordjs/discord.js)
-- [jQuery](https://jquery.com)
-
 ## License
 
 Copyright © 2021 Sanjay Sunil (sanjaysunil@protonmail.com)
