@@ -1,0 +1,41 @@
+{
+    "welcome": "Xin chào,",
+    "select_option": "Đâu là lựa chọn của bạn",
+
+    "start_web": "WEB - BetterDiscordPanel",
+    "start_desktop": "DESKTOP APP - BetterDiscordPanel",
+
+    "support": "Liên hệ Hỗ Trợ",
+    "settings": "Cài đặt",
+    "update": "Kiểm tra Update",
+    "language": "Ngôn ngữ",
+    "go_back": "Lùi lại",
+    "done": "Hoàn tất",
+    "exit": "Thoát",
+
+    "discordserver": "Discord Server",
+    "submit_issue": "Đóng góp lỗi/bug/ hoặc ý tưởng của bạn",
+
+    "betterdiscordpanel_help": "Sử dụng BetterDiscordPanel trong chính trình duyệt của bạn.",
+    "desktop_panel_help": "Khởi động ứng dụng của BetterDiscordPanel.",
+    "settings_help": "Mở cài đặt của BetterDiscordPanel.",
+    "exit_help": "Thoát.",
+    "support_help": "Bạn cần hỗ trợ từ BetterDiscordPanel ?",
+    "update_help": "Hãy update BetterDiscordPanel lên phiên bản mới nhất.",
+    "language_help": "Chọn ngôn ngữ cho BetterDiscordPanel",
+    "go_back_help": "Lùi lại.",
+    "discord_help": "Tham gia Support Server của chúng tôi.",
+    "issue_help": "Báo cáo, đóng góp Lỗi/Bug/Ý tưởng thông qua trang GitHub của chúng tôi.",
+    "get_help": "Hỗ trợ cho BetterDiscordPanel:",
+
+    "check_installation": "Kiểm tra toàn bộ file download.",
+    "checking_failure": "Kiểm tra thất bại, vui lòng thử lại.",
+    "checking_system": "Kiểm tra hệ thống BetterDiscordPanel ...",
+    "check_success": "Kiểm tra hệ thống thành công",
+    "updating": "Updating BetterDiscordPanel ...",
+    "updating_failure": "Không thể update BetterDiscordPanel, đã xảy ra lỗi trong quá trình update BetterDiscordPanel.",
+    "check_index": "Kiểm tra index.js",
+    "check_main": "Kiểm tra main.js",
+    "check_repo_download_method": "Hãy Clone Repository và thử lại",
+    "booting": "Đang khởi động BetterDiscordPanel ..."
+}
