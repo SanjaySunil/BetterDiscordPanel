@@ -109,6 +109,7 @@ View [contribution guide](https://github.com/SanjaySunil/BetterDiscordPanel/blob
 | [llamaiscoollmao](https://github.com/llamaiscoollmao) | Romanian  |
 | [llamaiscoollmao](https://github.com/llamaiscoollmao) | Russian   |
 | [GabiK65](https://github.com/GabiK65)                 | Hungarian |
+| [buiquochuy2k1](https://github.com/buiquochuy2k1)     | Vietnamese|
 
 [![Stargazers repo roster for @sanjaysunil/betterdiscordpanel](https://reporoster.com/stars/sanjaysunil/betterdiscordpanel)](https://github.com/sanjaysunil/betterdiscordpanel/stargazers)
 
