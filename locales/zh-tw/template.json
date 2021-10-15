@@ -1,0 +1,42 @@
+{
+    "welcome": "你好，", 
+    "select_option": "選擇你要執行的選項",
+
+    "start_web": "網頁 - BetterDiscordPanel",
+    "start_desktop": "桌面應用程式 - BetterDiscordPanel",
+
+    "support": "幫助",
+    "settings": "設定",
+    "update": "檢查更新",
+    "language": "語言",
+    "go_back": "返回",
+    "done": "完成！",
+    "exit": "離開",
+
+    "discordserver": "Discord 伺服器",
+    "submit_issue": "提交一個問題/錯誤回報/建議",
+
+    "betterdiscordpanel_help":"在預設瀏覽器上開啟 BetterDiscordPanel",
+    "desktop_panel_help": "開啟 BetterDiscordPanel 的桌面應用程式",
+    "settings_help": "開啟 BetterDiscordPanel 的設定",
+    "exit_help": "退出此腳本",
+    "support_help": "取得有關 BetterDiscordPanel 的幫助",
+    "update_help": "更新 BetterDiscordPanel 至最新版本",
+    "language_help": "選擇 BetterDiscordPanel 顯示的語言",
+    "go_back_help": "返回選擇頁面",
+    "discord_help": "在預設瀏覽器上開啟 Discord 幫助伺服器的邀請連結",
+    "issue_help": "提交一個問題/錯誤回報/建議至 GitHub",
+    "get_help": "取得有關 BetterDiscordPanel 的幫助",
+
+    "check_installation": "檢查你是否正確安裝 BetterDiscordPanel",
+    "checking_failure": "系統檢查失敗",
+    "checking_system": "檢查 BetterDiscordPanel 系統 ...",
+    "check_success": "系統檢查成功",
+    "updating": "更新 BetterDiscordPanel ...",
+    "updating_failure": "無法更新 BetterDiscordPanel，更新 BetterDiscordPanel 的過程中發生錯誤",
+    "check_index": "檢查 index.html 是否存在",
+    "check_main": "檢查 main.js 是否存在",
+    "check_repo_download_method": "複製專案後再試一次",
+    "booting": "啟動 BetterDiscordPanel ..."
+}
+
