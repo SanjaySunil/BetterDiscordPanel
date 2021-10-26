@@ -1,14 +1,14 @@
 {
 	"name": "betterdiscordpanel",
 	"productName": "BetterDiscordPanel",
-	"version": "2.7.1",
+	"version": "3.0.0",
 	"description": "The desktop application for BetterDiscordPanel.",
-	"license": "MIT",
+	"license": "GNU General Public License v3.0",
 	"repository": "sanjaysunil/BetterDiscordPanel",
 	"author": {
 		"name": "Sanjay Sunil",
 		"email": "sanjaysunil@protonmail.com",
-		"url": "https://sanjaysunil.me"
+		"url": "https://sanjaysunil.github.io"
 	},
 	"scripts": {
 		"postinstall": "electron-builder install-app-deps",
