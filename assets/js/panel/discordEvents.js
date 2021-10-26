@@ -53,7 +53,7 @@ client.on('ready', () => {
   $('.bot-createdAt').html(client.user.createdAt);
   $('.bot-avatar').attr(
       'src',
-      client.user.avatarURL({format: 'png', dynamic: true, size: 1024}),
+      client.user.avatarURL({format: 'png', dynamic: true, size: 1024}) || "assets/images/discord_defaults_avatars/0.png",
   );
   $('.bot-guilds').html(client.guilds.cache.size);
 

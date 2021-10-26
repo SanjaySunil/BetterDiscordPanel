@@ -323,12 +323,12 @@ function updateGuild() {
 
     guildName.html(
         `<a href="${guild.iconURL() || './img/icon/info.png'
-        }" target="_blank"><img alt="" src="${guild.iconURL() || './img/icon/info.png'
+        }" target="_blank"><img alt="" src="${guild.iconURL() || 'assets/images/discord_defaults_avatars/0.png'
         }" class="avatarIMG"/></a> ${escapeHtml(guild.name)}`,
     );
     guildPic.html(
         `<a href="${guild.iconURL() || './img/icon/info.png'
-        }" target="_blank"><img alt="" src="${guild.iconURL() || './img/icon/info.png'
+        }" target="_blank"><img alt="" src="${guild.iconURL() || 'assets/images/discord_defaults_avatars/0.png'
         }" class="rounded-circle avatar-lg img-thumbnail"/></a>`,
     );
     guildNameNoPic.html(`${escapeHtml(guild.name)}`);
