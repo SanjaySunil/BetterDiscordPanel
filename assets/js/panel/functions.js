@@ -353,7 +353,7 @@ function updateGuild() {
           `./assets/images//discord_defaults_avatars/${member.user.discriminator % 5
           }.png`;
           guildMembers.push(
-              `<div style="margin: 4px 0 4px 0"><a href="${avatarUrl}" target="_blank"><img alt="" style="display: inline;" class="avatarIMG" src="${avatarUrl}"/></a> ${member.user.tag} <button data-value="<@!${member.user.id}>" onclick="addText(this.dataset.value)" class="mini"><i class="mdi mdi-at"></i></button></div>`,
+              `<div style="margin: 4px 0 4px 0"><a href="${avatarUrl}" target="_blank"><img alt="" style="display: inline;" class="avatarIMG" src="${avatarUrl}"/></a> ${member.nickname ? member.nickname : member.user.tag} <button data-value="<@!${member.user.id}>" onclick="addText(this.dataset.value)" class="mini"><i class="mdi mdi-at"></i></button></div>`,
           );
         });
     html += `<button onclick='$("#guildMembers").toggle("fast")' class="action">${translation.infos.members
