@@ -23,7 +23,7 @@
 	},
 	"devDependencies": {
 		"electron": ">=15.3.0",
-		"electron-builder": "^22.10.5",
+		"electron-builder": "^22.13.1",
 		"eslint": "^8.1.0",
 		"eslint-config-google": "^0.14.0"
 	},
