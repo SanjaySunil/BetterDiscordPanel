@@ -4,6 +4,6 @@
  * @license GPL-3.0
  */
 
-$('.000').replaceWith('Copyright © 2020');
+$('.000').replaceWith('Copyright © 2021');
 $('.001').replaceWith('Sanjay Sunil');
 $('.002').replaceWith('All rights reserved.');
