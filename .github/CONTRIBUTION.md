@@ -14,4 +14,4 @@
 
 ***
 
-## If you encounter any problems, please email sanjaysunil@protonmail.com or message me on [Discord](https://discordapp.com/users/732336924559278181).
+#### If you encounter any problems, please create a new issue.

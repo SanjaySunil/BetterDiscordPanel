@@ -1,5 +1,5 @@
 <#
- * File: Language.ps1
+ * File: Languages1.ps1
  * Author: Sanjay Sunil
  * License: GPL-3.0
 #>
@@ -95,46 +95,13 @@ $choices.Add((
 $choices.Add((
         New-Object Management.Automation.Host.ChoiceDescription `
             -ArgumentList `
-            "&5 Norwegian",
-        "Select Norwegian."
+            "&5 More Languages",
+        "More languages."
     ))
-$choices.Add((
-        New-Object Management.Automation.Host.ChoiceDescription `
-            -ArgumentList `
-            "&6 Romanian",
-        "Select Romanian."
-    ))
-$choices.Add((
-        New-Object Management.Automation.Host.ChoiceDescription `
-            -ArgumentList `
-            "&7 Hungarian",
-        "Select Hungarian."
-    ))
-	$choices.Add((
-        New-Object Management.Automation.Host.ChoiceDescription `
-            -ArgumentList `
-            "&8 Dutch",
-        "Select Dutch."
-    ))
-    $choices.Add((
-      New-Object Management.Automation.Host.ChoiceDescription `
-          -ArgumentList `
-          "&9 Turkish",
-      "Select Turkish."
-  ))
-<#---------------------------------------
-$choices.Add((
-        New-Object Management.Automation.Host.ChoiceDescription `
-            -ArgumentList `
-            "&9 Russian",
-        "Select Russian"
-    ))
----------------------------------------#>
-
 $choices.Add((
         New-Object Management.Automation.Host.ChoiceDescription `
           -ArgumentList `
-          "&9 $($locales.go_back)",
+          "&6 $($locales.go_back)",
         "$($locales.go_back_help)"
       ))
 
@@ -149,7 +116,7 @@ switch ($selection) {
         Write-Host "Successfully changed language to English!"
         Start-Sleep -s 2
         .\Settings.ps1
-	}
+      }
     1 {
         $locales = (Get-Content "../../config/config.json" -Raw) | ConvertFrom-Json
         $locales.language='fr'
@@ -157,7 +124,7 @@ switch ($selection) {
         Write-Host "Successfully changed language to French!"
         Start-Sleep -s 2
         .\Settings.ps1
-	}
+      }
     2 {
         $locales = (Get-Content "../../config/config.json" -Raw) | ConvertFrom-Json
         $locales.language='es'
@@ -165,7 +132,7 @@ switch ($selection) {
         Write-Host "Successfully changed language to Spanish!"
         Start-Sleep -s 2
         .\Settings.ps1
-    }
+      }
     3 {
         $locales = (Get-Content "../../config/config.json" -Raw) | ConvertFrom-Json
         $locales.language='de'
@@ -173,48 +140,11 @@ switch ($selection) {
         Write-Host "Successfully changed language to German!"
         Start-Sleep -s 2
         .\Settings.ps1
-    }
+      }
     4 {
-        $locales = (Get-Content "../../config/config.json" -Raw) | ConvertFrom-Json
-        $locales.language='no'
-        $locales | ConvertTo-Json -depth 32| set-content '../../config/config.json'
-        Write-Host "Successfully changed language to Norwegian!"
-        Start-Sleep -s 2
-        .\Settings.ps1
+      .\Languages\Languages2.ps1
     }
     5 {
-        $locales = (Get-Content "../../config/config.json" -Raw) | ConvertFrom-Json
-        $locales.language='ro'
-        $locales | ConvertTo-Json -depth 32| set-content '../../config/config.json'
-        Write-Host "Successfully changed language to Romanian!"
-        Start-Sleep -s 2
-        .\Settings.ps1
-    }
-    6 {
-        $locales = (Get-Content "../../config/config.json" -Raw) | ConvertFrom-Json
-        $locales.language='hu'
-        $locales | ConvertTo-Json -depth 32| set-content '../../config/config.json'
-        Write-Host "Successfully changed language to Hungarian!"
-        Start-Sleep -s 2
-        .\Settings.ps1
-    }
-	  7 {
-        $locales = (Get-Content "../../config/config.json" -Raw) | ConvertFrom-Json
-        $locales.language='nl'
-        $locales | ConvertTo-Json -depth 32| set-content '../../config/config.json'
-        Write-Host "Successfully changed language to Dutch!"
-        Start-Sleep -s 2
-        .\Settings.ps1
-    }
-    8 {
-        $locales = (Get-Content "../../config/config.json" -Raw) | ConvertFrom-Json
-        $locales.language='tr'
-        $locales | ConvertTo-Json -depth 32| set-content '../../config/config.json'
-        Write-Host "Successfully changed language to Turkish!"
-        Start-Sleep -s 2
-        .\Settings.ps1
-    }
-    9 {
-        .\Settings.ps1
+      .\Settings.ps1
     }
 }

@@ -48,6 +48,10 @@ ElseIf ($config.language -eq 'nl') {
     $locales = (Get-Content '../locales/nl/panel.json' -Raw) | ConvertFrom-Json
 }
 
+ElseIf ($config.language -eq 'tr') {
+	$locales = (Get-Content '../locales/tr/panel.json' -Raw) | ConvertFrom-Json
+}
+
 Else {
     Start-Sleep -Seconds 0.1
     Write-Host "[ERROR]: INVALID LANGUAGE."
@@ -67,17 +71,9 @@ $choices = New-Object Collections.ObjectModel.Collection[Management.Automation.H
 $choices.Add((
         New-Object Management.Automation.Host.ChoiceDescription `
             -ArgumentList `
-            "&1 $($locales.start_web)",
-        "$($locales.betterdiscordpanel_help)"
-    ))
-<#
-$choices.Add((
-        New-Object Management.Automation.Host.ChoiceDescription `
-            -ArgumentList `
-            "&DESKTOP APP - BetterDiscordPanel",
+            "&1 Start $($locales.start_app)",
         "$($locales.desktop_panel_help)"
     ))
-#>
 $choices.Add((
         New-Object Management.Automation.Host.ChoiceDescription `
             -ArgumentList `

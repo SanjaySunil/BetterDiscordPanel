@@ -2,7 +2,7 @@
     "welcome": "Hello",
     "select_option": "Válasszon egy opciót.",
 
-    "start_web": "WEB - BetterDiscordPanel",
+    "start_app": "BetterDiscordPanel",
     "start_desktop": "DESKTOP APP - BetterDiscordPanel",
 
     "support": "Támogatás",
@@ -12,7 +12,7 @@
     "go_back": "Vissza",
     "done": "Kész!",
     "exit": "Kilépés",
-    
+
     "discordserver": "Discord Szerver",
     "submit_issue": "Hiba jelentése/Ajánlattétel",
 

@@ -48,6 +48,10 @@ ElseIf ($config.language -eq 'nl') {
 	$locales = (Get-Content '../../locales/nl/panel.json' -Raw) | ConvertFrom-Json
 }
 
+ElseIf ($config.language -eq 'tr') {
+	$locales = (Get-Content '../../locales/tr/panel.json' -Raw) | ConvertFrom-Json
+}
+
 Else {
 	Start-Sleep -Seconds 0.1
 	Write-Host "[ERROR]: INVALID LANGUAGE."
@@ -127,6 +131,19 @@ If (-Not ($?)) {
   Exit-BetterDiscordPanel-Updater
 }
 
+If (-Not (Test-Path "node_modules")) {
+  Write-Host "[BetterDiscordPanel]: Installing dependicies."
+  Write-Host
+
+  npm install
+  If (-Not ($?)) {
+    Write-Host "[BetterDiscordPanel]: $($locales.updating_failure)"
+    Write-Host "[BetterDiscordPanel]: $($locales.get_help) https://discord.gg/9h822H3"
+    Write-Host
+
+    Exit-BetterDiscordPanel-Updater
+  }
+}
 
 # Update was successful
 Set-Location scripts

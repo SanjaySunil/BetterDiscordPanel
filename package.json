@@ -1,27 +1,59 @@
 {
 	"name": "betterdiscordpanel",
-	"version": "2.7.1",
-	"description": "",
-	"main": "index.js",
-	"dependencies": {},
-	"devDependencies": {},
+	"productName": "BetterDiscordPanel",
+	"version": "3.0.0",
+	"description": "The desktop application for BetterDiscordPanel.",
+	"license": "GNU General Public License v3.0",
+	"repository": "sanjaysunil/BetterDiscordPanel",
+	"author": {
+		"name": "Sanjay Sunil",
+		"email": "sanjaysunil@protonmail.com",
+		"url": "https://sanjaysunil.github.io"
+	},
 	"scripts": {
-		"test": ""
+		"postinstall": "electron-builder install-app-deps",
+		"start": "electron .",
+		"pack": "electron-builder --dir",
+		"dist": "electron-builder --macos --linux --windows",
+		"win": "electron-builder --windows"
 	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/sanjaysunil/betterdiscordpanel.git"
+	"dependencies": {
+		"electron-debug": "^3.2.0",
+		"electron-reloader": "^1.2.0"
 	},
-	"keywords": [
-		"discord",
-		"panel",
-		"betterdiscordpanel",
-		"dashboard"
-	],
-	"author": "Sanjay Sunil",
-	"license": "GPL-3.0",
-	"bugs": {
-		"url": "https://github.com/sanjaysunil/betterdiscordpanel/issues"
+	"devDependencies": {
+		"electron": ">=12.0.0",
+		"electron-builder": "^22.10.5",
+		"eslint": "^7.21.0",
+		"eslint-config-google": "^0.14.0"
 	},
-	"homepage": "https://github.com/sanjaysunil/betterdiscordpanel#readme"
+	"build": {
+		"appId": "com.company.AppName",
+		"mac": {
+			"category": "public.app-category.developer-tools",
+			"darkModeSupport": true
+		},
+		"dmg": {
+			"iconSize": 160,
+			"contents": [
+				{
+					"x": 180,
+					"y": 170
+				},
+				{
+					"x": 480,
+					"y": 170,
+					"type": "link",
+					"path": "/Applications"
+				}
+			]
+		},
+		"linux": {
+			"target": [
+				"AppImage",
+				"deb"
+			],
+			"category": "Development"
+		}
+	}
 }

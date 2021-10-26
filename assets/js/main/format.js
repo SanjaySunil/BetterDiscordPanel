@@ -1,9 +1,9 @@
 /**
  * @file format.js
- * @author Sanjay Sunil 
+ * @author Sanjay Sunil
  * @license GPL-3.0
  */
 
 function format(command, value) {
-	document.execCommand(command, false, value);
+  document.execCommand(command, false, value);
 }

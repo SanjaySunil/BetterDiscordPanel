@@ -14,8 +14,6 @@
     <a href="https://github.com/SanjaySunil/BetterDiscordPanel/issues/new?assignees=&labels=Bug&template=bug_report.md&title=%5BBUG%5D">Report Bug</a>
     ·
     <a href="https://github.com/SanjaySunil/BetterDiscordPanel/issues/new?assignees=&labels=Suggestions&template=suggestions.md&title=%5BSUGGESTION%5D">Request Feature</a>
-    ·
-    <a href="https://discord.gg/9h822H3">Discord Server</a>
   </p>
 </h1>
 <br/><br/>
@@ -54,11 +52,19 @@
 
 ## 🛠 Getting Started
 
-This project does not run on any servers and can be self hosted. Simply open
-`index.html` to get started or use the control panel by opening `BetterDiscordPanel.cmd` and executing "W" for the web panel.
+Simply open
+`index.html` to open the web version of BetterDiscordPanel or use the control panel to open the desktop application by running `BetterDiscordPanel.cmd`.
 <br/>
 
 <!-- Installation -->
+
+### **Step 1:** Prerequisites
+To use the **desktop application** of BetterDiscordPanel, you will need to have the following installed.
+
+- Node.js
+- npm
+
+[Instructions](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
 
 ### **Step 2:** Setup / Installation
 
@@ -70,9 +76,9 @@ git clone https://github.com/sanjaysunil/betterdiscordpanel
 
 > ⚠️ **NOTE**: The updater only works if you have cloned the repository. 
 
-2. Open `login.html` or open `BetterDiscordPanel.cmd` to run the panel.
+2. Open `login.html` for the web application or open `BetterDiscordPanel.cmd` to run the desktop application.
 
-3. Login to your Discord Bot.
+3. Login to your discord bot using your discord bot token.
 
 4. Start using BetterDiscordPanel!
    <br/>
@@ -114,11 +120,6 @@ View [contribution guide](https://github.com/SanjaySunil/BetterDiscordPanel/blob
 
 [![Forkers repo roster for @sanjaysunil/betterdiscordpanel](https://reporoster.com/forks/sanjaysunil/betterdiscordpanel)](https://github.com/sanjaysunil/betterdiscordpanel/network/members)
 <br/>
-
-### Built With
-
-- [Discord.js](https://github.com/discordjs/discord.js)
-- [jQuery](https://jquery.com)
 
 ## License
 

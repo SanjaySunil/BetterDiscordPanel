@@ -1,8 +1,8 @@
 {
-    "welcome": "Bienvenue, ", 
+    "welcome": "Bienvenue, ",
     "select_option": "Sélectionnez l'option que vous souhaitez exécuter.",
 
-    "start_web": "WEB - BetterDiscordPanel",
+    "start_app": "BetterDiscordPanel",
     "start_desktop": "APPLI DE BUREAU - BetterDiscordPanel",
 
     "support": "Support",

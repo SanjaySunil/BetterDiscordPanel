@@ -1,8 +1,8 @@
 version: 2
 updates:
 - package-ecosystem: npm
-  directory: "/electron"
+  directory: "/"
   schedule:
     interval: daily
   open-pull-requests-limit: 10
-  target-branch: dev
+  target-branch: master

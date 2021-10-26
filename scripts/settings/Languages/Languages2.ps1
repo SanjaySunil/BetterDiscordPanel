@@ -1,5 +1,5 @@
 <#
- * File: Language.ps1
+ * File: Languages2.ps1
  * Author: Sanjay Sunil
  * License: GPL-3.0
 #>
@@ -71,70 +71,37 @@ $choices = New-Object Collections.ObjectModel.Collection[Management.Automation.H
 $choices.Add((
         New-Object Management.Automation.Host.ChoiceDescription `
             -ArgumentList `
-            "&1 English",
-        "Select English."
-	))
-$choices.Add((
-        New-Object Management.Automation.Host.ChoiceDescription `
-            -ArgumentList `
-            "&2 French",
-        "Select French."
-    ))
-$choices.Add((
-        New-Object Management.Automation.Host.ChoiceDescription `
-            -ArgumentList `
-            "&3 Spanish",
-        "Select Spanish."
-    ))
-$choices.Add((
-        New-Object Management.Automation.Host.ChoiceDescription `
-            -ArgumentList `
-            "&4 German",
-        "Select German."
-    ))
-$choices.Add((
-        New-Object Management.Automation.Host.ChoiceDescription `
-            -ArgumentList `
-            "&5 Norwegian",
+            "&1 Norwegian",
         "Select Norwegian."
     ))
 $choices.Add((
         New-Object Management.Automation.Host.ChoiceDescription `
             -ArgumentList `
-            "&6 Romanian",
+            "&2 Romanian",
         "Select Romanian."
     ))
 $choices.Add((
         New-Object Management.Automation.Host.ChoiceDescription `
             -ArgumentList `
-            "&7 Hungarian",
+            "&3 Hungarian",
         "Select Hungarian."
     ))
 	$choices.Add((
         New-Object Management.Automation.Host.ChoiceDescription `
             -ArgumentList `
-            "&8 Dutch",
+            "&4 Dutch",
         "Select Dutch."
     ))
-    $choices.Add((
-      New-Object Management.Automation.Host.ChoiceDescription `
-          -ArgumentList `
-          "&9 Turkish",
-      "Select Turkish."
-  ))
-<#---------------------------------------
 $choices.Add((
         New-Object Management.Automation.Host.ChoiceDescription `
             -ArgumentList `
-            "&9 Russian",
-        "Select Russian"
+            "&5 More Languages",
+        "More languages."
     ))
----------------------------------------#>
-
 $choices.Add((
         New-Object Management.Automation.Host.ChoiceDescription `
           -ArgumentList `
-          "&9 $($locales.go_back)",
+          "&6 $($locales.go_back)",
         "$($locales.go_back_help)"
       ))
 
@@ -144,45 +111,13 @@ Write-Host
 switch ($selection) {
     0 {
         $locales = (Get-Content "../../config/config.json" -Raw) | ConvertFrom-Json
-        $locales.language='en'
-        $locales | ConvertTo-Json -depth 32| set-content '../../config/config.json'
-        Write-Host "Successfully changed language to English!"
-        Start-Sleep -s 2
-        .\Settings.ps1
-	}
-    1 {
-        $locales = (Get-Content "../../config/config.json" -Raw) | ConvertFrom-Json
-        $locales.language='fr'
-        $locales | ConvertTo-Json -depth 32| set-content '../../config/config.json'
-        Write-Host "Successfully changed language to French!"
-        Start-Sleep -s 2
-        .\Settings.ps1
-	}
-    2 {
-        $locales = (Get-Content "../../config/config.json" -Raw) | ConvertFrom-Json
-        $locales.language='es'
-        $locales | ConvertTo-Json -depth 32| set-content '../../config/config.json'
-        Write-Host "Successfully changed language to Spanish!"
-        Start-Sleep -s 2
-        .\Settings.ps1
-    }
-    3 {
-        $locales = (Get-Content "../../config/config.json" -Raw) | ConvertFrom-Json
-        $locales.language='de'
-        $locales | ConvertTo-Json -depth 32| set-content '../../config/config.json'
-        Write-Host "Successfully changed language to German!"
-        Start-Sleep -s 2
-        .\Settings.ps1
-    }
-    4 {
-        $locales = (Get-Content "../../config/config.json" -Raw) | ConvertFrom-Json
         $locales.language='no'
         $locales | ConvertTo-Json -depth 32| set-content '../../config/config.json'
         Write-Host "Successfully changed language to Norwegian!"
         Start-Sleep -s 2
         .\Settings.ps1
     }
-    5 {
+    1 {
         $locales = (Get-Content "../../config/config.json" -Raw) | ConvertFrom-Json
         $locales.language='ro'
         $locales | ConvertTo-Json -depth 32| set-content '../../config/config.json'
@@ -190,7 +125,7 @@ switch ($selection) {
         Start-Sleep -s 2
         .\Settings.ps1
     }
-    6 {
+    2 {
         $locales = (Get-Content "../../config/config.json" -Raw) | ConvertFrom-Json
         $locales.language='hu'
         $locales | ConvertTo-Json -depth 32| set-content '../../config/config.json'
@@ -198,7 +133,7 @@ switch ($selection) {
         Start-Sleep -s 2
         .\Settings.ps1
     }
-	  7 {
+    3 {
         $locales = (Get-Content "../../config/config.json" -Raw) | ConvertFrom-Json
         $locales.language='nl'
         $locales | ConvertTo-Json -depth 32| set-content '../../config/config.json'
@@ -206,15 +141,10 @@ switch ($selection) {
         Start-Sleep -s 2
         .\Settings.ps1
     }
-    8 {
-        $locales = (Get-Content "../../config/config.json" -Raw) | ConvertFrom-Json
-        $locales.language='tr'
-        $locales | ConvertTo-Json -depth 32| set-content '../../config/config.json'
-        Write-Host "Successfully changed language to Turkish!"
-        Start-Sleep -s 2
-        .\Settings.ps1
+    4 {
+      .\Languages\Languages3.ps1
     }
-    9 {
-        .\Settings.ps1
+    5 {
+      .\Languages\Languages1.ps1
     }
 }

@@ -1,5 +1,5 @@
 <#
- * File: Electron.ps1
+ * File: Languages3.ps1
  * Author: Sanjay Sunil
  * License: GPL-3.0
 #>
@@ -48,6 +48,10 @@ ElseIf ($config.language -eq 'nl') {
 	$locales = (Get-Content '../../locales/nl/panel.json' -Raw) | ConvertFrom-Json
 }
 
+ElseIf ($config.language -eq 'tr') {
+	$locales = (Get-Content '../../locales/tr/panel.json' -Raw) | ConvertFrom-Json
+}
+
 Else {
     Start-Sleep -Seconds 0.1
     Write-Host "[ERROR]: INVALID LANGUAGE."
@@ -55,64 +59,41 @@ Else {
 }
 
 <#---------------------------------------
-Electron Boot-up
+Language Settings
 ---------------------------------------#>
 
-Write-Host "[BetterDiscordPanel]: $($locales.checking_system)"
-If (Test-Path "..\..\electron\main.js") {
-    Write-Host "[BetterDiscordPanel]: $($locales.check_success)"
-    Write-Host
+$caption = "[BetterDiscordPanel]: $($locales.language):
+ "
+$description = "[BetterDiscordPanel]: $($locales.language_help)
+ "
 
-    Write-Host "[BetterDiscordPanel]: $($locales.booting)"
-    Write-Host
+$choices = New-Object Collections.ObjectModel.Collection[Management.Automation.Host.ChoiceDescription]
+$choices.Add((
+        New-Object Management.Automation.Host.ChoiceDescription `
+            -ArgumentList `
+            "&1 Turkish",
+        "Select Turkish."
+      ))
+$choices.Add((
+        New-Object Management.Automation.Host.ChoiceDescription `
+          -ArgumentList `
+          "&2 $($locales.go_back)",
+        "$($locales.go_back_help)"
+      ))
 
-    Set-Location ..
-    Set-Location ..
-
-    Set-Location electron
-
-    npm start
-
-    Write-Host "[BetterDiscordPanel]: $($locales.done)"
-
-    $caption = ""
-    $description = ""
-
-    Write-Host
-    $choices = New-Object Collections.ObjectModel.Collection[Management.Automation.Host.ChoiceDescription]
-    $choices.Add((
-            New-Object Management.Automation.Host.ChoiceDescription `
-                -ArgumentList `
-                "&Go back.",
-            "$($locales.go_back_help)"
-        ))
-    $choices.Add((
-            New-Object Management.Automation.Host.ChoiceDescription `
-                -ArgumentList `
-                "&Exit",
-            "$($locales.exit_help)"
-        ))
-
-    $selection = $host.ui.PromptForChoice($empty, $empty2, $choices, -1)
-    Write-Host
-
-    switch ($selection) {
-        0 {
-            Set-Location ..
-            Set-Location scripts
-            .\Selection.ps1
-        }
-        1 {
-            Exit
-        }
-    }
-
-}
-Else {
-    Write-Host "[BetterDiscordPanel]: $($locales.checking_failure)"
-    Write-Host
-
-    Write-Host "[BetterDiscordPanel]: $($locales.check_main)"
-    Write-Host "[BetterDiscordPanel]: $($locales.get_help)"
-}
+$selection = $host.ui.PromptForChoice($caption, $description, $choices, -1)
 Write-Host
+
+switch ($selection) {
+    0 {
+        $locales = (Get-Content "../../config/config.json" -Raw) | ConvertFrom-Json
+        $locales.language='tr'
+        $locales | ConvertTo-Json -depth 32| set-content '../../config/config.json'
+        Write-Host "Successfully changed language to Turkish!"
+        Start-Sleep -s 2
+        .\Settings.ps1
+	  }
+    1 {
+      .\Languages\Languages2.ps1
+    }
+}
