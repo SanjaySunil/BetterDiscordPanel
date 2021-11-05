@@ -22,21 +22,20 @@
     "exit_help": "Quitter ce script.",
     "support_help": "Avoir le support pour BetterDiscordPanel",
     "update_help": "Mettre à jour BetterDiscordPanel dans la dernière version disponible.",
-    "language_help": "Choisir un language pour BetterDiscordPanel",
-    "go_back_help": "Retourner dans le panneau de selection.",
+    "language_help": "Choisir un langage pour BetterDiscordPanel",
+    "go_back_help": "Retourner dans le panneau de sélection.",
     "discord_help": "Ouvrir le serveur Discord de support dans le navigateur par défaut.",
-    "issue_help": "Envoyer in Issue/Rapport de bug/Suggesion sur GitHub",
+    "issue_help": "Envoyez in Issue/Rapport de bug/Suggesion sur GitHub",
     "get_help": "Avoir de l'aide sur BetterDiscordPanel",
 
     "check_installation": "Vérifier que vous avez installé BetterDiscordPanel correctement.",
-    "checking_failure": "Echec de la vérification.",
+    "checking_failure": "Échec de la vérification.",
     "checking_system": "Verification de BetterDiscordPanel...",
-    "check_success": "Vérification éffectué.",
+    "check_success": "Vérification effectué.",
     "updating": "Mise à jour de BetterDiscordPanel en cours...",
     "updating_failure": "Impossible de mettre à jour BetterDiscordPanel, il y a eu une erreur",
     "check_index": "Vérification du fichier index.html",
     "check_main": "Vérification du fichier main.js",
-    "check_repo_download_method": "Clonez le Repository et réssayez",
+    "check_repo_download_method": "Cloner le Repository et réessayez",
     "booting": "Chargement de BetterDiscordPanel..."
 }
-
