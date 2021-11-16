@@ -1,0 +1,42 @@
+{
+    "welcome": "Hallo,",
+    "select_option": "Pilih opsi yang anda ingin lakukan.",
+
+    "start_app": "BetterDiscordPanel",
+    "start_desktop": "APLIKASI DESKTOP - BetterDiscordPanel",
+
+    "support": "Mendukung",
+    "settings": "Pengaturan",
+    "update": "Memeriksa Pembaruan",
+    "language": "Bahasa",
+    "go_back": "Kembali",
+    "done": "Selesai!",
+    "exit": "Keluar",
+
+    "discordserver": "Server Discord.",
+    "submit_issue": "Kirim masalah/Laporan Bug/Saran",
+
+    "betterdiscordpanel_help":"Mulai BetterDiscordPanel di browser default Anda.",
+    "desktop_panel_help": "Mulai aplikasi Desktop BetterDiscordPanel.",
+    "settings_help": "Buka Pengaturan untuk BetterDiscordPanel",
+    "exit_help": "Keluar dari skrip ini.",
+    "support_help": "Dapatkan Dukungan untuk BetterDiscordPanel.",
+    "update_help": "Perbarui BetterDiscordPanel untuk pembaruan yang ada.",
+    "language_help": "Pilih bahasa untuk BetterDiscordPanel",
+    "go_back_help": "Kembali ke panel pilihan.",
+    "discord_help": "Buka tautan server dukungan Discord di browser default Anda.",
+    "issue_help": "Kirim Masalah/Laporan Bug/Saran di GitHub.",
+    "get_help": "Get Help/Support for BetterDiscordPanel:",
+
+    "check_installation": "Cek kalau kamu sudah menginstall BetterDiscordPanel dengan benar.",
+    "checking_failure": "Sistem cek gagal.",
+    "checking_system": "Mengecek BetterDiscordPanel Sistem ...",
+    "check_success": "Sistem cek Selesai.",
+    "updating": "Memperbarui BetterDiscordPanel ...",
+    "updating_failure": "Tidak dapat memperbarui BetterDiscordPanel, Kesalahan saat memperbarui BetterDiscordPanel.",
+    "check_index": "Cek bahwa index.html ada.",
+    "check_main": "Cek bahwa main.js ada.",
+    "check_repo_download_method": "Kloning Repositori dan coba lagi.",
+    "booting": "Mengeboot BetterDiscordPanel ..."
+}
+

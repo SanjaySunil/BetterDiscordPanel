@@ -92,4 +92,92 @@ const locales = {
       audio: 'audio',
     },
   },
+
+  id: {
+    'langCode': 'id',
+    'language': 'Indonesia',
+    // ========================= PANEL =========================
+    'status': {
+      loading: 'Memuat ...',
+    },
+    'headings': {
+      profile: 'Bot Discord',
+      guildName: 'Obrolan',
+      settings: 'Pengaturan',
+    },
+    'sub-headings': {
+      about: 'Tentang',
+      tools: 'Peralatan',
+      info: 'Info',
+    },
+    'navbar': {
+      profileNav: 'Profil',
+      chatNav: 'Pesan',
+      lastMessagesNav: 'Pesan Terakhir',
+      infoNav: 'Pesan / Info Server',
+      settingsNav: 'Pengaturan',
+      lightDark: 'Mode Terang / Gelap',
+      logoutTitle: 'Keluar',
+    },
+    'text': {
+      channelNameLabel: 'Pesan',
+      fileSent: 'Mengirim kan sebuah file',
+      attachmentTxt: 'Lampiran',
+      privateMessages: 'Pesan langsung',
+      profileSection: {
+        name: 'Nama',
+        discrim: 'Diskriminasi',
+        id: 'ID',
+        guilds: 'Persekutuan',
+        createdAt: 'Dibuat saat',
+      },
+      settingsSection: {
+        createBotInvite: 'Buat undangan bot',
+        eval: 'EVAL',
+        languages: 'Bahasa',
+      },
+    },
+    'buttons': {
+      clearLastMessages: 'Bersihkan pesan terakhir',
+      editToken: 'Keluar',
+      refreshChat: 'Menyegarkan pesan',
+      send: 'Kirim',
+      leave: 'Keluar Server',
+      invite: 'Undangan',
+    },
+    // ========================= DISCORD =========================
+    'infos': {
+      owner: 'Pemilik',
+      members: 'Anggota',
+      vChannels: 'Saluran (suara)',
+      tChannels: 'Saluran (teks)',
+      roles: 'Peran',
+      channels: 'Saluran',
+      emojis: 'Emoji',
+    },
+    'errors': {
+      error: 'Kesalahan',
+      dm: 'Kesalahan : Pesan Langsung',
+      emptyMsg: 'Pesan Kosong.',
+      missingPermissions: 'Tidak Mempunyai Izin!',
+    },
+    'token': {
+      confirmation: 'Apakah kamu yakin ingin keluar?',
+      invalid: 'Token tidak Valid. Silakan coba lagi.',
+    },
+    'messageType': {
+      serverJoin: 'Bergabung dengan server ini.',
+      pin: 'Pesan yang disematkan',
+      channelNews: 'Menambahkan berita saluran jarak jauh.',
+      boost: 'Meningkatkan server ini.',
+    },
+    'fileType': {
+      unknown: 'Tidak dikenal',
+      img: 'Foto',
+      doc: 'Dokumen',
+      pdf: 'pdf',
+      video: 'video',
+      audio: 'audio',
+    },
+  },
 };
