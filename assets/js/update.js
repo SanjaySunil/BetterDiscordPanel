@@ -1,3 +1,9 @@
+/**
+ * @file update.js
+ * @author Sanjay Sunil
+ * @license GPL-3.0
+ */
+
 function versionCompare(current, latest, options) {
   const lexicographical = options && options.lexicographical;
   const zeroExtend = options && options.zeroExtend;
