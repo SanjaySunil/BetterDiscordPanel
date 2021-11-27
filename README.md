@@ -52,8 +52,7 @@
 
 ## 🛠 Getting Started
 
-Simply open
-`index.html` to open the web version of BetterDiscordPanel or use the control panel to open the desktop application by running `BetterDiscordPanel.cmd`.
+Simply open `index.html` to open the web version of BetterDiscordPanel or use the control panel to open the desktop application by running `BetterDiscordPanel.cmd`.
 <br/>
 
 <!-- Installation -->
@@ -66,6 +65,9 @@ To use the **desktop application** of BetterDiscordPanel, you will need to have 
 
 [Instructions](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
 
+> ⚠️ **NOTE**: To use the **web version** of BetterDiscordPanel, you will need to set a custom User Agent.
+
+[Setting a custom User Agent](./docs/prerequisites/prerequisites.md)
 ### **Step 2:** Setup / Installation
 
 1. Clone the repository
@@ -81,7 +83,7 @@ git clone https://github.com/sanjaysunil/betterdiscordpanel
 3. Login to your discord bot using your discord bot token.
 
 4. Start using BetterDiscordPanel!
-   <br/>
+<br/>
 
 <!-- ROADMAP -->
 
