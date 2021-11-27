@@ -67,7 +67,7 @@ To use the **desktop application** of BetterDiscordPanel, you will need to have 
 
 > ⚠️ **NOTE**: To use the **web version** of BetterDiscordPanel, you will need to set a custom User Agent.
 
-[Setting a custom User Agent](./docs/prerequisites.md)
+[Setting a custom User Agent](./docs/prerequisites/prerequisites.md)
 ### **Step 2:** Setup / Installation
 
 1. Clone the repository
