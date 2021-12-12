@@ -1,0 +1,41 @@
+{
+    "welcome": "ようこそ",
+    "select_option": "実行したいオプションを選択してください。",
+
+    "start_app": "BetterDiscordPanel",
+    "start_desktop": "デスクトップアプリケーション - BetterDiscordPanel",
+
+    "support": "サポート",
+    "settings": "設定",
+    "update": "アップデートを確認",
+    "language": "言語",
+    "go_back": "戻る",
+    "done": "完了!",
+    "exit": "退出",
+
+    "discordserver": "Discordサーバー",
+    "submit_issue": "バグ/レポート/提案 を送信する",
+
+    "betterdiscordpanel_help":"BetterDiscordPanelをデフォルトブラウザ内で起動します。",
+    "desktop_panel_help": "BetterDiscordPanelをデスクトップアプリケーションで起動します。",
+    "settings_help": "BetterDiscordPanelの設定を開きます。",
+    "exit_help": "アプリケーションから退出します。",
+    "support_help": "BetterDiscordPanelのサポートを入手します。",
+    "update_help": "BetterDiscordPaneの最終バージョンにアップデートします。",
+    "language_help": "BetterDiscordPanelの言語を選択します。",
+    "go_back_help": "選択画面に戻る",
+    "discord_help": "デフォルトブラウザでDiscordのサポートサーバーのリンクを開きます。",
+    "issue_help": "GitHubでバグ/レポート/提案 を送信する。.",
+    "get_help": "BetterDiscordPanelのヘルプ/サポートを入手する。:",
+
+    "check_installation": "BetterDiscordPanelが正しくインストールされているか確認してください。",
+    "checking_failure": "システムチェックに失敗しました。",
+    "checking_system": "BetterDiscordPanelのシステムをチェックしています...",
+    "check_success": "システムチェックに成功しました。",
+    "updating": "BetterDiscordPanelをアップデート中...",
+    "updating_failure": "BetterDiscordPanelのアップデートを完了できませんでした、アップデート中にエラーが発生しました。",
+    "check_index": "index.htmlが存在しているかどうかを確認します。",
+    "check_main": "main.jsが存在しているかどうかを確認します。",
+    "check_repo_download_method": "リポジトリのクローンを作成し、もう一度お試しください。",
+    "booting": "BetterDiscordPanelを起動中です..."
+}
