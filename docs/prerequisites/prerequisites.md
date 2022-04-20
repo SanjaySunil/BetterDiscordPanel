@@ -22,8 +22,8 @@ Unfortunately, this has to be set every time you open up BetterDiscordPanel. A s
 
 ![Step 3](./images/step-3.png)
 
-5. Enter a custom User Agent string in the textfield.
+5. Enter the following custom User agent.
 
-e.g: `BDP (http://example.com), v0.0.1)`
+`BDP (http://example.com), v0.0.1)`
 
 6. Start using BetterDiscordPanel!
