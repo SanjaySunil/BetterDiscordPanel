@@ -76,7 +76,7 @@ To use the **desktop application** of BetterDiscordPanel, you will need to have 
 git clone https://github.com/sanjaysunil/betterdiscordpanel
 ```
 
-> ⚠️ **NOTE**: The updater only works if you have cloned the repository. 
+> ⚠️ **NOTE**: The updater only works if you have cloned the repository.
 
 2. Open `login.html` for the web application or open `BetterDiscordPanel.cmd` to run the desktop application.
 
@@ -125,6 +125,6 @@ View [contribution guide](https://github.com/SanjaySunil/BetterDiscordPanel/blob
 
 ## License
 
-Copyright © 2021 Sanjay Sunil (sanjaysunil@protonmail.com)
+Copyright © 2022 Sanjay Sunil (sanjaysunil@protonmail.com)
 
 Distributed under the GNU General Public License v3.0. See `LICENSE` for more information.

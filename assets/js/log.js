@@ -32,6 +32,18 @@ function errorNotification(message) {
   }).show();
 }
 
+function warnNotification(message) {
+  new Noty({
+    type: 'error',
+    theme: 'nest',
+    text: message,
+    progressBar: true,
+    dismissQueue: true,
+    force: false,
+    maxVisible: 5,
+  }).show();
+}
+
 function infoNotification(message) {
   new Noty({
     type: 'info',
