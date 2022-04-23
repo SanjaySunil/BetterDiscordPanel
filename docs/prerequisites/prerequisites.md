@@ -22,7 +22,7 @@ Unfortunately, this has to be set every time you open up BetterDiscordPanel. A s
 
 ![Step 3](./images/step-3.png)
 
-5. Enter the following custom User agent.
+5. Enter the following custom User agent. This User Agent must be specifically applied.
 
 `BDP (http://example.com), v0.0.1)`
 
