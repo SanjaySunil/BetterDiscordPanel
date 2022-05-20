@@ -1,6 +1,6 @@
 cd "$(dirname "$0")"
 
-TITLE BetterDiscordPanel
+title BetterDiscordPanel
 clear
 echo .
 cd scripts
