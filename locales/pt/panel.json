@@ -1,0 +1,42 @@
+{
+    "welcome": "Olá,",
+    "select_option": "Seleciona uma opção de acordo com o que queres fazer.",
+
+    "start_app": "BetterDiscordPanel",
+    "start_desktop": "APLICAÇÃO PARA COMPUTADOR - BetterDiscordPanel",
+
+    "support": "Suporte",
+    "settings": "Configurações",
+    "update": "Procurar Atualizações",
+    "language": "Idioma",
+    "go_back": "Voltar atrás",
+    "done": "Concluído!",
+    "exit": "Sair",
+
+    "discordserver": "Servidor de Discord",
+    "submit_issue": "Envia um problema / erro / sugestão",
+
+    "betterdiscordpanel_help":"Inicia BetterDiscordPanel no teu navegador favorito",
+    "desktop_panel_help": "Abre a aplicação para computador BetterDiscordPanel",
+    "settings_help": "Abrir a configuração para BetterDiscordPanel.",
+    "exit_help": "Saia deste script.",
+    "support_help": "Obtem suporte para BetterDiscordPanel.",
+    "update_help": "Atualiza BetterDiscordPanel para a versão mais recente.",
+    "language_help": "Escolhe um idioma para BetterDiscordPanel",
+    "english_help": "Choose an language for BetterDiscordPanel",
+    "go_back_help": "Volta ao painel de seleção.",
+    "discord_help": "Abre o link do servidor do discord no teu navegador favorito.",
+    "issue_help": "Envia um problema / erro / sugestão através do GitHub.",
+    "get_help": "Obtém ajuda / suporte para BetterDiscordPanel:",
+
+    "check_installation": "BetterDiscordPanel foi instalado corretamente.",
+    "checking_failure": "A verificação do sistema falhou.",
+    "checking_system": "A verificar BetterDiscordPanel ...",
+    "check_success": "Sistema verificado com sucesso.",
+    "updating": "A atualizar BetterDiscordPanel ...",
+    "updating_failure": "Não consegui atualizar BetterDiscordPanel, erro a atualizar BetterDiscordPanel.",
+    "check_index": "Receio que não exista index.html, verifica.",
+    "check_main": "Receio que não exista main.js, verifica.",
+    "check_repo_download_method": "Clona o repositório github de novo e volta a tentar.",
+    "booting": "A iniciar BetterDiscordPanel ..."
+}
