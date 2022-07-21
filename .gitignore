@@ -1,4 +1,0 @@
-# Remove Debug logs
-scripts/boot/debug.log
-# Node Modules
-node_modules
