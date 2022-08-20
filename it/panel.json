@@ -1,0 +1,41 @@
+{
+  "welcome": "Ciao,",
+  "select_option": "Seleziona l'opzione che desideri eseguire.",
+
+  "start_app": "BetterDiscordPanel",
+  "start_desktop": "DESKTOP APP - BetterDiscordPanel",
+
+  "support": "Supporto",
+  "settings": "Impostazioni",
+  "update": "Check for Updates",
+  "language": "Lingua",
+  "go_back": "Torna indietro",
+  "done": "Fatto!",
+  "exit": "Esci",
+
+  "discordserver": "Discord Server",
+  "submit_issue": "Invia un problema/segnalazione di bug/suggerimento",
+
+  "betterdiscordpanel_help":"Avvia BetterDiscordPanel nel tuo browser predefinito.",
+  "desktop_panel_help": "Avvia l'app desktop di BetterDiscordPanel.",
+  "settings_help": "Apri le Impostazioni per BetterDiscordPanel.",
+  "exit_help": "Esci da questo script.",
+  "support_help": "Ottieni supporto per BetterDiscordPanel.",
+  "update_help": "Aggiorna BetterDiscordPanel all'ultima versione disponibile.",
+  "language_help": "Scegli una lingua per BetterDiscordPanel",
+  "go_back_help": "Torna al pannello di selezione.",
+  "discord_help": "Apri il collegamento al server di supporto Discord sul tuo browser predefinito.",
+  "issue_help": "Invia un problema/segnalazione di bug/suggerimento tramite GitHub.",
+  "get_help": "Ottieni assistenza/supporto per BetterDiscordPanel:",
+
+  "check_installation": "Verifica di aver installato BetterDiscordPanel correttamente.",
+  "checking_failure": "Controllo del sistema fallito.",
+  "checking_system": "Controllo del sistema BetterDiscordPanel...",
+  "check_success": "Verifica del sistema riuscita.",
+  "updating": "Aggiornamento di BetterDiscordPanel ...",
+  "updating_failure": "Impossibile aggiornare BetterDiscordPanel, errore durante l'aggiornamento di BetterDiscordPanel.",
+  "check_index": "Verifica se index.html esiste.",
+  "check_main": "Controlla se esiste main.js.",
+  "check_repo_download_method": "Clone il repository e riprova.",
+  "booting": "Avvio di BetterDiscordPanel ..."
+}
