@@ -1,0 +1,41 @@
+{
+    "welcome": "你好,",
+    "select_option": "请选择你要进行的设置",
+
+    "start_app": "更好的Discord控制板",
+    "start_desktop": "电脑版 - 更好的Discord控制板",
+
+    "support": "支助",
+    "settings": "设定",
+    "update": "更新",
+    "language": "语言",
+    "go_back": "返回",
+    "done": "成功!",
+    "exit": "退出",
+
+    "discordserver": "Discord 服务器",
+    "submit_issue": "发问问题/给予反馈",
+
+    "betterdiscordpanel_help":"在此电脑的浏览器开启更好的Discord控制板。",
+    "desktop_panel_help": "开启电脑版的更好的Discord控制板软件。",
+    "settings_help": "开启更好的Discord控制板的设定。",
+    "exit_help": "退出此程序。",
+    "support_help": "给予更好的Discord控制板反馈。",
+    "update_help": "更新更好的Discord控制板至最新版本。",
+    "language_help": "选择更好的Discord控制板的语言。",
+    "go_back_help": "返回控制板选择选择。",
+    "discord_help": "开启更好的Discord控制板的资助服务器在此电脑的浏览器。",
+    "issue_help": "使用Github给予反馈及发问问题。",
+    "get_help": "获得资助:",
+
+    "check_installation": "请检查是否有正确地下载更好的Discord控制板软件。",
+    "checking_failure": "系统检查失败。",
+    "checking_system": "正在检查更好的Discord控制板系统 ...",
+    "check_success": "系统检查成功。",
+    "updating": "正在更新更好的Discord控制板 ...",
+    "updating_failure": "无法更新更好的Discord控制板。",
+    "check_index": "请检查index.js是否存在。",
+    "check_main": "请检查main.js是否存在。",
+    "check_repo_download_method": "克隆此储存库然后再是多一次。",
+    "booting": "正在开启更好的Discord控制板 ..."
+}
