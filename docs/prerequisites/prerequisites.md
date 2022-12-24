@@ -24,6 +24,6 @@ Unfortunately, this has to be set every time you open up BetterDiscordPanel. A s
 
 5. Enter the following custom User agent. This User Agent must be specifically applied.
 
-`BDP (http://example.com), v0.0.1)`
+`BDP (http://example.com), v0.0.1`
 
 6. Start using BetterDiscordPanel!
