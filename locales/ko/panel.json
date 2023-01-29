@@ -1,0 +1,41 @@
+{
+    "welcome": "안녕하세요,",
+    "select_option": "실행하고 싶은 옵션을 선택해주세요.",
+
+    "start_app": "BetterDiscordPanel",
+    "start_desktop": "데스크톱 앱 - BetterDiscordPanel",
+
+    "support": "지원",
+    "settings": "설정",
+    "update": "업데이트 확인",
+    "language": "언어",
+    "go_back": "뒤로 가기",
+    "done": "완료!",
+    "exit": "종료",
+
+    "discordserver": "Discord 서버",
+    "submit_issue": "문제/버그 리포트/제안 제출",
+
+    "betterdiscordpanel_help":"기본 브라우저로 BetterDiscordPanel을 시작합니다.",
+    "desktop_panel_help": "BetterDiscordPanel의 데스크톱 앱을 시작합니다.",
+    "settings_help": "BetterDiscordPanel의 설정을 엽니다.",
+    "exit_help": "스크립트를 종료합니다.",
+    "support_help": "BetterDiscordPanel을 위한 지원을 받습니다.",
+    "update_help": "BetterDiscordPanel을 최신 버전으로 업데이트합니다.",
+    "language_help": "BetterDiscordPanel의 언어를 선택합니다.",
+    "go_back_help": "선택 패널로 돌아갑니다.",
+    "discord_help": "Discord에서 지원 서버그 엽니다.",
+    "issue_help": "GitHub을 통해 문제/버그 리포트/제안을 제출합니다.",
+    "get_help": "BetterDiscordPanel을 위한 도움말/지원을 받습니다:",
+
+    "check_installation": "BetterDiscordPanel이 올바르게 설치되었는지 확인합니다.",
+    "checking_failure": "시스템 확인 실패.",
+    "checking_system": "BetterDiscordPanel 시스템 확인 중...",
+    "check_success": "시스템 확인 성공.",
+    "updating": "BetterDiscordPanel 업데이트 중...",
+    "updating_failure": "BetterDiscordPanel을 업데이트할 수 없습니다, BetterDiscordPanel 업데이트 중 오류가 발생했습니다.",
+    "check_index": "index.html가 존재하는지 확인합니다.",
+    "check_main": "main.js가 존재하는지 확인합니다.",
+    "check_repo_download_method": "리포지토리를 복제하고 다시 시도합니다.",
+    "booting": "BetterDiscordPanel 시작 중..."
+}
