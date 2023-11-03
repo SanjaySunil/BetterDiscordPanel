@@ -1,0 +1,43 @@
+ 
+{
+    "welcome": "مرحبا،", 
+    "select_option": "حدد الخيار الذي تريده",
+
+    "start_web": "WEB - BetterDiscordPanel",
+    "start_desktop": "تطبيق سطح المكتب - BetterDiscordPanel",
+
+    "support": "الدعم",
+    "settings": "إعدادات",
+    "update": "تحقق من وجود تحديثات",
+    "language": "لغة",
+    "go_back": "رجوع",
+    "done": "تم",
+    "exit": "خروج",
+
+    "discordserver": "سيرفر ديسكورد",
+    "submit_issue": "إرسال تقرير مشكلة / خطأ / اقتراح",
+
+    "betterdiscordpanel_help":"بداية لوحة BetterDiscord في المتصفح الافتراضي",
+    "desktop_panel_help": "ابدأ تشغيل تطبيق سطح المكتب الخاص بـ BetterDiscord Panel",
+    "settings_help": "افتح إعدادات BetterDiscordPanel",
+    "exit_help": "خروج من السكربت",
+    "support_help": "للحصول على دعم",
+    "update_help": "قم بتحديث لوحة BetterDiscord إلى أحدث إصدار متوفر.",
+    "language_help": "اختر لغة للوحة BetterDiscord",
+    "go_back_help": "ارجع إلى لوحة الاختيار.",
+    "discord_help": "فتح رابط سيرفر الديسكورد الخاص بالدعم",
+    "issue_help": "أرسل تقرير مشكلة / خطأ / اقتراح من خلال GitHub.",
+    "get_help": "الحصول على مساعدة / دعم BetterDiscordPanel",
+
+    "check_installation": "تحقق مما إذا كنت قد قمت بتثبيت BetterDiscordPanel بشكل صحيح.",
+    "checking_failure": "فشل فحص النظام",
+    "checking_system": "التحقق من نظام لوحة BetterDiscord ...",
+    "check_success": "تم فحص النظام بنجاح.",
+    "updating": "جارٍ تحديث BetterDiscordPanel ...",
+    "updating_failure": "تعذر تحديث BetterDiscordPanel ، حدث خطأ أثناء تحديث BetterDiscordPanel.",
+    "check_index": "تحقق من وجود index.html.",
+    "check_main": "تحقق من وجود main.js",
+    "check_repo_download_method": "انسخ  Repository وحاول مرة أخرى. ",
+    "booting": "بدء تشغيل لوحة BetterDiscord ..."
+}
+
