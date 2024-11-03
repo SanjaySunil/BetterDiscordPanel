@@ -31,7 +31,6 @@
 
 <h2 align="center">Special Thanks to Globium Designs</h2>
 <div align="center">
-<br/>
 <img src="https://www.globiumdesigns.com/icon.png" width="25%"/>
 <br/><br/>
 </div>
@@ -41,6 +40,7 @@ Looking for custom-tailored project solutions? At **Globium Designs**, we specia
 Contact us at [info@globiumdesigns.com](mailto:info@globiumdesigns.com) for inquiries and let us bring your vision to life!
 
 <!-- Information -->
+<br/>
 
 ## What's BetterDiscordPanel?
 
