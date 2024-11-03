@@ -28,7 +28,6 @@
     <img src="./assets/images/previews/dropShadow.png" width="100%"/>
   </a>
 </p>
-<br/>
 
 <h2 align="center">Special Thanks to Globium Designs</h2>
 <div align="center">
