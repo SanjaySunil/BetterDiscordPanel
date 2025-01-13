@@ -37,7 +37,7 @@
 
 Looking for custom-tailored project solutions? At **Globium Designs**, we specialise in creating innovative digital solutions tailored to your unique business needs. Whether you need web development, app development, or branding services, we are here to help you succeed.
 
-Contact us at [info@globiumdesigns.com](mailto:info@globiumdesigns.com) for inquiries and let us bring your vision to life!
+Contact us at [globiumdesigns@gmail.com](mailto:globiumdesigns@gmail.com) for inquiries and let us bring your vision to life!
 
 <!-- Information -->
 <br/>
