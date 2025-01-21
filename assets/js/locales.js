@@ -180,4 +180,93 @@ const locales = {
       audio: 'audio',
     },
   },
+
+  // Haven't practiced my korean in so long but hey why not
+  ko: {
+    'langCode': "ko",
+		'language': "한국어",
+		// ========================= PANEL =========================
+		'status': {
+			loading: "로딩 중...",
+		},
+		'headings': {
+			profile: "디스코드 봇",
+			guildName: "채팅",
+			settings: "설정",
+		},
+		'sub-headings': {
+			about: "소개",
+			tools: "도구",
+			info: "정보",
+		},
+		'navbar': {
+			profileNav: "프로필",
+			chatNav: "채팅",
+			lastMessagesNav: "최근 메시지",
+			infoNav: "채팅/서버 정보",
+			settingsNav: "설정",
+			lightDark: "라이트/다크 모드",
+			logoutTitle: "로그아웃",
+		},
+    'text': {
+			channelNameLabel: "채팅",
+			fileSent: "파일을 보냈습니다",
+			attachmentTxt: "첨부 파일",
+			privateMessages: "DM",
+			profileSection: {
+				name: "이름",
+				discrim: "구분자",
+				id: "ID",
+				guilds: "길드",
+				createdAt: "생성 일자"
+			},
+			settingsSection: {
+				createBotInvite: "봇 초대 만들기",
+				eval: "EVAL",
+				languages: "언어",
+			},
+		},
+    'buttons': {
+			clearLastMessages: "최근 메시지 삭제",
+			editToken: "로그아웃",
+			refreshChat: "채팅 새로고침",
+			send: "보내기",
+			leave: "서버 나가기",
+			invite: "초대하기",
+		},
+		// ========================= DISCORD =========================
+		'infos': {
+			owner: "소유자",
+			members: "멤버",
+			vChannels: "채널 (음성)",
+			tChannels: "채널 (텍스트)",
+			roles: "역할",
+			channels: "채널",
+			emojis: "이모지",
+		},
+		'errors': {
+			error: "에러",
+			dm: "에러 : DM",
+			emptyMsg: "빈 메시지!",
+			missingPermissions: "권한 부족!",
+		},
+    'token': {
+			confirmation: "로그아웃 하시겠습니까?",
+			invalid: "토큰이 유효하지 않습니다. 다시 시도해 주세요.",
+		},
+		'messageType': {
+			serverJoin: "서버에 참여했습니다.",
+			pin: "메시지를 고정했습니다.",
+			channelNews: "원격 채널 뉴스를 추가했습니다.",
+			boost: "서버를 부스트했습니다.",
+		},
+		'fileType': {
+			unknown: "알 수 없음",
+			img: "이미지",
+			doc: "문서",
+			pdf: "PDF",
+			video: "비디오",
+			audio: "오디오",
+		},
+  }
 };
