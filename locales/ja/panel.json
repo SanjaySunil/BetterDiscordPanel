@@ -1,0 +1,42 @@
+{
+    "welcome": "ようこそ", 
+    "select_option": "オプションを選択",
+
+    "start_web": "ウェブを開始",
+    "start_desktop": "デスクトップを開始",
+
+    "support": "サポート",
+    "settings": "設定",
+    "update": "更新 ",
+    "language": "言語 ",
+    "go_back": "戻る ",
+    "done": "完了 ",
+    "exit": "終了 ",
+
+    "discordserver": "Discordサーバー",
+    "submit_issue": "問題を提出",
+
+    "BetterDiscordPanel_help":"BetterDiscordパネルのヘルプ",
+    "desktop_panel_help": "デスクトップパネルのヘルプ",
+    "settings_help": " 設定のヘルプ",
+    "exit_help": "終了のヘルプ",
+    "support_help": "サポートのヘルプ",
+    "update_help": "更新のヘルプ",
+    "language_help": "言語のヘルプ",
+    "go_back_help": "戻るのヘルプ",
+    "discord_help": "Discordのヘルプ",
+    "issue_help": "問題のヘルプ",
+    "get_help": "ヘルプを得る",
+
+    "check_installation": "インストールを確認",
+    "checking_failure": " 確認の失敗",
+    "checking_system": "システムを確認",
+    "check_success": "確認の成功",
+    "updating": "更新中",
+    "updating_failure": " 更新の失敗",
+    "check_index": "インデックスを確認",
+    "check_main": "メインを確認",
+    "check_repo_download_method": "リポジトリのダウンロード方法を確認",
+    "booting": "起動中"
+}
+

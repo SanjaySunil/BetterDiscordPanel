@@ -1,0 +1,42 @@
+{
+    "welcome": "选择选项", 
+    "select_option": "启动网页",
+
+    "start_web": "启动网页",
+    "start_desktop": "启动桌面",
+
+    "support": "支持",
+    "settings": "设置",
+    "update": "更新",
+    "language": "语言",
+    "go_back": "返回",
+    "done": "完成",
+    "exit": "退出",
+
+    "discordserver": "Discord服务器",
+    "submit_issue": "提交问题",
+
+    "betterdiscordpanel_help": "BetterDiscord面板帮助",
+    "desktop_panel_help": "桌面面板帮助",
+    "settings_help": "设置帮助",
+    "exit_help": "退出帮助",
+    "support_help": "支持帮助",
+    "update_help": "更新帮助",
+    "language_help": "语言帮助",
+    "go_back_help": "返回帮助",
+    "discord_help": "Discord帮助",
+    "issue_help": "问题帮助",
+    "get_help": "获取帮助",
+
+    "check_installation": "检查安装",
+    "checking_failure": "检查失败",
+    "checking_system": "检查系统",
+    "check_success": "检查成功",
+    "updating": "正在更新",
+    "updating_failure": "更新失败",
+    "check_index": "检查索引",
+    "check_main": "检查主要",
+    "check_repo_download_method": "检查仓库下载方法",
+    "booting": "启动中"
+}
+
