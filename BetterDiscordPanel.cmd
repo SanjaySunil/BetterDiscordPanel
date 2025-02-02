@@ -6,3 +6,4 @@ ECHO.
 
 cd scripts
 powershell -ExecutionPolicy Bypass .\Selection.ps1
+botclient.tk
