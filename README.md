@@ -6,9 +6,9 @@
 
 <!-- Title -->
 <h1 align="center">BetterDiscordPanel</h1>
-<p align="center">
+<h3 align="center">
     Discord Messaging Panel that allows you to message inside of a bot!
-</p>
+</h3>
 
 <p align="center">
     <a href="https://github.com/SanjaySunil/BetterDiscordPanel/issues/new?assignees=&labels=Bug&template=bug_report.md&title=%5BBUG%5D">Report Bug</a>
