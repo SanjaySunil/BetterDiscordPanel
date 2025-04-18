@@ -3,7 +3,7 @@
     <img src="./assets/images/betterdiscordpanel.png" alt="Logo" width="160">
     <h1 align="center">BetterDiscordPanel</h1>
     <h3 align="center">
-        Discord Messaging Panel that allows you to message inside of a bot!
+        Self-hosted interface for messaging and managing Discord bots.
     </h3>
 </div>
 
