@@ -4,6 +4,8 @@
     <img src="./assets/images/betterdiscordpanel.png" alt="Logo" width="180">
 </div>
 
+<br/>
+
 <!-- Title -->
 <h1 align="center">BetterDiscordPanel</h1>
 <h3 align="center">
@@ -23,6 +25,8 @@
   </a>
 </p>
 
+<br/>
+
 <!-- Special Thanks Section -->
 <div align="center">
   <h2>Sponsored by Globium Designs</h2>
@@ -41,10 +45,13 @@
   <hr style="width: 50%; margin: 30px auto;" />
 </div>
 
+<br/>
+
 <!-- Information -->
 ## What's BetterDiscordPanel?
 
 [BetterDiscordPanel](https://github.com/betterdiscordpanel) is a powerful panel that allows you to message, manage, and gain comprehensive statistics inside of your Discord bot. Designed with both functionality and aesthetics in mind, it offers an intuitive interface for Discord bot owners.
+
 <br/>
 
 <!-- Features -->
@@ -56,6 +63,8 @@
 - **Open Source:** BetterDiscordPanel is open source on GitHub so you can see all the code behind the project.
 - **Multi-language Support:** Available in multiple languages thanks to our amazing contributors.
 - **Customizable Interface:** Adjust the panel to your preferences with theme options.
+
+<br/>
 
 <!-- Getting Started -->
 ## Getting Started
@@ -77,6 +86,8 @@ To use the **desktop application** of BetterDiscordPanel, you will need to have 
 >
 > [Setting a custom User Agent](./docs/prerequisites/prerequisites.md)
 
+<br/>
+
 ### **Step 2:** Setup / Installation
 
 1. Clone the repository
@@ -93,10 +104,13 @@ To use the **desktop application** of BetterDiscordPanel, you will need to have 
 
 4. Start using BetterDiscordPanel!
 
+<br/>
+
 <!-- ROADMAP -->
 ## Roadmap
 
 See the [open issues](https://github.com/sanjaysunil/betterdiscordpanel/issues) for a list of proposed features (and known issues).
+
 <br/>
 
 <!-- CONTRIBUTING -->
@@ -124,8 +138,12 @@ View [contribution guide](https://github.com/SanjaySunil/BetterDiscordPanel/blob
 | [llamaiscoollmao](https://github.com/llamaiscoollmao) | Russian   |
 | [GabiK65](https://github.com/GabiK65)                 | Hungarian |
 
+<br/>
+
 ### Stargazers
 [![Stargazers repo roster for @sanjaysunil/betterdiscordpanel](https://reporoster.com/stars/sanjaysunil/betterdiscordpanel)](https://github.com/sanjaysunil/betterdiscordpanel/stargazers)
+
+<br/>
 
 ### Forkers
 [![Forkers repo roster for @sanjaysunil/betterdiscordpanel](https://reporoster.com/forks/sanjaysunil/betterdiscordpanel)](https://github.com/sanjaysunil/betterdiscordpanel/network/members)
