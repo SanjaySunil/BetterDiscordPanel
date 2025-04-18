@@ -3,7 +3,7 @@
     <img src="./assets/images/betterdiscordpanel.png" alt="Logo" width="160">
     <h1 align="center">BetterDiscordPanel</h1>
     <h3 align="center">
-        Self-hosted interface for messaging and managing Discord bots.
+        Message and manage through your Discord bot, self-hosted.
     </h3>
 </div>
 
