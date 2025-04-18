@@ -1,7 +1,7 @@
 <!-- Logo -->
 <br />
 <div align="center">
-    <img src="./assets/images/betterdiscordpanel.png" alt="Logo" width="200">
+    <img src="./assets/images/betterdiscordpanel.png" alt="Logo" width="180">
 </div>
 
 <!-- Title -->
