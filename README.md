@@ -20,8 +20,6 @@
   </a>
 </p>
 
-<br/>
-
 <!-- Special Thanks Section -->
 <div align="center">
   <h2>Sponsored by Globium Designs</h2>
