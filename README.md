@@ -1,16 +1,11 @@
 <!-- Logo -->
-<br />
 <div align="center">
     <img src="./assets/images/betterdiscordpanel.png" alt="Logo" width="180">
+    <h1 align="center">BetterDiscordPanel</h1>
+    <h3 align="center">
+        Discord Messaging Panel that allows you to message inside of a bot!
+    </h3>
 </div>
-
-<br/>
-
-<!-- Title -->
-<h1 align="center">BetterDiscordPanel</h1>
-<h3 align="center">
-    Discord Messaging Panel that allows you to message inside of a bot!
-</h3>
 
 <br/>
 
