@@ -35,13 +35,13 @@
     <img src="https://www.globiumdesigns.com/icon.png" width="150px" style="border-radius: 15px; margin: 20px 0;" />
   </a>
   <p>
-    Looking for custom-tailored project solutions? At <strong><a href="https://www.globiumdesigns.com" target="_blank">Globium Designs</a></strong>, we specialize in creating innovative digital solutions tailored to your unique business needs.
+    Looking for custom-tailored project solutions? At <strong><a href="https://globiumdesigns.com" target="_blank">Globium Designs</a></strong>, we specialize in creating innovative digital solutions tailored to your unique business needs.
   </p>
   <p>
     <strong>Services:</strong> Web Development • App Development • UI/UX Design • Branding • Digital Marketing
   </p>
   <p>
-    Visit <a href="globiumdesigns.com/meeting">Globium Designs</a> to book a free discovery call and explore how we can help you achieve your goals.
+    Visit <a href="https://globiumdesigns.com/meeting">Globium Designs</a> to book a free discovery call and explore how we can help you achieve your goals.
   </p>
   <hr style="width: 50%; margin: 30px auto;" />
 </div>
