@@ -18,13 +18,7 @@ function delMsg(id) {
     const guild = client.guilds.cache.find((g) => g.id === guilds.val());
     channel = guild.channels.cache.find((c) => c.id === channels.val());
   }
-  const message = channel.messages.cache.find((m) => m.id === id);
-
-  if (!message.deletable) {
-    return;
-  }
-
-  message.delete().catch((e) => {
-    console.log(e);
+  channel.messages.fetch(id).then((message)=>{
+    message.delete();
   });
 }
